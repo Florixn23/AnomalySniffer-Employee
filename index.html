@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Timesheet</title>
+  <script id="sap-ui-bootstrap"
+    src="https://ui5.sap.com/resources/sap-ui-core.js"
+    data-sap-ui-theme="sap_horizon"
+    data-sap-ui-resourceroots='{"zeiterfassung": "./"}'
+    data-sap-ui-oninit="module:sap/ui/core/ComponentSupport"
+    data-sap-ui-compatVersion="edge"
+    data-sap-ui-async="true"
+    data-sap-ui-frameOptions="allow">
+  </script>
+  <style>
+
+    /* ── Global ──────────────────────────────────────────────── */
+    html, body { height: 100%; margin: 0; overflow: hidden; }
+    body.sapUiBody { background: var(--sapBackgroundColor, #f5f6f7); }
+
+    /* ── Root VBox fills viewport ────────────────────────────── */
+    .zeRootBox {
+      height: 100vh;
+      display: flex !important;
+      flex-direction: column !important;
+    }
+    .zeRootBox > .sapMFlexItem { display: flex; flex-direction: column; }
+
+    /* ShellBar gets its own row, content fills the rest */
+    .zeRootBox > .sapFShellBar { flex-shrink: 0; }
+
+    /* ── Page background ─────────────────────────────────────── */
+    .zePageContent {
+      flex: 1 !important;
+      overflow-y: auto;
+      padding: 1rem 1.5rem 1.5rem;
+      box-sizing: border-box;
+      background: var(--sapBackgroundColor, #f0f2f5);
+    }
+
+    /* ── Calendar card (Panel) ───────────────────────────────── */
+    .zeCalPanel.sapMPanel {
+      border-radius: 0.75rem;
+      box-shadow: var(--sapContent_Shadow1,
+                  0 0 0 1px rgba(0,0,0,.08),
+                  0 2px 6px rgba(0,0,0,.08));
+      border: none;
+      overflow: hidden;
+    }
+    .zeCalPanel .sapMPanelHdr {
+      border-bottom: 1px solid var(--sapGroup_TitleBorderColor, #e8e8e8);
+    }
+    .zeCalPanelIcon.sapUiIcon {
+      font-size: 1.1rem !important;
+      color: var(--sapContent_IconColor, #0064d9);
+      margin-right: 0.5rem;
+    }
+    .zeCalPanelTitle .sapMTitle {
+      font-size: 0.9375rem !important;
+      font-weight: 600 !important;
+    }
+
+    /* ── Main flex layout (calendar + entry panel) ───────────── */
+    .zeMainLayout { width: 100%; }
+
+    /* ── Calendar container ──────────────────────────────────── */
+    .zeCalContainer {
+      padding: 1.25rem 1.75rem 0.75rem;
+      overflow-y: auto;
+      box-sizing: border-box;
+    }
+
+    /* ── Month / year header ─────────────────────────────────── */
+    .zeCalHeader    { margin-bottom: 1rem; }
+    .zeMonthYearBox { gap: 0.3rem; }
+    .zeMonthTitle .sapMTitle { color: var(--sapLinkColor, #0064d9) !important; font-size: 1.15rem !important; }
+    .zeYearTitle  .sapMTitle { color: var(--sapLinkColor, #0064d9) !important; font-size: 1.15rem !important; }
+
+    /* ── Calendar grid ───────────────────────────────────────── */
+    .zeGrid         { display: table; width: 100%; border-collapse: separate; border-spacing: 0.3rem 0.3rem; }
+    .zeGridRow      { display: table-row; }
+
+    .zeGridHdr .zeHdrCell {
+      font-weight: 600;
+      font-size: 0.75rem;
+      color: var(--sapContent_LabelColor, #6a6d70);
+      text-align: center;
+      padding: 0.2rem 0;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .zeWkCell {
+      display: table-cell;
+      width: 2.25rem;
+      font-size: 0.7rem;
+      color: var(--sapNeutralColor, #c0c0c0);
+      text-align: right;
+      vertical-align: middle;
+      padding-right: 0.5rem;
+    }
+    .zeWkHdr { font-weight: 600; }
+
+    .zeGridCell {
+      display: table-cell;
+      width: calc(100% / 7);
+      padding: 0.12rem 0.15rem;
+      box-sizing: border-box;
+      vertical-align: top;
+    }
+
+    .zeDay {
+      min-height: 4.25rem;
+      padding: 0.3rem 0.35rem 0.35rem;
+      border-radius: 0.625rem;
+      box-sizing: border-box;
+      position: relative;
+    }
+    .zeDay.zeClickable { cursor: pointer; }
+    .zeDay.zeClickable:hover {
+      background: var(--sapList_Hover_Background, #edf3ff);
+    }
+
+    .zeWe {
+      background: #e0e0e0;
+      border-radius: 0.625rem;
+      opacity: 0.75;
+    }
+    .zeWe:hover { background: #e0e0e0 !important; }
+
+    /* Evening Horizon (Dunkel) */
+    body.sapUiTheme-sap_horizon_dark .zeWe       { background: #000000 !important; opacity: 1; }
+    body.sapUiTheme-sap_horizon_dark .zeWe:hover { background: #000000 !important; }
+
+    /* High Contrast Schwarz */
+    body.sapUiTheme-sap_horizon_hcb .zeWe       { background: #3a3a3a; opacity: 1; }
+    body.sapUiTheme-sap_horizon_hcb .zeWe:hover { background: #3a3a3a !important; }
+
+    /* High Contrast Weiß */
+    body.sapUiTheme-sap_horizon_hcw .zeWe       { background: #d0d0d0; opacity: 1; }
+    body.sapUiTheme-sap_horizon_hcw .zeWe:hover { background: #d0d0d0 !important; }
+
+    /* Today: use SAP standard selection ring */
+    .zeToday {
+      outline: 2px solid var(--sapSelectedColor, #9b59b6);
+      outline-offset: -2px;
+    }
+
+    /* Selected */
+    .zeSel {
+      background: var(--sapList_SelectionBackgroundColor, #faf0ff) !important;
+      outline: 2px solid var(--sapSelectedColor, #9b59b6) !important;
+      outline-offset: -2px;
+    }
+
+    .zeDayNum {
+      text-align: right;
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--sapTextColor, #32363a);
+      line-height: 1.3;
+    }
+    .zeWe .zeDayNum { color: var(--sapNeutralColor, #c0c0c0); }
+
+    /* Colour bar */
+    .zeDayBar {
+      height: 5px;
+      border-radius: 2.5px;
+      margin: 0.4rem 0.1rem 0.18rem;
+    }
+
+    /* Hours value */
+    .zeDayVal {
+      font-size: 0.7rem;
+      color: var(--sapContent_LabelColor, #8c8c8c);
+      text-align: right;
+      line-height: 1;
+    }
+
+    /* ── Week summary bar ────────────────────────────────────── */
+    .zeWeekBar {
+      margin-top: 0.75rem;
+      padding: 0.55rem 0.75rem;
+      background: var(--sapGroup_ContentBackground, #f7f7f7);
+      border-radius: 0.5rem;
+      border: 1px solid var(--sapGroup_TitleBorderColor, #e8e8e8);
+    }
+    .zeBarLabel    { font-size: 0.8125rem; color: var(--sapContent_LabelColor, #6a6d70); }
+    .zeBarValue    { font-size: 0.8125rem; font-weight: 700; color: var(--sapTextColor, #32363a);  margin-left: 0.2rem; }
+    .zeBarValueRed { font-size: 0.8125rem; font-weight: 700; color: var(--sapNegativeColor, #bb0000); margin-left: 0.2rem; }
+
+    /* ── Selected-day sub-bar ────────────────────────────────── */
+    .zeDayBar2 {
+      margin-top: 0.4rem;
+      border-top: 1px solid var(--sapGroup_TitleBorderColor, #e8e8e8);
+      padding: 0.4rem 0.75rem 0.5rem;
+    }
+    .zeDayBarRow { padding: 0.2rem 0; }
+    .zeDayIcon.sapUiIcon { color: var(--sapContent_LabelColor, #888); margin-right: 0.4rem; font-size: 0.85rem !important; }
+    .zeNoData { font-size: 0.8rem; color: var(--sapNeutralColor, #ccc); padding: 0.3rem 0; }
+
+    /* ── Stats tiles ─────────────────────────────────────────── */
+    .zeStatsTiles {
+      margin-top: 0.75rem;
+      gap: 0.6rem;
+    }
+    .zeStatsTile {
+      flex: 1;
+      padding: 0.75rem 1rem 0.8rem;
+      background: var(--sapBaseColor, #fff);
+      border: 1px solid var(--sapGroup_TitleBorderColor, #e0e0e0);
+      border-radius: 0.625rem;
+      box-shadow: 0 1px 4px rgba(0,0,0,.06);
+      gap: 0.1rem;
+    }
+    .zeStatsTileLabel .sapMText {
+      font-size: 0.68rem !important;
+      font-weight: 600 !important;
+      color: var(--sapContent_LabelColor, #6a6d70) !important;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .zeStatsTileSub .sapMText {
+      font-size: 0.75rem !important;
+      color: var(--sapContent_LabelColor, #8c8c8c) !important;
+      margin-top: 0.15rem;
+    }
+    .zeStatsTileValueBlue .sapMText   { font-size: 1.6rem !important; font-weight: 700 !important; color: #0064d9 !important; line-height: 1.2 !important; }
+    .zeStatsTileValueGreen .sapMText  { font-size: 1.6rem !important; font-weight: 700 !important; color: #107e3e !important; line-height: 1.2 !important; }
+    .zeStatsTileValueOrange .sapMText { font-size: 1.6rem !important; font-weight: 700 !important; color: #e76500 !important; line-height: 1.2 !important; }
+    .zeStatsTileValueRed .sapMText    { font-size: 1.6rem !important; font-weight: 700 !important; color: #bb0000 !important; line-height: 1.2 !important; }
+    .zeStatsTileValueNeutral .sapMText{ font-size: 1.6rem !important; font-weight: 700 !important; color: var(--sapTextColor, #32363a) !important; line-height: 1.2 !important; }
+
+
+    .zeEntryPanel {
+      border-left: 1px solid var(--sapGroup_TitleBorderColor, #e8e8e8);
+      padding: 1.25rem;
+      box-sizing: border-box;
+      overflow-y: auto;
+      background: var(--sapBaseColor, #fff);
+    }
+
+    .zePanelHeader {
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid var(--sapGroup_TitleBorderColor, #f0f0f0);
+      margin-bottom: 0.9rem;
+    }
+    .zePanelHeader .sapMTitle { font-size: 1rem !important; }
+
+    /* Read-only info */
+    .zeReadOnly {
+      align-items: center;
+      padding: 2.5rem 1rem;
+      gap: 0.6rem;
+    }
+    .zeReadOnlyIcon .sapUiIcon { font-size: 2.5rem !important; color: var(--sapNeutralColor, #b0b0b0); }
+    .zeReadOnlyTitle { font-size: 1.05rem; font-weight: 600; color: var(--sapTextColor, #444); margin-top: 0.25rem; }
+    .zeReadOnlyHint  { font-size: 0.8rem; color: var(--sapContent_LabelColor, #aaa); text-align: center; }
+
+    /* Form sections */
+    .zePanelSection { margin-bottom: 0.85rem; }
+    .zePanelLabel   { margin-bottom: 0.3rem !important; }
+
+    /* Actions */
+    .zePanelActions {
+      margin-top: 1.25rem;
+      padding-top: 0.9rem;
+      border-top: 1px solid var(--sapGroup_TitleBorderColor, #f0f0f0);
+    }
+
+  </style>
+</head>
+<body class="sapUiBody" id="content">
+  <div data-sap-ui-component
+       data-name="zeiterfassung"
+       data-settings='{"id": "zeiterfassung"}'
+       style="height:100%">
+  </div>
+</body>
+</html>

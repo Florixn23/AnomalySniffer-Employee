@@ -1,0 +1,169 @@
+<mvc:View
+  controllerName="zeiterfassung.controller.Main"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns="sap.m"
+  xmlns:core="sap.ui.core"
+  xmlns:l="sap.ui.layout"
+  xmlns:f="sap.f"
+  displayBlock="true">
+
+  <!-- Root box: ShellBar on top, page content below -->
+  <VBox class="zeRootBox">
+
+    <!-- ── SAP Shell Bar ──────────────────────────────────────── -->
+    <f:ShellBar
+      title="My Timesheet"
+      homeIcon="sap-logo.svg"
+      homeIconTooltip="SAP Home"
+      showNotifications="true"
+      notificationsNumber="3"
+      showProductSwitcher="false">
+      <f:profile>
+        <Avatar initials="FV" displaySize="XS" backgroundColor="Accent5" />
+      </f:profile>
+    </f:ShellBar>
+
+    <!-- ── Page content (scrollable) ────────────────────────── -->
+    <VBox class="zePageContent">
+
+      <!-- Calendar card (sap.m.Panel gives Fiori card look) -->
+      <Panel class="zeCalPanel sapUiNoContentPadding" expandable="false">
+
+        <headerToolbar>
+          <OverflowToolbar style="Clear">
+            <core:Icon src="sap-icon://person-placeholder" class="zeCalPanelIcon" />
+            <Title text="CATSXT Activity Recording" level="H5" class="zeCalPanelTitle" />
+            <ToolbarSpacer />
+            <Button icon="sap-icon://calendar"          type="Transparent" tooltip="Kalenderansicht" />
+            <Button icon="sap-icon://text-align-center" type="Transparent" tooltip="Wochenansicht" />
+            <Button icon="sap-icon://palette"          type="Transparent" tooltip="Design" press=".onThemePress" />
+            <Button icon="sap-icon://hint"              type="Transparent" tooltip="Hilfe" />
+          </OverflowToolbar>
+        </headerToolbar>
+
+        <!-- ── Calendar + Entry panel ──────────────────────── -->
+        <FlexBox renderType="Bare" class="zeMainLayout">
+
+          <!-- Left: Calendar -->
+          <VBox class="zeCalContainer">
+            <layoutData><FlexItemData growFactor="1" shrinkFactor="1" /></layoutData>
+
+            <!-- Month / year nav -->
+            <HBox alignItems="Center" justifyContent="SpaceBetween" class="zeCalHeader">
+              <Button icon="sap-icon://navigation-left-arrow"
+                      press=".onPrevMonth" type="Transparent" />
+              <HBox alignItems="Center" class="zeMonthYearBox">
+                <Title text="{/monthTitle}" level="H2" class="zeMonthTitle" />
+                <Text text=" " />
+                <Title text="{/yearTitle}"  level="H2" class="zeYearTitle" />
+              </HBox>
+              <Button icon="sap-icon://navigation-right-arrow"
+                      press=".onNextMonth" type="Transparent" />
+            </HBox>
+
+            <!-- Calendar grid -->
+            <core:HTML content="{/calGridHtml}" sanitizeContent="false" />
+
+            <!-- Week stats tiles -->
+            <HBox class="zeStatsTiles" justifyContent="SpaceBetween">
+              <VBox class="zeStatsTile">
+                <Text text="KALENDERWOCHE" class="zeStatsTileLabel" />
+                <Text text="{/currentWeek}" class="zeStatsTileValueBlue" />
+                <Text text="Aktuelle Woche" class="zeStatsTileSub" />
+              </VBox>
+              <VBox class="zeStatsTile">
+                <Text text="IST-STUNDEN / WOCHE" class="zeStatsTileLabel" />
+                <Text text="{/weekActual}" class="{/weekActualClass}" />
+                <Text text="{= 'Ziel: ' + ${/weekTarget} }" class="zeStatsTileSub" />
+              </VBox>
+              <VBox class="zeStatsTile">
+                <Text text="SOLL-STUNDEN / WOCHE" class="zeStatsTileLabel" />
+                <Text text="{/weekTarget}" class="zeStatsTileValueNeutral" />
+                <Text text="5 Arbeitstage" class="zeStatsTileSub" />
+              </VBox>
+              <VBox class="zeStatsTile">
+                <Text text="OFFEN / ÜBERSTUNDEN" class="zeStatsTileLabel" />
+                <Text text="{/weekUnrecorded}" class="{= parseFloat(${/weekUnrecordedNum}) >= 0 ? 'zeStatsTileValueRed' : 'zeStatsTileValueGreen'}" />
+                <Text text="{= parseFloat(${/weekUnrecordedNum}) >= 0 ? 'Noch nicht erfasst' : 'Über Ziel' }" class="zeStatsTileSub" />
+              </VBox>
+            </HBox>
+
+            <!-- Selected-day row -->
+            <VBox class="zeDayBar2" visible="{= !!${/selectedDay} }">
+              <HBox alignItems="Center" justifyContent="SpaceBetween" class="zeDayBarRow">
+                <HBox alignItems="Center">
+                  <core:Icon src="sap-icon://date-time" class="zeDayIcon" />
+                  <Text text="{/selectedDayLabel}"      class="zeBarLabel" />
+                </HBox>
+                <HBox alignItems="Center">
+                  <Text text="Submitted: "          class="zeBarLabel" />
+                  <Text text="{/selectedDaySubmitted}" class="zeBarValue" />
+                </HBox>
+                <HBox alignItems="Center">
+                  <Text text="Unrecorded: "              class="zeBarLabel" />
+                  <Text text="{/selectedDayUnrecorded}" class="zeBarValueRed" />
+                </HBox>
+              </HBox>
+              <HBox justifyContent="Center"
+                    visible="{= ${/selectedDaySubmitted} === '0 h' }">
+                <Text text="No data" class="zeNoData" />
+              </HBox>
+            </VBox>
+
+          </VBox>
+
+          <!-- Right: Entry panel (vertical separator built via CSS) -->
+          <VBox class="zeEntryPanel">
+            <layoutData><FlexItemData growFactor="0" shrinkFactor="0" baseSize="340px" /></layoutData>
+
+            <!-- Panel header -->
+            <HBox alignItems="Center" class="zePanelHeader">
+              <Title text="{/selectedDayLabel}" level="H4" />
+            </HBox>
+
+            <!-- READ-ONLY (vacation / holiday) -->
+            <VBox class="zeReadOnly" visible="{/selectedReadOnly}">
+              <core:Icon src="sap-icon://calendar" class="zeReadOnlyIcon" />
+              <Text text="{/selectedDayTypeName}" class="zeReadOnlyTitle" />
+              <Text text="Dieser Tag kann nicht bearbeitet werden." class="zeReadOnlyHint" />
+            </VBox>
+
+            <!-- EDITABLE (work day) -->
+            <VBox visible="{= !${/selectedReadOnly} }">
+
+              <VBox class="zePanelSection">
+                <Label text="Beginn" design="Bold" class="zePanelLabel" />
+                <TimePicker value="{/selectedStart}"
+                            valueFormat="HH:mm" displayFormat="HH:mm"
+                            placeholder="hh:mm" change=".onPanelStartChange" width="100%" />
+              </VBox>
+
+              <VBox class="zePanelSection">
+                <Label text="Ende" design="Bold" class="zePanelLabel" />
+                <TimePicker value="{/selectedEnd}"
+                            valueFormat="HH:mm" displayFormat="HH:mm"
+                            placeholder="hh:mm" change=".onPanelEndChange" width="100%" />
+              </VBox>
+
+              <VBox class="zePanelSection">
+                <Label text="Dauer" design="Bold" class="zePanelLabel" />
+                <Input value="{/selectedDuration}" placeholder="hh:mm"
+                       change=".onPanelDurationChange" width="100%" />
+              </VBox>
+              <HBox justifyContent="End" class="zePanelActions">
+                <Button text="Löschen"   type="Transparent" press=".onClearDay" />
+                <Button text="Speichern" type="Emphasized"  press=".onSaveDay"
+                        class="sapUiTinyMarginBegin" />
+              </HBox>
+
+            </VBox>
+
+          </VBox>
+
+        </FlexBox>
+      </Panel>
+
+    </VBox>
+  </VBox>
+
+</mvc:View>
