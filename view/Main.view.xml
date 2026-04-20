@@ -156,6 +156,11 @@
                         class="sapUiTinyMarginBegin" />
               </HBox>
 
+              <HBox justifyContent="End" class="zePanelActions sapUiTinyMarginTop">
+                <Button text="Test-Webhook senden" type="Ghost" icon="sap-icon://simulate"
+                        press=".onSendTestWebhook" />
+              </HBox>
+
             </VBox>
 
           </VBox>

@@ -167,6 +167,24 @@ sap.ui.define([
       this._sendPendingWebhooks(sIso);
     },
 
+    onSendTestWebhook: function () {
+      jQuery.ajax({
+        url:         WEBHOOK_URL,
+        method:      "POST",
+        contentType: "application/json",
+        data: JSON.stringify({
+          weekday:      0,
+          start_hour:   8.0,
+          end_hour:     17.0,
+          actual_hours: 8.5,
+          target_hours: 8.0,
+          weekly_hours: 8.5
+        }),
+        success: function () { MessageToast.show("Test-Webhook erfolgreich gesendet!"); },
+        error:   function () { MessageToast.show("Test-Webhook fehlgeschlagen!"); }
+      });
+    },
+
     _sendPendingWebhooks: function (sSavedIso) {
       var that = this;
 
