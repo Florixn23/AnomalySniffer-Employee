@@ -4,4 +4,6 @@ COPY . /usr/share/nginx/html
 
 EXPOSE 80
 
-CMD ["nginx", "-g", "daemon off;"]
+CMD ["/bin/sh", "-c", \
+  "sed -i \"s|WEBHOOK_URL_PLACEHOLDER|${WEBHOOK_URL}|g\" /usr/share/nginx/html/controller/Main.controller.js && \
+   nginx -g 'daemon off;'"]

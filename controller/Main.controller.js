@@ -17,7 +17,7 @@ sap.ui.define([
   var COL_HOLIDAY  = "#aad4f5";
   var COL_EMPTY    = "#e8c84a";
 
-  var WEBHOOK_URL = "http://localhost:5678/webhook-test/9a2dd551-5aef-4d51-a977-0b286e8a056a";
+  var WEBHOOK_URL = "WEBHOOK_URL_PLACEHOLDER";
   var TARGET_MINS = 480;
 
   var TYPE_LABEL = { vacation: "Urlaub", holiday: "Feiertag" };
