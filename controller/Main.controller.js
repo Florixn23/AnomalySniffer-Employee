@@ -17,19 +17,39 @@ sap.ui.define([
   var COL_HOLIDAY  = "#aad4f5";
   var COL_EMPTY    = "#e8c84a";
 
+  var WEBHOOK_URL = "http://localhost:5678/webhook-test/9a2dd551-5aef-4d51-a977-0b286e8a056a";
+  var TARGET_MINS = 480;
+
+  var TYPE_LABEL = { vacation: "Urlaub", holiday: "Feiertag" };
+
   return Controller.extend("zeiterfassung.controller.Main", {
 
     onInit: function () {
-      var oModel = new JSONModel({ selectedDay: null });
-      this.getView().setModel(oModel);
+      this.getView().setModel(new JSONModel({ selectedDay: null }));
 
       var oNow = new Date();
       this._year  = oNow.getFullYear();
       this._month = oNow.getMonth();
       this._today = this._isoDate(oNow);
-
       this._entries = {};
 
+      this._loadTestdata();
+    },
+
+    onAfterRendering: function () {
+      var oDom = this.getView().getDomRef();
+      if (!oDom || oDom._zeBound) return;
+      oDom._zeBound = true;
+      var that = this;
+      oDom.addEventListener("click", function (e) {
+        var oCell = e.target.closest("[data-iso]");
+        if (oCell) that.onDayPress(oCell.getAttribute("data-iso"));
+      });
+    },
+
+    // ── Data init ──────────────────────────────────────────────────────────
+
+    _loadTestdata: function () {
       var that = this;
       jQuery.ajax({
         url: "testdata.json",
@@ -46,26 +66,15 @@ sap.ui.define([
       });
     },
 
-    onAfterRendering: function () {
-      var oDom = this.getView().getDomRef();
-      if (!oDom || oDom._zeBound) return;
-      oDom._zeBound = true;
-      var that = this;
-      oDom.addEventListener("click", function (e) {
-        var oCell = e.target.closest("[data-iso]");
-        if (oCell) that.onDayPress(oCell.getAttribute("data-iso"));
-      });
-    },
-
-    // ── Data init ──────────────────────────────────────────────────────────
-
     _initFromTestdata: function (aEntries) {
       this._entries = {};
+      this._testdataMap = {};
       aEntries.forEach(function (e) {
+        this._testdataMap[e.date] = e;
         var oEntry = { type: e.day_type };
         if (e.day_type === "work") {
-          oEntry.start    = e.start_hour  != null ? this._decimalToTime(e.start_hour)  : "";
-          oEntry.end      = e.end_hour    != null ? this._decimalToTime(e.end_hour)    : "";
+          oEntry.start    = e.start_hour   != null ? this._decimalToTime(e.start_hour)   : "";
+          oEntry.end      = e.end_hour     != null ? this._decimalToTime(e.end_hour)     : "";
           oEntry.duration = e.actual_hours != null ? this._decimalToTime(e.actual_hours) : "";
           oEntry.break    = "";
         }
@@ -98,25 +107,19 @@ sap.ui.define([
       var iDow  = oDate.getDay();
       if (iDow === 0 || iDow === 6) return;
 
-      var oModel  = this.getView().getModel();
-      var oEntry  = this._getEffectiveEntry(sIso);
-      var bRO     = !!oEntry && (oEntry.type === "vacation" || oEntry.type === "holiday");
-      var sDur    = (oEntry && oEntry.type === "work") ? (oEntry.duration || "") : "";
-      var sLabel  = DAY_SHORT[iDow] + ", " +
-                    String(oDate.getDate()).padStart(2,"0") + ". " +
-                    MONTH_NAMES[oDate.getMonth()];
-
-      var sTypeName = "";
-      if (oEntry) {
-        if (oEntry.type === "vacation") sTypeName = "Urlaub";
-        if (oEntry.type === "holiday")  sTypeName = "Feiertag";
-      }
+      var oModel = this.getView().getModel();
+      var oEntry = this._getEffectiveEntry(sIso);
+      var bRO    = !!oEntry && (oEntry.type === "vacation" || oEntry.type === "holiday");
+      var sDur   = (oEntry && oEntry.type === "work") ? (oEntry.duration || "") : "";
+      var sLabel = DAY_SHORT[iDow] + ", " +
+                   String(oDate.getDate()).padStart(2,"0") + ". " +
+                   MONTH_NAMES[oDate.getMonth()];
 
       oModel.setData(Object.assign(oModel.getData(), {
         selectedDay:           sIso,
         selectedDayLabel:      sLabel,
         selectedReadOnly:      bRO,
-        selectedDayTypeName:   sTypeName,
+        selectedDayTypeName:   this._typeName(oEntry),
         selectedStart:         oEntry ? (oEntry.start    || "") : "",
         selectedEnd:           oEntry ? (oEntry.end      || "") : "",
         selectedDuration:      sDur,
@@ -165,70 +168,78 @@ sap.ui.define([
     },
 
     _sendPendingWebhooks: function (sSavedIso) {
-      var WEBHOOK_URL = "http://localhost:5678/webhook-test/9a2dd551-5aef-4d51-a977-0b286e8a056a";
       var that = this;
 
-      var oSaved = this._parseIso(sSavedIso);
-      var iDow   = oSaved.getDay();
-      var iMondayOffset = iDow === 0 ? -6 : 1 - iDow;
-      var oMonday = new Date(oSaved.getFullYear(), oSaved.getMonth(), oSaved.getDate() + iMondayOffset);
+      var isComplete = function (sIso) {
+        var oE = that._entries[sIso];
+        if (!oE) return false;
+        return oE.type === "vacation" || oE.type === "holiday" ||
+               (oE.type === "work" && !!oE.duration);
+      };
 
-      var aPending = [];
-      var iCumulMins = 0;
-
-      for (var delta = 0; ; delta++) {
-        var oD   = new Date(oMonday.getFullYear(), oMonday.getMonth(), oMonday.getDate() + delta);
-        var iDowD = oD.getDay();
-        if (iDowD === 0 || iDowD === 6) continue;
-
-        var sDIso = this._isoDate(oD);
-        if (sDIso > sSavedIso) break;
-
-        var oE = this._entries[sDIso];
-        if (!oE) return;
-
-        var iActualMins;
+      var getActualMins = function (sIso) {
+        var oE = that._entries[sIso];
+        if (!oE) return 0;
         if (oE.type === "vacation" || oE.type === "holiday") {
-          iActualMins = 480;
-        } else if (oE.type === "work" && oE.duration) {
-          iActualMins = this._toMins(oE.duration);
-        } else {
-          return;
+          var td = that._testdataMap && that._testdataMap[sIso];
+          return td && td.actual_hours != null ? Math.round(td.actual_hours * 60) : TARGET_MINS;
         }
+        return oE.duration ? that._toMins(oE.duration) : 0;
+      };
 
-        if (!this._sentDays) this._sentDays = {};
-        if (this._sentDays[sDIso]) {
-          iCumulMins += iActualMins;
-          continue;
-        }
+      var getTargetMins = function (sIso) {
+        var td = that._testdataMap && that._testdataMap[sIso];
+        return td && td.target_hours != null ? Math.round(td.target_hours * 60) : TARGET_MINS;
+      };
 
-        iCumulMins += iActualMins;
-
-        var oPayload = {
-          weekday:       iDowD === 0 ? 6 : iDowD - 1,
-          start_hour:    (oE.type === "work" && oE.start)    ? this._timeToDecimal(oE.start)    : null,
-          end_hour:      (oE.type === "work" && oE.end)      ? this._timeToDecimal(oE.end)      : null,
-          actual_hours:  iActualMins / 60,
-          target_hours:  8.0,
-          weekly_hours:  Math.round(iCumulMins / 60 * 100) / 100
-        };
-
-        aPending.push({ iso: sDIso, payload: oPayload });
-      }
-
-      aPending.forEach(function (oItem) {
-        that._sentDays[oItem.iso] = true;
+      var sendDay = function (sIso, iCumulMins) {
+        var oE    = that._entries[sIso];
+        var iDowD = that._parseIso(sIso).getDay();
         jQuery.ajax({
           url:         WEBHOOK_URL,
           method:      "POST",
           contentType: "application/json",
-          data:        JSON.stringify(oItem.payload),
-          error: function () {
-            delete that._sentDays[oItem.iso];
-            MessageToast.show("Webhook-Fehler für " + oItem.iso);
-          }
+          data: JSON.stringify({
+            weekday:      iDowD === 0 ? 6 : iDowD - 1,
+            start_hour:   (oE.type === "work" && oE.start) ? that._timeToDecimal(oE.start) : null,
+            end_hour:     (oE.type === "work" && oE.end)   ? that._timeToDecimal(oE.end)   : null,
+            actual_hours: getActualMins(sIso) / 60,
+            target_hours: getTargetMins(sIso) / 60,
+            weekly_hours: Math.round(iCumulMins / 60 * 100) / 100
+          }),
+          error: function () { MessageToast.show("Webhook-Fehler für " + sIso); }
         });
-      });
+      };
+
+      if (!isComplete(sSavedIso)) return;
+
+      var oSavedEntry = this._entries[sSavedIso];
+      if (oSavedEntry && (oSavedEntry.type === "vacation" || oSavedEntry.type === "holiday")) return;
+
+      var oSaved = this._parseIso(sSavedIso);
+      var iDow   = oSaved.getDay();
+
+      for (var i = 1; i < iDow; i++) {
+        var oPrev = new Date(oSaved.getFullYear(), oSaved.getMonth(), oSaved.getDate() - i);
+        if (!isComplete(this._isoDate(oPrev))) return;
+      }
+
+      // Cumulative mins from Monday up to and including saved day
+      var iCumulMins = 0;
+      for (var j = iDow - 1; j >= 1; j--) {
+        var oPrevDay = new Date(oSaved.getFullYear(), oSaved.getMonth(), oSaved.getDate() - j);
+        iCumulMins += getActualMins(this._isoDate(oPrevDay));
+      }
+      iCumulMins += getActualMins(sSavedIso);
+      sendDay(sSavedIso, iCumulMins);
+
+      for (var k = 1; iDow + k <= 5; k++) {
+        var oNext    = new Date(oSaved.getFullYear(), oSaved.getMonth(), oSaved.getDate() + k);
+        var sNextIso = this._isoDate(oNext);
+        if (!isComplete(sNextIso)) break;
+        iCumulMins += getActualMins(sNextIso);
+        sendDay(sNextIso, iCumulMins);
+      }
     },
 
     _timeToDecimal: function (sTime) {
@@ -271,18 +282,18 @@ sap.ui.define([
       var iYear     = this._year;
       var iMonth    = this._month;
 
-      var iDays    = new Date(iYear, iMonth + 1, 0).getDate();
+      var iDays     = new Date(iYear, iMonth + 1, 0).getDate();
       var iFirstDow = new Date(iYear, iMonth, 1).getDay();
-      var iOffset  = iFirstDow === 0 ? 6 : iFirstDow - 1;
+      var iOffset   = iFirstDow === 0 ? 6 : iFirstDow - 1;
 
-      var h = '<div class="zeGrid">';
+      var parts = ['<div class="zeGrid">'];
 
-      h += '<div class="zeGridRow zeGridHdr">';
-      h += '<div class="zeWkCell zeWkHdr"></div>';
+      parts.push('<div class="zeGridRow zeGridHdr">');
+      parts.push('<div class="zeWkCell zeWkHdr"></div>');
       DAY_HDR.forEach(function (d) {
-        h += '<div class="zeGridCell zeHdrCell">' + d + '</div>';
+        parts.push('<div class="zeGridCell zeHdrCell">' + d + '</div>');
       });
-      h += '</div>';
+      parts.push('</div>');
 
       var iDay = 1, iRow = 0;
       while (iDay <= iDays) {
@@ -290,10 +301,10 @@ sap.ui.define([
         var iCol0     = iRow === 0 ? iOffset : 0;
         var iWk       = this._isoWeek(new Date(iYear, iMonth, iDay));
 
-        h += '<div class="zeGridRow">';
-        h += '<div class="zeWkCell">' + iWk + '</div>';
+        parts.push('<div class="zeGridRow">');
+        parts.push('<div class="zeWkCell">' + iWk + '</div>');
 
-        for (var e = 0; e < iCol0; e++) h += '<div class="zeGridCell"></div>';
+        for (var e = 0; e < iCol0; e++) parts.push('<div class="zeGridCell"></div>');
 
         for (var col = iCol0; col < 7 && iDay <= iDays; col++) {
           var oD     = new Date(iYear, iMonth, iDay);
@@ -303,36 +314,31 @@ sap.ui.define([
           var bToday = sIso === this._today;
           var bSel   = sIso === sSelected;
           var oE     = this._getEffectiveEntry(sIso);
-
           var bFuture = sIso > this._today;
-          var cls = "zeGridCell zeDay";
-          if (bWe)    cls += " zeWe";
-          if (bToday) cls += " zeToday";
-          if (bSel)   cls += " zeSel";
 
+          var cls = "zeGridCell zeDay" + (bWe ? " zeWe" : "") + (bToday ? " zeToday" : "") + (bSel ? " zeSel" : "");
           var sAttr = bWe ? "" : ' data-iso="' + sIso + '"';
-          h += '<div class="' + cls + '"' + sAttr + '>';
-          h += '<div class="zeDayNum">' + iDay + '</div>';
+          parts.push('<div class="' + cls + '"' + sAttr + '>');
+          parts.push('<div class="zeDayNum">' + iDay + '</div>');
           if (!bWe) {
             var sColor = this._barColor(oE, bFuture);
-            var sVal   = this._barVal(oE);
             if (sColor) {
-              h += '<div class="zeDayBar" style="background:' + sColor + '"></div>';
-              h += '<div class="zeDayVal">' + sVal + '</div>';
+              parts.push('<div class="zeDayBar" style="background:' + sColor + '"></div>');
+              parts.push('<div class="zeDayVal">' + this._barVal(oE) + '</div>');
             }
           }
-          h += '</div>';
+          parts.push('</div>');
           iDay++;
         }
 
         var iUsed = iCol0 + (iDay - iRowStart);
-        for (var f = iUsed; f < 7; f++) h += '<div class="zeGridCell"></div>';
-        h += '</div>';
+        for (var f = iUsed; f < 7; f++) parts.push('<div class="zeGridCell"></div>');
+        parts.push('</div>');
         iRow++;
       }
 
-      h += '</div>';
-      oModel.setProperty("/calGridHtml", h);
+      parts.push('</div>');
+      oModel.setProperty("/calGridHtml", parts.join(""));
     },
 
     _barColor: function (oE, bFuture) {
@@ -353,26 +359,17 @@ sap.ui.define([
       return "0";
     },
 
-    // ── Week summary ───────────────────────────────────────────────────────
+    // ── Statistics ─────────────────────────────────────────────────────────
 
-    _updateWeekSummary: function (sRefIso) {
-      var oModel   = this.getView().getModel();
-      var oRefDate = sRefIso ? this._parseIso(sRefIso) : new Date();
-      var iWk      = this._isoWeek(oRefDate);
-
+    _calcPeriodStats: function (aDates) {
       var iMins = 0, iTargetMins = 0;
-      for (var delta = -6; delta <= 6; delta++) {
-        var oD = new Date(oRefDate.getFullYear(), oRefDate.getMonth(), oRefDate.getDate() + delta);
-        if (this._isoWeek(oD) !== iWk) continue;
-        var iDow = oD.getDay();
-        if (iDow === 0 || iDow === 6) continue;
-        var sIso = this._isoDate(oD);
-        var oE   = this._getEffectiveEntry(sIso);
-        iTargetMins += 480;
-        if (!oE) continue;
+      aDates.forEach(function (sIso) {
+        var oE = this._getEffectiveEntry(sIso);
+        iTargetMins += TARGET_MINS;
+        if (!oE) return;
         if (oE.type === "work" && oE.duration) iMins += this._toMins(oE.duration);
-        else if (oE.type === "vacation" || oE.type === "holiday") iMins += 480;
-      }
+        else if (oE.type === "vacation" || oE.type === "holiday") iMins += TARGET_MINS;
+      }, this);
 
       var iUnrec = Math.max(0, iTargetMins - iMins);
       var iOver  = Math.max(0, iMins - iTargetMins);
@@ -385,45 +382,59 @@ sap.ui.define([
                     : fRatio >= 0.95 ? "zeStatsTileValueOrange"
                     : "zeStatsTileValueRed";
 
+      return {
+        actual:     this._fmtMins(iMins) + " h",
+        target:     this._fmtMins(iTargetMins) + " h",
+        unrecorded: sUnrec,
+        balance:    String(iUnrec - iOver),
+        actClass:   sActClass
+      };
+    },
+
+    _weekdayDates: function (oRefDate, iWk) {
+      var aDates = [];
+      for (var delta = -6; delta <= 6; delta++) {
+        var oD = new Date(oRefDate.getFullYear(), oRefDate.getMonth(), oRefDate.getDate() + delta);
+        if (this._isoWeek(oD) !== iWk) continue;
+        var iDow = oD.getDay();
+        if (iDow === 0 || iDow === 6) continue;
+        aDates.push(this._isoDate(oD));
+      }
+      return aDates;
+    },
+
+    _updateWeekSummary: function (sRefIso) {
+      var oModel   = this.getView().getModel();
+      var oRefDate = sRefIso ? this._parseIso(sRefIso) : new Date();
+      var iWk      = this._isoWeek(oRefDate);
+      var oStats   = this._calcPeriodStats(this._weekdayDates(oRefDate, iWk));
+
       oModel.setProperty("/currentWeek",       String(iWk));
-      oModel.setProperty("/weekActual",         this._fmtMins(iMins) + " h");
-      oModel.setProperty("/weekTarget",         this._fmtMins(iTargetMins) + " h");
-      oModel.setProperty("/weekUnrecorded",     sUnrec);
-      oModel.setProperty("/weekUnrecordedNum",  String(iUnrec - iOver));
-      oModel.setProperty("/weekActualClass",    sActClass);
+      oModel.setProperty("/weekActual",         oStats.actual);
+      oModel.setProperty("/weekTarget",         oStats.target);
+      oModel.setProperty("/weekUnrecorded",     oStats.unrecorded);
+      oModel.setProperty("/weekUnrecordedNum",  oStats.balance);
+      oModel.setProperty("/weekActualClass",    oStats.actClass);
 
       this._updateMonthSummary();
     },
 
     _updateMonthSummary: function () {
       var oModel  = this.getView().getModel();
-      var iYear   = this._year;
-      var iMonth  = this._month;
-      var iDays   = new Date(iYear, iMonth + 1, 0).getDate();
-
-      var iMins = 0, iTargetMins = 0;
+      var iDays   = new Date(this._year, this._month + 1, 0).getDate();
+      var aDates  = [];
       for (var i = 1; i <= iDays; i++) {
-        var oD   = new Date(iYear, iMonth, i);
+        var oD   = new Date(this._year, this._month, i);
         var iDow = oD.getDay();
         if (iDow === 0 || iDow === 6) continue;
-        var sIso = this._isoDate(oD);
-        var oE   = this._getEffectiveEntry(sIso);
-        iTargetMins += 480;
-        if (!oE) continue;
-        if (oE.type === "work" && oE.duration) iMins += this._toMins(oE.duration);
-        else if (oE.type === "vacation" || oE.type === "holiday") iMins += 480;
+        aDates.push(this._isoDate(oD));
       }
 
-      var iUnrec = Math.max(0, iTargetMins - iMins);
-      var iOver  = Math.max(0, iMins - iTargetMins);
-      var sUnrec = iUnrec > 0
-        ? this._fmtMins(iUnrec) + " h"
-        : (iOver > 0 ? "+" + this._fmtMins(iOver) + " h" : "0 h");
-
-      oModel.setProperty("/monthActual",         this._fmtMins(iMins) + " h");
-      oModel.setProperty("/monthTarget",         this._fmtMins(iTargetMins) + " h");
-      oModel.setProperty("/monthUnrecorded",     sUnrec);
-      oModel.setProperty("/monthUnrecordedNum",  String(iUnrec - iOver));
+      var oStats = this._calcPeriodStats(aDates);
+      oModel.setProperty("/monthActual",        oStats.actual);
+      oModel.setProperty("/monthTarget",        oStats.target);
+      oModel.setProperty("/monthUnrecorded",    oStats.unrecorded);
+      oModel.setProperty("/monthUnrecordedNum", oStats.balance);
     },
 
     // ── Panel time calculation ─────────────────────────────────────────────
@@ -459,7 +470,7 @@ sap.ui.define([
       }
     },
 
-    // ── Theme switcher ────────────────────────────────────────────────────
+    // ── Theme switcher ─────────────────────────────────────────────────────
 
     onThemePress: function (oEvent) {
       if (!this._oThemeSheet) {
@@ -484,6 +495,10 @@ sap.ui.define([
     },
 
     // ── Helpers ────────────────────────────────────────────────────────────
+
+    _typeName: function (oEntry) {
+      return oEntry ? (TYPE_LABEL[oEntry.type] || "") : "";
+    },
 
     _fmtHours: function (sTime) {
       if (!this._isValid(sTime)) return "0";

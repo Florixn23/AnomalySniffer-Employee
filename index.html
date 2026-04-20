@@ -226,11 +226,20 @@
       color: var(--sapContent_LabelColor, #8c8c8c) !important;
       margin-top: 0.15rem;
     }
-    .zeStatsTileValueBlue .sapMText   { font-size: 1.6rem !important; font-weight: 700 !important; color: #0064d9 !important; line-height: 1.2 !important; }
-    .zeStatsTileValueGreen .sapMText  { font-size: 1.6rem !important; font-weight: 700 !important; color: #107e3e !important; line-height: 1.2 !important; }
-    .zeStatsTileValueOrange .sapMText { font-size: 1.6rem !important; font-weight: 700 !important; color: #e76500 !important; line-height: 1.2 !important; }
-    .zeStatsTileValueRed .sapMText    { font-size: 1.6rem !important; font-weight: 700 !important; color: #bb0000 !important; line-height: 1.2 !important; }
-    .zeStatsTileValueNeutral .sapMText{ font-size: 1.6rem !important; font-weight: 700 !important; color: var(--sapTextColor, #32363a) !important; line-height: 1.2 !important; }
+    .zeStatsTileValueBlue .sapMText,
+    .zeStatsTileValueGreen .sapMText,
+    .zeStatsTileValueOrange .sapMText,
+    .zeStatsTileValueRed .sapMText,
+    .zeStatsTileValueNeutral .sapMText {
+      font-size: 1.6rem !important;
+      font-weight: 700 !important;
+      line-height: 1.2 !important;
+    }
+    .zeStatsTileValueBlue .sapMText    { color: #0064d9 !important; }
+    .zeStatsTileValueGreen .sapMText   { color: #107e3e !important; }
+    .zeStatsTileValueOrange .sapMText  { color: #e76500 !important; }
+    .zeStatsTileValueRed .sapMText     { color: #bb0000 !important; }
+    .zeStatsTileValueNeutral .sapMText { color: var(--sapTextColor, #32363a) !important; }
 
 
     .zeEntryPanel {
