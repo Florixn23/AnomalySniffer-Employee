@@ -36,7 +36,7 @@
             <ToolbarSpacer />
             <Button icon="sap-icon://calendar"          type="Transparent" tooltip="Kalenderansicht" />
             <Button icon="sap-icon://text-align-center" type="Transparent" tooltip="Wochenansicht" />
-            <Button icon="sap-icon://palette"          type="Transparent" tooltip="Design" press=".onThemePress" />
+            <Button icon="sap-icon://palette"           type="Transparent" tooltip="Design" press=".onThemePress" />
             <Button icon="sap-icon://hint"              type="Transparent" tooltip="Hilfe" />
           </OverflowToolbar>
         </headerToolbar>
@@ -96,11 +96,11 @@
                   <Text text="{/selectedDayLabel}"      class="zeBarLabel" />
                 </HBox>
                 <HBox alignItems="Center">
-                  <Text text="Submitted: "          class="zeBarLabel" />
-                  <Text text="{/selectedDaySubmitted}" class="zeBarValue" />
+                  <Text text="Submitted: "              class="zeBarLabel" />
+                  <Text text="{/selectedDaySubmitted}"  class="zeBarValue" />
                 </HBox>
                 <HBox alignItems="Center">
-                  <Text text="Unrecorded: "              class="zeBarLabel" />
+                  <Text text="Unrecorded: "             class="zeBarLabel" />
                   <Text text="{/selectedDayUnrecorded}" class="zeBarValueRed" />
                 </HBox>
               </HBox>
@@ -150,6 +150,7 @@
                 <Input value="{/selectedDuration}" placeholder="hh:mm"
                        change=".onPanelDurationChange" width="100%" />
               </VBox>
+
               <HBox justifyContent="End" class="zePanelActions">
                 <Button text="Löschen"   type="Transparent" press=".onClearDay" />
                 <Button text="Speichern" type="Emphasized"  press=".onSaveDay"
