@@ -70,7 +70,6 @@ sap.ui.define([
           that._loadUser(that._aAllUsersData[0]);
           that._refreshCalendar();
           that.onDaySelect(that._sTodayIso);
-          WebhookReplay.replayAllUsers({ webhookUrl: sWebhookUrl, usersData: that._aAllUsersData });
         },
         error: function () {
           that._refreshCalendar();
