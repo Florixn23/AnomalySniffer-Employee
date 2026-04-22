@@ -14,25 +14,25 @@
         {
           "date": "2026-01-02",
           "day_type": "work",
-          "start_hour": 7.78,
+          "start_hour": 4.78,
           "end_hour": 16.28,
-          "actual_hours": 8.5,
+          "actual_hours": 11.5,
           "target_hours": 8.0
         },
         {
           "date": "2026-01-05",
           "day_type": "work",
           "start_hour": 7.73,
-          "end_hour": 16.73,
-          "actual_hours": 9.0,
+          "end_hour": 19.73,
+          "actual_hours": 12.0,
           "target_hours": 8.0
         },
         {
           "date": "2026-01-06",
           "day_type": "work",
           "start_hour": 7.8,
-          "end_hour": 16.67,
-          "actual_hours": 8.87,
+          "end_hour": 18.67,
+          "actual_hours": 10.87,
           "target_hours": 8.0
         },
         {
