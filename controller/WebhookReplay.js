@@ -145,7 +145,7 @@ sap.ui.define([
       var that     = this;
       var iWeekday = this._parseIso(sIsoDate).getDay();
       var iDelay   = this._iNextDelay;
-      this._iNextDelay += 100;
+      this._iNextDelay += 20;
       setTimeout(function () {
         jQuery.ajax({
           url:         oConfig.webhookUrl,
