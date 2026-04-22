@@ -12,6 +12,7 @@ sap.ui.define([
     //   usersData   {Array}  raw user objects from testdata.json
     replayAllUsers: function (oConfig) {
       var that = this;
+      this._iNextDelay = 0;
       (oConfig.usersData || []).forEach(function (oUser) {
         var oProcessed = that._processUserData(oUser);
         that.replayAll({
@@ -141,23 +142,28 @@ sap.ui.define([
     _sendWebhook: function (oConfig, sIsoDate, iCumulativeMinutes) {
       var oEntry   = oConfig.entries[sIsoDate];
       if (!oEntry) return;
+      var that     = this;
       var iWeekday = this._parseIso(sIsoDate).getDay();
-      jQuery.ajax({
-        url:         oConfig.webhookUrl,
-        method:      "POST",
-        contentType: "application/json",
-        data: JSON.stringify({
-          user:         oConfig.userId || "",
-          date:         sIsoDate,
-          weekday:      iWeekday === 0 ? 6 : iWeekday - 1,
-          start_hour:   (oEntry.type === "work" && oEntry.start) ? this._timeToDecimal(oEntry.start) : null,
-          end_hour:     (oEntry.type === "work" && oEntry.end)   ? this._timeToDecimal(oEntry.end)   : null,
-          actual_hours: this._getActualMinutes(oConfig, sIsoDate) / 60,
-          target_hours: this._getTargetMinutes(oConfig, sIsoDate) / 60,
-          weekly_hours: Math.round(iCumulativeMinutes / 60 * 100) / 100
-        }),
-        error: function () { MessageToast.show("Webhook-Fehler für " + sIsoDate); }
-      });
+      var iDelay   = this._iNextDelay;
+      this._iNextDelay += 100;
+      setTimeout(function () {
+        jQuery.ajax({
+          url:         oConfig.webhookUrl,
+          method:      "POST",
+          contentType: "application/json",
+          data: JSON.stringify({
+            user:         oConfig.userId || "",
+            date:         sIsoDate,
+            weekday:      iWeekday === 0 ? 6 : iWeekday - 1,
+            start_hour:   (oEntry.type === "work" && oEntry.start) ? that._timeToDecimal(oEntry.start) : null,
+            end_hour:     (oEntry.type === "work" && oEntry.end)   ? that._timeToDecimal(oEntry.end)   : null,
+            actual_hours: that._getActualMinutes(oConfig, sIsoDate) / 60,
+            target_hours: that._getTargetMinutes(oConfig, sIsoDate) / 60,
+            weekly_hours: Math.round(iCumulativeMinutes / 60 * 100) / 100
+          }),
+          error: function () { MessageToast.show("Webhook-Fehler für " + sIsoDate); }
+        });
+      }, iDelay);
     },
 
     // ── Helpers (self-contained copies, no controller dependency) ────────────
