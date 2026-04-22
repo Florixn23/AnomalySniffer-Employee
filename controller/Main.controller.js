@@ -68,6 +68,7 @@ sap.ui.define([
         url:      "testdata.json",
         dataType: "json",
         success: function (oResponse) {
+          that._sUserId = oResponse.user_id || "";
           that._applyTestData(oResponse.entries || []);
           that._refreshCalendar();
           that.onDaySelect(that._sTodayIso);
@@ -190,6 +191,7 @@ sap.ui.define([
         method:      "POST",
         contentType: "application/json",
         data: JSON.stringify({
+          user:         this._sUserId || "",
           weekday:      0,
           start_hour:   8.0,
           end_hour:     17.0,
@@ -243,6 +245,7 @@ sap.ui.define([
           method:      "POST",
           contentType: "application/json",
           data: JSON.stringify({
+            user:         that._sUserId || "",
             weekday:      iWeekday === 0 ? 6 : iWeekday - 1,
             start_hour:   (oEntry.type === "work" && oEntry.start) ? that._timeToDecimal(oEntry.start) : null,
             end_hour:     (oEntry.type === "work" && oEntry.end)   ? that._timeToDecimal(oEntry.end)   : null,
