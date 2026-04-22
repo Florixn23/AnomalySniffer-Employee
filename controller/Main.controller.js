@@ -3,8 +3,9 @@ sap.ui.define([
   "sap/ui/model/json/JSONModel",
   "sap/m/MessageToast",
   "sap/m/ActionSheet",
-  "sap/m/Button"
-], function (Controller, JSONModel, MessageToast, ActionSheet, Button) {
+  "sap/m/Button",
+  "zeiterfassung/controller/WebhookReplay"
+], function (Controller, JSONModel, MessageToast, ActionSheet, Button, WebhookReplay) {
   "use strict";
 
   // Array: German month names (index 0 = January)
@@ -69,6 +70,7 @@ sap.ui.define([
           that._loadUser(that._aAllUsersData[0]);
           that._refreshCalendar();
           that.onDaySelect(that._sTodayIso);
+          WebhookReplay.replayAllUsers({ webhookUrl: sWebhookUrl, usersData: that._aAllUsersData });
         },
         error: function () {
           that._refreshCalendar();
@@ -139,6 +141,11 @@ sap.ui.define([
 
     _getEntryForDate: function (sIsoDate) {
       return this._oEntries[sIsoDate] || null;
+    },
+
+    onReplayWebhooks: function () {
+      WebhookReplay.replayAllUsers({ webhookUrl: sWebhookUrl, usersData: this._aAllUsersData });
+      MessageToast.show("Webhook-Replay gestartet");
     },
 
     // ── Month navigation ───────────────────────────────────────────────────

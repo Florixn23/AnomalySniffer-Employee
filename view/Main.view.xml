@@ -34,6 +34,7 @@
             <Button id="userBtn" type="Ghost" press=".onUserPress" />
             <Button icon="sap-icon://calendar"          type="Transparent" tooltip="Kalenderansicht" />
             <Button icon="sap-icon://text-align-center" type="Transparent" tooltip="Wochenansicht" />
+            <Button icon="sap-icon://synchronize"       type="Transparent" tooltip="Webhooks wiedergeben" press=".onReplayWebhooks" />
             <Button icon="sap-icon://palette"           type="Transparent" tooltip="Design" press=".onThemePress" />
             <Button icon="sap-icon://hint"              type="Transparent" tooltip="Hilfe" />
           </OverflowToolbar>
