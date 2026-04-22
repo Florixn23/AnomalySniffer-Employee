@@ -18,9 +18,6 @@
       showNotifications="true"
       notificationsNumber="3"
       showProductSwitcher="false">
-      <f:profile>
-        <Avatar initials="FV" displaySize="XS" backgroundColor="Accent5" />
-      </f:profile>
     </f:ShellBar>
 
     <!-- ── Page content (scrollable) ────────────────────────── -->
@@ -32,8 +29,9 @@
         <headerToolbar>
           <OverflowToolbar style="Clear">
             <core:Icon src="sap-icon://person-placeholder" class="zeCalPanelIcon" />
-            <Title text="CATSXT Activity Recording" level="H5" class="zeCalPanelTitle" />
+            <Title text="Anomaly Sniffer" level="H5" class="zeCalPanelTitle" />
             <ToolbarSpacer />
+            <Button id="userBtn" type="Ghost" press=".onUserPress" />
             <Button icon="sap-icon://calendar"          type="Transparent" tooltip="Kalenderansicht" />
             <Button icon="sap-icon://text-align-center" type="Transparent" tooltip="Wochenansicht" />
             <Button icon="sap-icon://palette"           type="Transparent" tooltip="Design" press=".onThemePress" />
@@ -155,11 +153,6 @@
                 <Button text="Löschen"   type="Transparent" press=".onClearDay" />
                 <Button text="Speichern" type="Emphasized"  press=".onSaveDay"
                         class="sapUiTinyMarginBegin" />
-              </HBox>
-
-              <HBox justifyContent="End" class="zePanelActions sapUiTinyMarginTop">
-                <Button text="Test-Webhook senden" type="Ghost" icon="sap-icon://simulate"
-                        press=".onSendTestWebhook" />
               </HBox>
 
             </VBox>

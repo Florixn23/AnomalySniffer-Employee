@@ -26,9 +26,6 @@ sap.ui.define([
   // String: Target URL for outgoing webhooks (replace placeholder before deployment)
   var sWebhookUrl = "WEBHOOK_URL_PLACEHOLDER";
 
-  // Integer: Daily target working time in minutes (8 hours)
-  var iTargetMinutesPerDay = 480;
-
   // Object: Display labels for special day types
   var oDayTypeLabels = { vacation: "Urlaub", holiday: "Feiertag" };
 
@@ -68,8 +65,8 @@ sap.ui.define([
         url:      "testdata.json",
         dataType: "json",
         success: function (oResponse) {
-          that._sUserId = oResponse.user_id || "";
-          that._applyTestData(oResponse.entries || []);
+          that._aAllUsersData = oResponse.users || [oResponse];
+          that._loadUser(that._aAllUsersData[0]);
           that._refreshCalendar();
           that.onDaySelect(that._sTodayIso);
         },
@@ -78,6 +75,48 @@ sap.ui.define([
           that.onDaySelect(that._sTodayIso);
         }
       });
+    },
+
+    _loadUser: function (oUserData) {
+      var aEntries = oUserData.entries || [];
+      this._sUserId = oUserData.user_id || "";
+
+      this._iDefaultTargetMinutes = 480;
+      for (var i = 0; i < aEntries.length; i++) {
+        if (aEntries[i].day_type === "work" && aEntries[i].target_hours != null) {
+          this._iDefaultTargetMinutes = Math.round(aEntries[i].target_hours * 60);
+          break;
+        }
+      }
+
+      this._applyTestData(aEntries);
+
+      var oBtn = this.byId("userBtn");
+      if (oBtn) oBtn.setText(oUserData.user_id || "");
+    },
+
+    onUserPress: function (oEvent) {
+      if (!this._aAllUsersData) return;
+      var that = this;
+      if (this._oUserSheet) {
+        this._oUserSheet.destroy();
+        this._oUserSheet = null;
+      }
+      this._oUserSheet = new ActionSheet({
+        title: "Select User",
+        buttons: this._aAllUsersData.map(function (oUser) {
+          return new Button({
+            text:  oUser.user_id,
+            press: function () {
+              that._loadUser(oUser);
+              that._refreshCalendar();
+              that.onDaySelect(that._sTodayIso);
+            }
+          });
+        })
+      });
+      this.getView().addDependent(this._oUserSheet);
+      this._oUserSheet.openBy(oEvent.getSource());
     },
 
     _applyTestData: function (aRawEntries) {
@@ -127,6 +166,7 @@ sap.ui.define([
       var oEntry     = this._getEntryForDate(sIsoDate);
       var bReadOnly  = !!oEntry && (oEntry.type === "vacation" || oEntry.type === "holiday");
       var sDuration  = (oEntry && oEntry.type === "work") ? (oEntry.duration || "") : "";
+      var sTargetStr = this._formatMinutes(this._getTargetMinutesForDate(sIsoDate)) + " h";
 
       // String: human-readable day label, e.g. "Mo, 07. April"
       var sDayLabel  = aWeekdayShort[iWeekday] + ", " +
@@ -143,7 +183,7 @@ sap.ui.define([
         selectedDuration:      sDuration,
         selectedBreak:         oEntry ? (oEntry.break    || "") : "",
         selectedDaySubmitted:  sDuration ? this._formatHours(sDuration) + " h" : "0 h",
-        selectedDayUnrecorded: sDuration ? "0 h" : "8 h"
+        selectedDayUnrecorded: sDuration ? "0 h" : sTargetStr
       }));
 
       this._refreshWeekSummary(sIsoDate);
@@ -176,32 +216,14 @@ sap.ui.define([
       };
 
       var sDuration = this._oEntries[sIsoDate].duration;
+      var sTargetStr = this._formatMinutes(this._getTargetMinutesForDate(sIsoDate)) + " h";
       oModel.setProperty("/selectedDaySubmitted",  sDuration ? this._formatHours(sDuration) + " h" : "0 h");
-      oModel.setProperty("/selectedDayUnrecorded", sDuration ? "0 h" : "8 h");
+      oModel.setProperty("/selectedDayUnrecorded", sDuration ? "0 h" : sTargetStr);
       this._refreshWeekSummary(sIsoDate);
       this._buildCalendarGrid();
       MessageToast.show("Gespeichert");
 
       this._sendPendingWebhooks(sIsoDate);
-    },
-
-    onSendTestWebhook: function () {
-      jQuery.ajax({
-        url:         sWebhookUrl,
-        method:      "POST",
-        contentType: "application/json",
-        data: JSON.stringify({
-          user:         this._sUserId || "",
-          weekday:      0,
-          start_hour:   8.0,
-          end_hour:     17.0,
-          actual_hours: 8.5,
-          target_hours: 8.0,
-          weekly_hours: 8.5
-        }),
-        success: function () { MessageToast.show("Test-Webhook erfolgreich gesendet!"); },
-        error:   function () { MessageToast.show("Test-Webhook fehlgeschlagen!"); }
-      });
     },
 
     _sendPendingWebhooks: function (sSavedIso) {
@@ -223,7 +245,7 @@ sap.ui.define([
           var oRaw = that._oTestDataMap && that._oTestDataMap[sIsoDate];
           return oRaw && oRaw.actual_hours != null
             ? Math.round(oRaw.actual_hours * 60)
-            : iTargetMinutesPerDay;
+            : that._getTargetMinutesForDate(sIsoDate);
         }
         return oEntry.duration ? that._timeToMinutes(oEntry.duration) : 0;
       };
@@ -233,7 +255,7 @@ sap.ui.define([
         var oRaw = that._oTestDataMap && that._oTestDataMap[sIsoDate];
         return oRaw && oRaw.target_hours != null
           ? Math.round(oRaw.target_hours * 60)
-          : iTargetMinutesPerDay;
+          : that._getTargetMinutesForDate(sIsoDate);
       };
 
       // Sends a single webhook POST for one day
@@ -308,7 +330,8 @@ sap.ui.define([
       delete this._oEntries[sIsoDate];
       oModel.setData(Object.assign(oModel.getData(), {
         selectedStart: "", selectedEnd: "", selectedDuration: "", selectedBreak: "",
-        selectedDaySubmitted: "0 h", selectedDayUnrecorded: "8 h"
+        selectedDaySubmitted:  "0 h",
+        selectedDayUnrecorded: this._formatMinutes(this._getTargetMinutesForDate(sIsoDate)) + " h"
       }));
       this._refreshWeekSummary(sIsoDate);
       this._buildCalendarGrid();
@@ -385,7 +408,7 @@ sap.ui.define([
             var sBarColor = this._getDayBarColor(oEntry, bIsFuture);
             if (sBarColor) {
               aHtmlParts.push('<div class="zeDayBar" style="background:' + sBarColor + '"></div>');
-              aHtmlParts.push('<div class="zeDayVal">' + this._getDayBarValue(oEntry) + '</div>');
+              aHtmlParts.push('<div class="zeDayVal">' + this._getDayBarValue(oEntry, sIsoDate) + '</div>');
             }
           }
           aHtmlParts.push('</div>');
@@ -415,26 +438,34 @@ sap.ui.define([
       return sColorMissing;
     },
 
-    _getDayBarValue: function (oEntry) {
-      if (!oEntry)                                     return "0";
-      if (oEntry.type === "vacation")                  return "8";
-      if (oEntry.type === "holiday")                   return "8";
-      if (oEntry.type === "work" && oEntry.duration)   return this._formatHours(oEntry.duration);
+    _getDayBarValue: function (oEntry, sIsoDate) {
+      if (!oEntry) return "0";
+      if (oEntry.type === "vacation" || oEntry.type === "holiday")
+        return this._formatMinutes(this._getTargetMinutesForDate(sIsoDate));
+      if (oEntry.type === "work" && oEntry.duration) return this._formatHours(oEntry.duration);
       return "0";
     },
 
     // ── Statistics ─────────────────────────────────────────────────────────
+
+    _getTargetMinutesForDate: function (sIsoDate) {
+      var oRaw = this._oTestDataMap && this._oTestDataMap[sIsoDate];
+      return oRaw && oRaw.target_hours != null
+        ? Math.round(oRaw.target_hours * 60)
+        : (this._iDefaultTargetMinutes || 480);
+    },
 
     _calcPeriodStats: function (aIsoDates) {
       var iActualMinutes = 0;
       var iTargetMinutes = 0;
 
       aIsoDates.forEach(function (sIsoDate) {
-        var oEntry = this._getEntryForDate(sIsoDate);
-        iTargetMinutes += iTargetMinutesPerDay;
+        var oEntry          = this._getEntryForDate(sIsoDate);
+        var iDayTargetMins  = this._getTargetMinutesForDate(sIsoDate);
+        iTargetMinutes += iDayTargetMins;
         if (!oEntry) return;
         if (oEntry.type === "work" && oEntry.duration) iActualMinutes += this._timeToMinutes(oEntry.duration);
-        else if (oEntry.type === "vacation" || oEntry.type === "holiday") iActualMinutes += iTargetMinutesPerDay;
+        else if (oEntry.type === "vacation" || oEntry.type === "holiday") iActualMinutes += iDayTargetMins;
       }, this);
 
       var iMissingMinutes   = Math.max(0, iTargetMinutes - iActualMinutes);
