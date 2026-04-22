@@ -4,6 +4,14 @@
       "user_id": "U2345678",
       "entries": [
         {
+          "date": "2026-01-01",
+          "day_type": "holiday",
+          "start_hour": null,
+          "end_hour": null,
+          "actual_hours": 8.0,
+          "target_hours": 8.0
+        },
+        {
           "date": "2026-01-02",
           "day_type": "work",
           "start_hour": 7.78,
@@ -524,6 +532,22 @@
           "target_hours": 8.0
         },
         {
+          "date": "2026-04-03",
+          "day_type": "holiday",
+          "start_hour": null,
+          "end_hour": null,
+          "actual_hours": 8.0,
+          "target_hours": 8.0
+        },
+        {
+          "date": "2026-04-06",
+          "day_type": "holiday",
+          "start_hour": null,
+          "end_hour": null,
+          "actual_hours": 8.0,
+          "target_hours": 8.0
+        },
+        {
           "date": "2026-04-07",
           "day_type": "work",
           "start_hour": 7.75,
@@ -605,10 +629,10 @@
         },
         {
           "date": "2026-04-21",
-          "day_type": "holiday",
-          "start_hour": null,
-          "end_hour": null,
-          "actual_hours": 8.0,
+          "day_type": "work",
+          "start_hour": 7.77,
+          "end_hour": 17.28,
+          "actual_hours": 9.51,
           "target_hours": 8.0
         }
       ]
@@ -616,6 +640,14 @@
     {
       "user_id": "U1234567",
       "entries": [
+        {
+          "date": "2026-01-01",
+          "day_type": "holiday",
+          "start_hour": null,
+          "end_hour": null,
+          "actual_hours": 8.0,
+          "target_hours": 8.0
+        },
         {
           "date": "2026-01-02",
           "day_type": "work",
@@ -1137,6 +1169,22 @@
           "target_hours": 6.0
         },
         {
+          "date": "2026-04-03",
+          "day_type": "holiday",
+          "start_hour": null,
+          "end_hour": null,
+          "actual_hours": 8.0,
+          "target_hours": 8.0
+        },
+        {
+          "date": "2026-04-06",
+          "day_type": "holiday",
+          "start_hour": null,
+          "end_hour": null,
+          "actual_hours": 8.0,
+          "target_hours": 8.0
+        },
+        {
           "date": "2026-04-07",
           "day_type": "work",
           "start_hour": 8.0,
@@ -1218,17 +1266,25 @@
         },
         {
           "date": "2026-04-21",
-          "day_type": "holiday",
-          "start_hour": null,
-          "end_hour": null,
-          "actual_hours": 6.0,
-          "target_hours": 6.0
+          "day_type": "work",
+          "start_hour": 7.85,
+          "end_hour": 15.35,
+          "actual_hours": 7.5,
+          "target_hours": 8.0
         }
       ]
     },
     {
       "user_id": "U9876543",
       "entries": [
+        {
+          "date": "2026-01-01",
+          "day_type": "holiday",
+          "start_hour": null,
+          "end_hour": null,
+          "actual_hours": 8.0,
+          "target_hours": 8.0
+        },
         {
           "date": "2026-01-02",
           "day_type": "work",
@@ -1750,6 +1806,22 @@
           "target_hours": 4.0
         },
         {
+          "date": "2026-04-03",
+          "day_type": "holiday",
+          "start_hour": null,
+          "end_hour": null,
+          "actual_hours": 8.0,
+          "target_hours": 8.0
+        },
+        {
+          "date": "2026-04-06",
+          "day_type": "holiday",
+          "start_hour": null,
+          "end_hour": null,
+          "actual_hours": 8.0,
+          "target_hours": 8.0
+        },
+        {
           "date": "2026-04-07",
           "day_type": "work",
           "start_hour": 7.97,
@@ -1831,17 +1903,25 @@
         },
         {
           "date": "2026-04-21",
-          "day_type": "holiday",
-          "start_hour": null,
-          "end_hour": null,
-          "actual_hours": 4.0,
-          "target_hours": 4.0
+          "day_type": "work",
+          "start_hour": 8.1,
+          "end_hour": 15.6,
+          "actual_hours": 7.5,
+          "target_hours": 8.0
         }
       ]
     },
     {
       "user_id": "U3456789",
       "entries": [
+        {
+          "date": "2026-01-01",
+          "day_type": "holiday",
+          "start_hour": null,
+          "end_hour": null,
+          "actual_hours": 8.0,
+          "target_hours": 8.0
+        },
         {
           "date": "2026-01-02",
           "day_type": "work",
@@ -2363,6 +2443,22 @@
           "target_hours": 8.0
         },
         {
+          "date": "2026-04-03",
+          "day_type": "holiday",
+          "start_hour": null,
+          "end_hour": null,
+          "actual_hours": 8.0,
+          "target_hours": 8.0
+        },
+        {
+          "date": "2026-04-06",
+          "day_type": "holiday",
+          "start_hour": null,
+          "end_hour": null,
+          "actual_hours": 8.0,
+          "target_hours": 8.0
+        },
+        {
           "date": "2026-04-07",
           "day_type": "work",
           "start_hour": 7.21,
@@ -2444,10 +2540,10 @@
         },
         {
           "date": "2026-04-21",
-          "day_type": "holiday",
-          "start_hour": null,
-          "end_hour": null,
-          "actual_hours": 8.0,
+          "day_type": "work",
+          "start_hour": 7.46,
+          "end_hour": 15.99,
+          "actual_hours": 8.53,
           "target_hours": 8.0
         }
       ]
@@ -2455,6 +2551,14 @@
     {
       "user_id": "U4567890",
       "entries": [
+        {
+          "date": "2026-01-01",
+          "day_type": "holiday",
+          "start_hour": null,
+          "end_hour": null,
+          "actual_hours": 8.0,
+          "target_hours": 8.0
+        },
         {
           "date": "2026-01-02",
           "day_type": "work",
@@ -2976,6 +3080,22 @@
           "target_hours": 7.5
         },
         {
+          "date": "2026-04-03",
+          "day_type": "holiday",
+          "start_hour": null,
+          "end_hour": null,
+          "actual_hours": 8.0,
+          "target_hours": 8.0
+        },
+        {
+          "date": "2026-04-06",
+          "day_type": "holiday",
+          "start_hour": null,
+          "end_hour": null,
+          "actual_hours": 8.0,
+          "target_hours": 8.0
+        },
+        {
           "date": "2026-04-07",
           "day_type": "work",
           "start_hour": 8.97,
@@ -3057,17 +3177,25 @@
         },
         {
           "date": "2026-04-21",
-          "day_type": "holiday",
-          "start_hour": null,
-          "end_hour": null,
+          "day_type": "work",
+          "start_hour": 9.0,
+          "end_hour": 16.5,
           "actual_hours": 7.5,
-          "target_hours": 7.5
+          "target_hours": 8.0
         }
       ]
     },
     {
       "user_id": "U5678901",
       "entries": [
+        {
+          "date": "2026-01-01",
+          "day_type": "holiday",
+          "start_hour": null,
+          "end_hour": null,
+          "actual_hours": 8.0,
+          "target_hours": 8.0
+        },
         {
           "date": "2026-01-02",
           "day_type": "work",
@@ -3589,6 +3717,22 @@
           "target_hours": 6.0
         },
         {
+          "date": "2026-04-03",
+          "day_type": "holiday",
+          "start_hour": null,
+          "end_hour": null,
+          "actual_hours": 8.0,
+          "target_hours": 8.0
+        },
+        {
+          "date": "2026-04-06",
+          "day_type": "holiday",
+          "start_hour": null,
+          "end_hour": null,
+          "actual_hours": 8.0,
+          "target_hours": 8.0
+        },
+        {
           "date": "2026-04-07",
           "day_type": "work",
           "start_hour": 9.46,
@@ -3670,17 +3814,25 @@
         },
         {
           "date": "2026-04-21",
-          "day_type": "holiday",
-          "start_hour": null,
-          "end_hour": null,
-          "actual_hours": 6.0,
-          "target_hours": 6.0
+          "day_type": "work",
+          "start_hour": 9.0,
+          "end_hour": 16.5,
+          "actual_hours": 7.5,
+          "target_hours": 8.0
         }
       ]
     },
     {
       "user_id": "U6789012",
       "entries": [
+        {
+          "date": "2026-01-01",
+          "day_type": "holiday",
+          "start_hour": null,
+          "end_hour": null,
+          "actual_hours": 8.0,
+          "target_hours": 8.0
+        },
         {
           "date": "2026-01-02",
           "day_type": "work",
@@ -4202,6 +4354,22 @@
           "target_hours": 8.0
         },
         {
+          "date": "2026-04-03",
+          "day_type": "holiday",
+          "start_hour": null,
+          "end_hour": null,
+          "actual_hours": 8.0,
+          "target_hours": 8.0
+        },
+        {
+          "date": "2026-04-06",
+          "day_type": "holiday",
+          "start_hour": null,
+          "end_hour": null,
+          "actual_hours": 8.0,
+          "target_hours": 8.0
+        },
+        {
           "date": "2026-04-07",
           "day_type": "work",
           "start_hour": 7.98,
@@ -4283,10 +4451,10 @@
         },
         {
           "date": "2026-04-21",
-          "day_type": "holiday",
-          "start_hour": null,
-          "end_hour": null,
-          "actual_hours": 8.0,
+          "day_type": "work",
+          "start_hour": 7.95,
+          "end_hour": 16.5,
+          "actual_hours": 8.55,
           "target_hours": 8.0
         }
       ]
@@ -4294,6 +4462,14 @@
     {
       "user_id": "U7890123",
       "entries": [
+        {
+          "date": "2026-01-01",
+          "day_type": "holiday",
+          "start_hour": null,
+          "end_hour": null,
+          "actual_hours": 8.0,
+          "target_hours": 8.0
+        },
         {
           "date": "2026-01-02",
           "day_type": "work",
@@ -4815,6 +4991,22 @@
           "target_hours": 7.5
         },
         {
+          "date": "2026-04-03",
+          "day_type": "holiday",
+          "start_hour": null,
+          "end_hour": null,
+          "actual_hours": 8.0,
+          "target_hours": 8.0
+        },
+        {
+          "date": "2026-04-06",
+          "day_type": "holiday",
+          "start_hour": null,
+          "end_hour": null,
+          "actual_hours": 8.0,
+          "target_hours": 8.0
+        },
+        {
           "date": "2026-04-07",
           "day_type": "work",
           "start_hour": 9.42,
@@ -4896,17 +5088,25 @@
         },
         {
           "date": "2026-04-21",
-          "day_type": "holiday",
-          "start_hour": null,
-          "end_hour": null,
+          "day_type": "work",
+          "start_hour": 9.0,
+          "end_hour": 16.5,
           "actual_hours": 7.5,
-          "target_hours": 7.5
+          "target_hours": 8.0
         }
       ]
     },
     {
       "user_id": "U8901234",
       "entries": [
+        {
+          "date": "2026-01-01",
+          "day_type": "holiday",
+          "start_hour": null,
+          "end_hour": null,
+          "actual_hours": 8.0,
+          "target_hours": 8.0
+        },
         {
           "date": "2026-01-02",
           "day_type": "work",
@@ -5428,6 +5628,22 @@
           "target_hours": 8.0
         },
         {
+          "date": "2026-04-03",
+          "day_type": "holiday",
+          "start_hour": null,
+          "end_hour": null,
+          "actual_hours": 8.0,
+          "target_hours": 8.0
+        },
+        {
+          "date": "2026-04-06",
+          "day_type": "holiday",
+          "start_hour": null,
+          "end_hour": null,
+          "actual_hours": 8.0,
+          "target_hours": 8.0
+        },
+        {
           "date": "2026-04-07",
           "day_type": "vacation",
           "start_hour": null,
@@ -5509,10 +5725,10 @@
         },
         {
           "date": "2026-04-21",
-          "day_type": "holiday",
-          "start_hour": null,
-          "end_hour": null,
-          "actual_hours": 8.0,
+          "day_type": "work",
+          "start_hour": 7.76,
+          "end_hour": 16.01,
+          "actual_hours": 8.25,
           "target_hours": 8.0
         }
       ]
