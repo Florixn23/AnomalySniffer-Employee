@@ -4,7 +4,7 @@
       "user_id": "U2345678",
       "entries": [
         {
-          "date": "2025-01-02",
+          "date": "2026-01-02",
           "day_type": "work",
           "start_hour": 7.78,
           "end_hour": 16.28,
@@ -12,15 +12,15 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-01-03",
+          "date": "2026-01-05",
           "day_type": "work",
-          "start_hour": 7.71,
-          "end_hour": 16.32,
-          "actual_hours": 8.61,
+          "start_hour": 7.73,
+          "end_hour": 16.73,
+          "actual_hours": 9.0,
           "target_hours": 8.0
         },
         {
-          "date": "2025-01-06",
+          "date": "2026-01-06",
           "day_type": "work",
           "start_hour": 7.8,
           "end_hour": 16.67,
@@ -28,7 +28,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-01-07",
+          "date": "2026-01-07",
           "day_type": "work",
           "start_hour": 7.83,
           "end_hour": 16.37,
@@ -36,7 +36,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-01-08",
+          "date": "2026-01-08",
           "day_type": "work",
           "start_hour": 7.73,
           "end_hour": 16.24,
@@ -44,7 +44,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-01-09",
+          "date": "2026-01-09",
           "day_type": "work",
           "start_hour": 7.77,
           "end_hour": 18.77,
@@ -52,15 +52,15 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-01-10",
+          "date": "2026-01-12",
           "day_type": "work",
-          "start_hour": 7.69,
-          "end_hour": 16.46,
-          "actual_hours": 8.77,
+          "start_hour": 7.74,
+          "end_hour": 16.31,
+          "actual_hours": 8.57,
           "target_hours": 8.0
         },
         {
-          "date": "2025-01-13",
+          "date": "2026-01-13",
           "day_type": "work",
           "start_hour": 7.66,
           "end_hour": 16.26,
@@ -68,7 +68,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-01-14",
+          "date": "2026-01-14",
           "day_type": "work",
           "start_hour": 7.78,
           "end_hour": 16.58,
@@ -76,7 +76,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-01-15",
+          "date": "2026-01-15",
           "day_type": "work",
           "start_hour": 7.69,
           "end_hour": 16.51,
@@ -84,7 +84,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-01-16",
+          "date": "2026-01-16",
           "day_type": "work",
           "start_hour": 7.81,
           "end_hour": 16.3,
@@ -92,15 +92,15 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-01-17",
+          "date": "2026-01-19",
           "day_type": "work",
-          "start_hour": 7.81,
-          "end_hour": 16.69,
-          "actual_hours": 8.88,
+          "start_hour": 7.55,
+          "end_hour": 16.17,
+          "actual_hours": 8.62,
           "target_hours": 8.0
         },
         {
-          "date": "2025-01-20",
+          "date": "2026-01-20",
           "day_type": "work",
           "start_hour": 7.72,
           "end_hour": 16.3,
@@ -108,7 +108,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-01-21",
+          "date": "2026-01-21",
           "day_type": "work",
           "start_hour": 7.84,
           "end_hour": 16.52,
@@ -116,7 +116,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-01-22",
+          "date": "2026-01-22",
           "day_type": "work",
           "start_hour": 7.67,
           "end_hour": 16.21,
@@ -124,7 +124,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-01-23",
+          "date": "2026-01-23",
           "day_type": "work",
           "start_hour": 7.82,
           "end_hour": 16.65,
@@ -132,15 +132,15 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-01-24",
+          "date": "2026-01-26",
           "day_type": "work",
-          "start_hour": 7.81,
-          "end_hour": 16.71,
-          "actual_hours": 8.9,
+          "start_hour": 8.1,
+          "end_hour": 17.06,
+          "actual_hours": 8.96,
           "target_hours": 8.0
         },
         {
-          "date": "2025-01-27",
+          "date": "2026-01-27",
           "day_type": "work",
           "start_hour": 7.76,
           "end_hour": 16.79,
@@ -148,7 +148,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-01-28",
+          "date": "2026-01-28",
           "day_type": "work",
           "start_hour": 7.73,
           "end_hour": 16.53,
@@ -156,7 +156,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-01-29",
+          "date": "2026-01-29",
           "day_type": "work",
           "start_hour": 7.82,
           "end_hour": 16.66,
@@ -164,7 +164,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-01-30",
+          "date": "2026-01-30",
           "day_type": "work",
           "start_hour": 7.78,
           "end_hour": 14.78,
@@ -172,15 +172,15 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-01-31",
+          "date": "2026-02-02",
           "day_type": "work",
-          "start_hour": 7.82,
-          "end_hour": 16.63,
-          "actual_hours": 8.81,
+          "start_hour": 8.08,
+          "end_hour": 16.94,
+          "actual_hours": 8.86,
           "target_hours": 8.0
         },
         {
-          "date": "2025-02-03",
+          "date": "2026-02-03",
           "day_type": "work",
           "start_hour": 7.79,
           "end_hour": 16.31,
@@ -188,7 +188,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-02-04",
+          "date": "2026-02-04",
           "day_type": "work",
           "start_hour": 7.7,
           "end_hour": 16.35,
@@ -196,7 +196,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-02-05",
+          "date": "2026-02-05",
           "day_type": "work",
           "start_hour": 9.02,
           "end_hour": 17.27,
@@ -204,7 +204,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-02-06",
+          "date": "2026-02-06",
           "day_type": "work",
           "start_hour": 7.67,
           "end_hour": 16.29,
@@ -212,15 +212,15 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-02-07",
+          "date": "2026-02-09",
           "day_type": "work",
-          "start_hour": 7.67,
-          "end_hour": 16.32,
-          "actual_hours": 8.65,
+          "start_hour": 7.91,
+          "end_hour": 16.74,
+          "actual_hours": 8.83,
           "target_hours": 8.0
         },
         {
-          "date": "2025-02-10",
+          "date": "2026-02-10",
           "day_type": "work",
           "start_hour": 7.78,
           "end_hour": 16.47,
@@ -228,7 +228,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-02-11",
+          "date": "2026-02-11",
           "day_type": "work",
           "start_hour": 7.72,
           "end_hour": 16.33,
@@ -236,7 +236,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-02-12",
+          "date": "2026-02-12",
           "day_type": "work",
           "start_hour": 7.7,
           "end_hour": 16.71,
@@ -244,7 +244,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-02-13",
+          "date": "2026-02-13",
           "day_type": "work",
           "start_hour": 7.78,
           "end_hour": 16.61,
@@ -252,15 +252,15 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-02-14",
+          "date": "2026-02-16",
           "day_type": "work",
-          "start_hour": 7.68,
-          "end_hour": 16.58,
-          "actual_hours": 8.9,
+          "start_hour": 7.35,
+          "end_hour": 16.53,
+          "actual_hours": 9.18,
           "target_hours": 8.0
         },
         {
-          "date": "2025-02-17",
+          "date": "2026-02-17",
           "day_type": "vacation",
           "start_hour": null,
           "end_hour": null,
@@ -268,7 +268,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-02-18",
+          "date": "2026-02-18",
           "day_type": "vacation",
           "start_hour": null,
           "end_hour": null,
@@ -276,7 +276,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-02-19",
+          "date": "2026-02-19",
           "day_type": "vacation",
           "start_hour": null,
           "end_hour": null,
@@ -284,7 +284,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-02-20",
+          "date": "2026-02-20",
           "day_type": "vacation",
           "start_hour": null,
           "end_hour": null,
@@ -292,15 +292,15 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-02-21",
-          "day_type": "vacation",
-          "start_hour": null,
-          "end_hour": null,
-          "actual_hours": 8.0,
+          "date": "2026-02-23",
+          "day_type": "work",
+          "start_hour": 7.94,
+          "end_hour": 16.94,
+          "actual_hours": 9.0,
           "target_hours": 8.0
         },
         {
-          "date": "2025-02-24",
+          "date": "2026-02-24",
           "day_type": "work",
           "start_hour": 7.68,
           "end_hour": 16.38,
@@ -308,7 +308,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-02-25",
+          "date": "2026-02-25",
           "day_type": "work",
           "start_hour": 7.85,
           "end_hour": 16.7,
@@ -316,7 +316,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-02-26",
+          "date": "2026-02-26",
           "day_type": "work",
           "start_hour": 7.82,
           "end_hour": 18.32,
@@ -324,7 +324,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-02-27",
+          "date": "2026-02-27",
           "day_type": "work",
           "start_hour": 7.76,
           "end_hour": 16.63,
@@ -332,15 +332,15 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-02-28",
+          "date": "2026-03-02",
           "day_type": "work",
-          "start_hour": 7.82,
-          "end_hour": 16.74,
-          "actual_hours": 8.92,
+          "start_hour": 7.35,
+          "end_hour": 15.17,
+          "actual_hours": 7.82,
           "target_hours": 8.0
         },
         {
-          "date": "2025-03-03",
+          "date": "2026-03-03",
           "day_type": "work",
           "start_hour": 7.7,
           "end_hour": 16.21,
@@ -348,7 +348,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-03-04",
+          "date": "2026-03-04",
           "day_type": "work",
           "start_hour": 7.71,
           "end_hour": 16.35,
@@ -356,7 +356,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-03-05",
+          "date": "2026-03-05",
           "day_type": "work",
           "start_hour": 7.69,
           "end_hour": 16.71,
@@ -364,7 +364,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-03-06",
+          "date": "2026-03-06",
           "day_type": "work",
           "start_hour": 7.83,
           "end_hour": 16.5,
@@ -372,15 +372,15 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-03-07",
+          "date": "2026-03-09",
           "day_type": "work",
-          "start_hour": 7.78,
-          "end_hour": 16.49,
-          "actual_hours": 8.71,
+          "start_hour": 7.56,
+          "end_hour": 16.05,
+          "actual_hours": 8.49,
           "target_hours": 8.0
         },
         {
-          "date": "2025-03-10",
+          "date": "2026-03-10",
           "day_type": "work",
           "start_hour": 7.83,
           "end_hour": 16.58,
@@ -388,7 +388,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-03-11",
+          "date": "2026-03-11",
           "day_type": "work",
           "start_hour": 7.7,
           "end_hour": 16.33,
@@ -396,7 +396,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-03-12",
+          "date": "2026-03-12",
           "day_type": "work",
           "start_hour": 7.76,
           "end_hour": 16.4,
@@ -404,7 +404,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-03-13",
+          "date": "2026-03-13",
           "day_type": "work",
           "start_hour": 7.77,
           "end_hour": 16.76,
@@ -412,15 +412,15 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-03-14",
+          "date": "2026-03-16",
           "day_type": "work",
-          "start_hour": 7.73,
-          "end_hour": 16.34,
-          "actual_hours": 8.61,
+          "start_hour": 7.88,
+          "end_hour": 16.59,
+          "actual_hours": 8.71,
           "target_hours": 8.0
         },
         {
-          "date": "2025-03-17",
+          "date": "2026-03-17",
           "day_type": "work",
           "start_hour": 7.85,
           "end_hour": 16.63,
@@ -428,7 +428,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-03-18",
+          "date": "2026-03-18",
           "day_type": "work",
           "start_hour": 7.67,
           "end_hour": 16.19,
@@ -436,7 +436,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-03-19",
+          "date": "2026-03-19",
           "day_type": "work",
           "start_hour": 9.28,
           "end_hour": 17.53,
@@ -444,7 +444,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-03-20",
+          "date": "2026-03-20",
           "day_type": "work",
           "start_hour": 7.67,
           "end_hour": 16.51,
@@ -452,15 +452,15 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-03-21",
+          "date": "2026-03-23",
           "day_type": "work",
-          "start_hour": 7.81,
-          "end_hour": 16.54,
-          "actual_hours": 8.73,
+          "start_hour": 7.94,
+          "end_hour": 16.34,
+          "actual_hours": 8.4,
           "target_hours": 8.0
         },
         {
-          "date": "2025-03-24",
+          "date": "2026-03-24",
           "day_type": "work",
           "start_hour": 7.66,
           "end_hour": 16.36,
@@ -468,7 +468,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-03-25",
+          "date": "2026-03-25",
           "day_type": "work",
           "start_hour": 7.85,
           "end_hour": 16.64,
@@ -476,7 +476,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-03-26",
+          "date": "2026-03-26",
           "day_type": "work",
           "start_hour": 7.84,
           "end_hour": 16.81,
@@ -484,7 +484,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-03-27",
+          "date": "2026-03-27",
           "day_type": "work",
           "start_hour": 7.65,
           "end_hour": 16.54,
@@ -492,15 +492,15 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-03-28",
+          "date": "2026-03-30",
           "day_type": "work",
-          "start_hour": 7.79,
-          "end_hour": 16.58,
-          "actual_hours": 8.79,
+          "start_hour": 7.88,
+          "end_hour": 16.82,
+          "actual_hours": 8.94,
           "target_hours": 8.0
         },
         {
-          "date": "2025-03-31",
+          "date": "2026-03-31",
           "day_type": "work",
           "start_hour": 7.7,
           "end_hour": 16.55,
@@ -508,7 +508,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-04-01",
+          "date": "2026-04-01",
           "day_type": "work",
           "start_hour": 7.67,
           "end_hour": 16.4,
@@ -516,7 +516,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-04-02",
+          "date": "2026-04-02",
           "day_type": "work",
           "start_hour": 7.74,
           "end_hour": 16.76,
@@ -524,23 +524,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-04-03",
-          "day_type": "work",
-          "start_hour": 7.73,
-          "end_hour": 18.73,
-          "actual_hours": 11.0,
-          "target_hours": 8.0
-        },
-        {
-          "date": "2025-04-04",
-          "day_type": "work",
-          "start_hour": 7.83,
-          "end_hour": 16.47,
-          "actual_hours": 8.64,
-          "target_hours": 8.0
-        },
-        {
-          "date": "2025-04-07",
+          "date": "2026-04-07",
           "day_type": "work",
           "start_hour": 7.75,
           "end_hour": 16.34,
@@ -548,7 +532,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-04-08",
+          "date": "2026-04-08",
           "day_type": "work",
           "start_hour": 7.83,
           "end_hour": 16.81,
@@ -556,7 +540,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-04-09",
+          "date": "2026-04-09",
           "day_type": "work",
           "start_hour": 7.71,
           "end_hour": 16.56,
@@ -564,7 +548,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-04-10",
+          "date": "2026-04-10",
           "day_type": "work",
           "start_hour": 7.77,
           "end_hour": 16.35,
@@ -572,15 +556,15 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-04-11",
+          "date": "2026-04-13",
           "day_type": "work",
-          "start_hour": 7.8,
-          "end_hour": 16.59,
-          "actual_hours": 8.79,
+          "start_hour": 7.62,
+          "end_hour": 17.25,
+          "actual_hours": 9.63,
           "target_hours": 8.0
         },
         {
-          "date": "2025-04-14",
+          "date": "2026-04-14",
           "day_type": "work",
           "start_hour": 7.72,
           "end_hour": 14.97,
@@ -588,7 +572,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-04-15",
+          "date": "2026-04-15",
           "day_type": "work",
           "start_hour": 7.81,
           "end_hour": 16.6,
@@ -596,7 +580,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-04-16",
+          "date": "2026-04-16",
           "day_type": "work",
           "start_hour": 7.65,
           "end_hour": 16.32,
@@ -604,7 +588,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-04-17",
+          "date": "2026-04-17",
           "day_type": "work",
           "start_hour": 7.65,
           "end_hour": 16.66,
@@ -612,15 +596,15 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-04-18",
-          "day_type": "holiday",
-          "start_hour": null,
-          "end_hour": null,
-          "actual_hours": 8.0,
+          "date": "2026-04-20",
+          "day_type": "work",
+          "start_hour": 7.84,
+          "end_hour": 16.25,
+          "actual_hours": 8.41,
           "target_hours": 8.0
         },
         {
-          "date": "2025-04-21",
+          "date": "2026-04-21",
           "day_type": "holiday",
           "start_hour": null,
           "end_hour": null,
@@ -633,7 +617,7 @@
       "user_id": "U1234567",
       "entries": [
         {
-          "date": "2025-01-02",
+          "date": "2026-01-02",
           "day_type": "work",
           "start_hour": 8.1,
           "end_hour": 14.32,
@@ -641,15 +625,15 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-01-03",
+          "date": "2026-01-05",
           "day_type": "work",
-          "start_hour": 7.98,
-          "end_hour": 13.92,
-          "actual_hours": 5.94,
-          "target_hours": 6.0
+          "start_hour": 8.2,
+          "end_hour": 15.7,
+          "actual_hours": 7.5,
+          "target_hours": 8.0
         },
         {
-          "date": "2025-01-06",
+          "date": "2026-01-06",
           "day_type": "work",
           "start_hour": 8.1,
           "end_hour": 14.36,
@@ -657,7 +641,7 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-01-07",
+          "date": "2026-01-07",
           "day_type": "work",
           "start_hour": 7.94,
           "end_hour": 14.03,
@@ -665,7 +649,7 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-01-08",
+          "date": "2026-01-08",
           "day_type": "work",
           "start_hour": 7.93,
           "end_hour": 14.12,
@@ -673,7 +657,7 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-01-09",
+          "date": "2026-01-09",
           "day_type": "work",
           "start_hour": 8.07,
           "end_hour": 14.04,
@@ -681,15 +665,15 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-01-10",
+          "date": "2026-01-12",
           "day_type": "work",
-          "start_hour": 8.02,
-          "end_hour": 14.14,
-          "actual_hours": 6.12,
-          "target_hours": 6.0
+          "start_hour": 7.9,
+          "end_hour": 15.4,
+          "actual_hours": 7.5,
+          "target_hours": 8.0
         },
         {
-          "date": "2025-01-13",
+          "date": "2026-01-13",
           "day_type": "work",
           "start_hour": 7.97,
           "end_hour": 14.2,
@@ -697,7 +681,7 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-01-14",
+          "date": "2026-01-14",
           "day_type": "work",
           "start_hour": 8.0,
           "end_hour": 14.0,
@@ -705,7 +689,7 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-01-15",
+          "date": "2026-01-15",
           "day_type": "work",
           "start_hour": 8.05,
           "end_hour": 15.05,
@@ -713,7 +697,7 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-01-16",
+          "date": "2026-01-16",
           "day_type": "work",
           "start_hour": 8.03,
           "end_hour": 14.21,
@@ -721,15 +705,15 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-01-17",
+          "date": "2026-01-19",
           "day_type": "work",
-          "start_hour": 7.96,
-          "end_hour": 13.99,
-          "actual_hours": 6.03,
-          "target_hours": 6.0
+          "start_hour": 7.97,
+          "end_hour": 15.47,
+          "actual_hours": 7.5,
+          "target_hours": 8.0
         },
         {
-          "date": "2025-01-20",
+          "date": "2026-01-20",
           "day_type": "work",
           "start_hour": 8.12,
           "end_hour": 14.27,
@@ -737,7 +721,7 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-01-21",
+          "date": "2026-01-21",
           "day_type": "work",
           "start_hour": 8.01,
           "end_hour": 14.12,
@@ -745,7 +729,7 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-01-22",
+          "date": "2026-01-22",
           "day_type": "work",
           "start_hour": 8.0,
           "end_hour": 12.5,
@@ -753,7 +737,7 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-01-23",
+          "date": "2026-01-23",
           "day_type": "work",
           "start_hour": 7.94,
           "end_hour": 13.94,
@@ -761,15 +745,15 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-01-24",
+          "date": "2026-01-26",
           "day_type": "work",
-          "start_hour": 7.99,
-          "end_hour": 14.12,
-          "actual_hours": 6.13,
-          "target_hours": 6.0
+          "start_hour": 8.21,
+          "end_hour": 15.71,
+          "actual_hours": 7.5,
+          "target_hours": 8.0
         },
         {
-          "date": "2025-01-27",
+          "date": "2026-01-27",
           "day_type": "work",
           "start_hour": 7.97,
           "end_hour": 13.97,
@@ -777,7 +761,7 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-01-28",
+          "date": "2026-01-28",
           "day_type": "work",
           "start_hour": 7.93,
           "end_hour": 14.08,
@@ -785,7 +769,7 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-01-29",
+          "date": "2026-01-29",
           "day_type": "work",
           "start_hour": 7.97,
           "end_hour": 14.22,
@@ -793,7 +777,7 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-01-30",
+          "date": "2026-01-30",
           "day_type": "work",
           "start_hour": 8.09,
           "end_hour": 14.04,
@@ -801,15 +785,15 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-01-31",
+          "date": "2026-02-02",
           "day_type": "work",
-          "start_hour": 7.97,
-          "end_hour": 14.13,
-          "actual_hours": 6.16,
-          "target_hours": 6.0
+          "start_hour": 7.94,
+          "end_hour": 15.44,
+          "actual_hours": 7.5,
+          "target_hours": 8.0
         },
         {
-          "date": "2025-02-03",
+          "date": "2026-02-03",
           "day_type": "work",
           "start_hour": 9.53,
           "end_hour": 15.53,
@@ -817,7 +801,7 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-02-04",
+          "date": "2026-02-04",
           "day_type": "work",
           "start_hour": 7.96,
           "end_hour": 13.93,
@@ -825,7 +809,7 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-02-05",
+          "date": "2026-02-05",
           "day_type": "work",
           "start_hour": 8.11,
           "end_hour": 14.24,
@@ -833,7 +817,7 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-02-06",
+          "date": "2026-02-06",
           "day_type": "work",
           "start_hour": 8.01,
           "end_hour": 14.21,
@@ -841,15 +825,15 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-02-07",
+          "date": "2026-02-09",
           "day_type": "work",
-          "start_hour": 8.08,
-          "end_hour": 14.07,
-          "actual_hours": 5.99,
-          "target_hours": 6.0
+          "start_hour": 7.93,
+          "end_hour": 15.43,
+          "actual_hours": 7.5,
+          "target_hours": 8.0
         },
         {
-          "date": "2025-02-10",
+          "date": "2026-02-10",
           "day_type": "vacation",
           "start_hour": null,
           "end_hour": null,
@@ -857,7 +841,7 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-02-11",
+          "date": "2026-02-11",
           "day_type": "vacation",
           "start_hour": null,
           "end_hour": null,
@@ -865,7 +849,7 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-02-12",
+          "date": "2026-02-12",
           "day_type": "vacation",
           "start_hour": null,
           "end_hour": null,
@@ -873,7 +857,7 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-02-13",
+          "date": "2026-02-13",
           "day_type": "vacation",
           "start_hour": null,
           "end_hour": null,
@@ -881,15 +865,15 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-02-14",
-          "day_type": "vacation",
-          "start_hour": null,
-          "end_hour": null,
-          "actual_hours": 6.0,
-          "target_hours": 6.0
+          "date": "2026-02-16",
+          "day_type": "work",
+          "start_hour": 7.85,
+          "end_hour": 15.35,
+          "actual_hours": 7.5,
+          "target_hours": 8.0
         },
         {
-          "date": "2025-02-17",
+          "date": "2026-02-17",
           "day_type": "work",
           "start_hour": 7.94,
           "end_hour": 14.02,
@@ -897,7 +881,7 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-02-18",
+          "date": "2026-02-18",
           "day_type": "work",
           "start_hour": 8.0,
           "end_hour": 14.09,
@@ -905,7 +889,7 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-02-19",
+          "date": "2026-02-19",
           "day_type": "work",
           "start_hour": 8.07,
           "end_hour": 14.23,
@@ -913,7 +897,7 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-02-20",
+          "date": "2026-02-20",
           "day_type": "work",
           "start_hour": 8.12,
           "end_hour": 14.08,
@@ -921,15 +905,15 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-02-21",
+          "date": "2026-02-23",
           "day_type": "work",
-          "start_hour": 8.0,
-          "end_hour": 14.04,
-          "actual_hours": 6.04,
-          "target_hours": 6.0
+          "start_hour": 8.16,
+          "end_hour": 15.66,
+          "actual_hours": 7.5,
+          "target_hours": 8.0
         },
         {
-          "date": "2025-02-24",
+          "date": "2026-02-24",
           "day_type": "work",
           "start_hour": 8.09,
           "end_hour": 14.1,
@@ -937,7 +921,7 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-02-25",
+          "date": "2026-02-25",
           "day_type": "work",
           "start_hour": 7.96,
           "end_hour": 14.04,
@@ -945,7 +929,7 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-02-26",
+          "date": "2026-02-26",
           "day_type": "work",
           "start_hour": 8.0,
           "end_hour": 14.02,
@@ -953,7 +937,7 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-02-27",
+          "date": "2026-02-27",
           "day_type": "work",
           "start_hour": 8.12,
           "end_hour": 15.12,
@@ -961,15 +945,15 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-02-28",
+          "date": "2026-03-02",
           "day_type": "work",
-          "start_hour": 7.97,
-          "end_hour": 14.22,
-          "actual_hours": 6.25,
-          "target_hours": 6.0
+          "start_hour": 8.07,
+          "end_hour": 15.57,
+          "actual_hours": 7.5,
+          "target_hours": 8.0
         },
         {
-          "date": "2025-03-03",
+          "date": "2026-03-03",
           "day_type": "work",
           "start_hour": 8.01,
           "end_hour": 14.24,
@@ -977,7 +961,7 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-03-04",
+          "date": "2026-03-04",
           "day_type": "work",
           "start_hour": 8.03,
           "end_hour": 13.97,
@@ -985,7 +969,7 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-03-05",
+          "date": "2026-03-05",
           "day_type": "work",
           "start_hour": 8.12,
           "end_hour": 14.34,
@@ -993,7 +977,7 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-03-06",
+          "date": "2026-03-06",
           "day_type": "work",
           "start_hour": 8.11,
           "end_hour": 14.36,
@@ -1001,15 +985,15 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-03-07",
+          "date": "2026-03-09",
           "day_type": "work",
-          "start_hour": 8.08,
-          "end_hour": 12.58,
-          "actual_hours": 4.5,
-          "target_hours": 6.0
+          "start_hour": 7.55,
+          "end_hour": 15.05,
+          "actual_hours": 7.5,
+          "target_hours": 8.0
         },
         {
-          "date": "2025-03-10",
+          "date": "2026-03-10",
           "day_type": "work",
           "start_hour": 8.09,
           "end_hour": 14.07,
@@ -1017,7 +1001,7 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-03-11",
+          "date": "2026-03-11",
           "day_type": "work",
           "start_hour": 8.02,
           "end_hour": 14.02,
@@ -1025,7 +1009,7 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-03-12",
+          "date": "2026-03-12",
           "day_type": "work",
           "start_hour": 8.0,
           "end_hour": 13.94,
@@ -1033,7 +1017,7 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-03-13",
+          "date": "2026-03-13",
           "day_type": "work",
           "start_hour": 8.0,
           "end_hour": 14.27,
@@ -1041,15 +1025,15 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-03-14",
+          "date": "2026-03-16",
           "day_type": "work",
-          "start_hour": 7.97,
-          "end_hour": 14.17,
-          "actual_hours": 6.2,
-          "target_hours": 6.0
+          "start_hour": 8.03,
+          "end_hour": 15.53,
+          "actual_hours": 7.5,
+          "target_hours": 8.0
         },
         {
-          "date": "2025-03-17",
+          "date": "2026-03-17",
           "day_type": "work",
           "start_hour": 8.01,
           "end_hour": 14.08,
@@ -1057,7 +1041,7 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-03-18",
+          "date": "2026-03-18",
           "day_type": "work",
           "start_hour": 8.11,
           "end_hour": 14.39,
@@ -1065,7 +1049,7 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-03-19",
+          "date": "2026-03-19",
           "day_type": "work",
           "start_hour": 8.03,
           "end_hour": 14.21,
@@ -1073,7 +1057,7 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-03-20",
+          "date": "2026-03-20",
           "day_type": "work",
           "start_hour": 7.95,
           "end_hour": 13.98,
@@ -1081,15 +1065,15 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-03-21",
+          "date": "2026-03-23",
           "day_type": "work",
-          "start_hour": 8.11,
-          "end_hour": 14.24,
-          "actual_hours": 6.13,
-          "target_hours": 6.0
+          "start_hour": 8.18,
+          "end_hour": 15.68,
+          "actual_hours": 7.5,
+          "target_hours": 8.0
         },
         {
-          "date": "2025-03-24",
+          "date": "2026-03-24",
           "day_type": "work",
           "start_hour": 8.03,
           "end_hour": 14.22,
@@ -1097,7 +1081,7 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-03-25",
+          "date": "2026-03-25",
           "day_type": "work",
           "start_hour": 7.93,
           "end_hour": 14.06,
@@ -1105,7 +1089,7 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-03-26",
+          "date": "2026-03-26",
           "day_type": "work",
           "start_hour": 8.02,
           "end_hour": 14.25,
@@ -1113,7 +1097,7 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-03-27",
+          "date": "2026-03-27",
           "day_type": "work",
           "start_hour": 7.95,
           "end_hour": 14.22,
@@ -1121,15 +1105,15 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-03-28",
+          "date": "2026-03-30",
           "day_type": "work",
-          "start_hour": 7.94,
-          "end_hour": 13.93,
-          "actual_hours": 5.99,
-          "target_hours": 6.0
+          "start_hour": 7.69,
+          "end_hour": 15.19,
+          "actual_hours": 7.5,
+          "target_hours": 8.0
         },
         {
-          "date": "2025-03-31",
+          "date": "2026-03-31",
           "day_type": "work",
           "start_hour": 9.02,
           "end_hour": 15.02,
@@ -1137,7 +1121,7 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-04-01",
+          "date": "2026-04-01",
           "day_type": "work",
           "start_hour": 8.04,
           "end_hour": 14.2,
@@ -1145,7 +1129,7 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-04-02",
+          "date": "2026-04-02",
           "day_type": "work",
           "start_hour": 7.97,
           "end_hour": 13.93,
@@ -1153,23 +1137,7 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-04-03",
-          "day_type": "work",
-          "start_hour": 8.1,
-          "end_hour": 14.11,
-          "actual_hours": 6.01,
-          "target_hours": 6.0
-        },
-        {
-          "date": "2025-04-04",
-          "day_type": "work",
-          "start_hour": 8.04,
-          "end_hour": 14.18,
-          "actual_hours": 6.14,
-          "target_hours": 6.0
-        },
-        {
-          "date": "2025-04-07",
+          "date": "2026-04-07",
           "day_type": "work",
           "start_hour": 8.0,
           "end_hour": 14.13,
@@ -1177,7 +1145,7 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-04-08",
+          "date": "2026-04-08",
           "day_type": "work",
           "start_hour": 8.02,
           "end_hour": 14.28,
@@ -1185,7 +1153,7 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-04-09",
+          "date": "2026-04-09",
           "day_type": "work",
           "start_hour": 7.96,
           "end_hour": 14.14,
@@ -1193,7 +1161,7 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-04-10",
+          "date": "2026-04-10",
           "day_type": "work",
           "start_hour": 7.97,
           "end_hour": 14.03,
@@ -1201,15 +1169,15 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-04-11",
+          "date": "2026-04-13",
           "day_type": "work",
-          "start_hour": 8.05,
-          "end_hour": 14.08,
-          "actual_hours": 6.03,
-          "target_hours": 6.0
+          "start_hour": 8.22,
+          "end_hour": 15.72,
+          "actual_hours": 7.5,
+          "target_hours": 8.0
         },
         {
-          "date": "2025-04-14",
+          "date": "2026-04-14",
           "day_type": "work",
           "start_hour": 7.98,
           "end_hour": 14.17,
@@ -1217,7 +1185,7 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-04-15",
+          "date": "2026-04-15",
           "day_type": "work",
           "start_hour": 7.93,
           "end_hour": 14.01,
@@ -1225,7 +1193,7 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-04-16",
+          "date": "2026-04-16",
           "day_type": "work",
           "start_hour": 8.12,
           "end_hour": 14.4,
@@ -1233,7 +1201,7 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-04-17",
+          "date": "2026-04-17",
           "day_type": "work",
           "start_hour": 7.93,
           "end_hour": 13.93,
@@ -1241,15 +1209,15 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-04-18",
-          "day_type": "holiday",
-          "start_hour": null,
-          "end_hour": null,
-          "actual_hours": 6.0,
-          "target_hours": 6.0
+          "date": "2026-04-20",
+          "day_type": "work",
+          "start_hour": 7.73,
+          "end_hour": 16.24,
+          "actual_hours": 8.51,
+          "target_hours": 8.0
         },
         {
-          "date": "2025-04-21",
+          "date": "2026-04-21",
           "day_type": "holiday",
           "start_hour": null,
           "end_hour": null,
@@ -1262,7 +1230,7 @@
       "user_id": "U9876543",
       "entries": [
         {
-          "date": "2025-01-02",
+          "date": "2026-01-02",
           "day_type": "work",
           "start_hour": 7.96,
           "end_hour": 12.17,
@@ -1270,15 +1238,15 @@
           "target_hours": 4.0
         },
         {
-          "date": "2025-01-03",
+          "date": "2026-01-05",
           "day_type": "work",
-          "start_hour": 8.06,
-          "end_hour": 12.25,
-          "actual_hours": 4.19,
-          "target_hours": 4.0
+          "start_hour": 8.32,
+          "end_hour": 15.82,
+          "actual_hours": 7.5,
+          "target_hours": 8.0
         },
         {
-          "date": "2025-01-06",
+          "date": "2026-01-06",
           "day_type": "work",
           "start_hour": 7.98,
           "end_hour": 11.96,
@@ -1286,7 +1254,7 @@
           "target_hours": 4.0
         },
         {
-          "date": "2025-01-07",
+          "date": "2026-01-07",
           "day_type": "work",
           "start_hour": 8.05,
           "end_hour": 12.19,
@@ -1294,7 +1262,7 @@
           "target_hours": 4.0
         },
         {
-          "date": "2025-01-08",
+          "date": "2026-01-08",
           "day_type": "work",
           "start_hour": 7.98,
           "end_hour": 13.48,
@@ -1302,7 +1270,7 @@
           "target_hours": 4.0
         },
         {
-          "date": "2025-01-09",
+          "date": "2026-01-09",
           "day_type": "work",
           "start_hour": 8.02,
           "end_hour": 12.25,
@@ -1310,15 +1278,15 @@
           "target_hours": 4.0
         },
         {
-          "date": "2025-01-10",
+          "date": "2026-01-12",
           "day_type": "work",
-          "start_hour": 8.02,
-          "end_hour": 11.95,
-          "actual_hours": 3.93,
-          "target_hours": 4.0
+          "start_hour": 8.06,
+          "end_hour": 15.56,
+          "actual_hours": 7.5,
+          "target_hours": 8.0
         },
         {
-          "date": "2025-01-13",
+          "date": "2026-01-13",
           "day_type": "work",
           "start_hour": 8.05,
           "end_hour": 12.07,
@@ -1326,7 +1294,7 @@
           "target_hours": 4.0
         },
         {
-          "date": "2025-01-14",
+          "date": "2026-01-14",
           "day_type": "work",
           "start_hour": 8.03,
           "end_hour": 12.24,
@@ -1334,7 +1302,7 @@
           "target_hours": 4.0
         },
         {
-          "date": "2025-01-15",
+          "date": "2026-01-15",
           "day_type": "work",
           "start_hour": 7.94,
           "end_hour": 11.9,
@@ -1342,7 +1310,7 @@
           "target_hours": 4.0
         },
         {
-          "date": "2025-01-16",
+          "date": "2026-01-16",
           "day_type": "work",
           "start_hour": 7.94,
           "end_hour": 12.04,
@@ -1350,15 +1318,15 @@
           "target_hours": 4.0
         },
         {
-          "date": "2025-01-17",
+          "date": "2026-01-19",
           "day_type": "work",
-          "start_hour": 7.96,
-          "end_hour": 12.07,
-          "actual_hours": 4.11,
-          "target_hours": 4.0
+          "start_hour": 8.16,
+          "end_hour": 15.66,
+          "actual_hours": 7.5,
+          "target_hours": 8.0
         },
         {
-          "date": "2025-01-20",
+          "date": "2026-01-20",
           "day_type": "work",
           "start_hour": 9.02,
           "end_hour": 13.02,
@@ -1366,7 +1334,7 @@
           "target_hours": 4.0
         },
         {
-          "date": "2025-01-21",
+          "date": "2026-01-21",
           "day_type": "work",
           "start_hour": 8.03,
           "end_hour": 12.02,
@@ -1374,7 +1342,7 @@
           "target_hours": 4.0
         },
         {
-          "date": "2025-01-22",
+          "date": "2026-01-22",
           "day_type": "work",
           "start_hour": 8.02,
           "end_hour": 12.03,
@@ -1382,7 +1350,7 @@
           "target_hours": 4.0
         },
         {
-          "date": "2025-01-23",
+          "date": "2026-01-23",
           "day_type": "work",
           "start_hour": 8.0,
           "end_hour": 12.2,
@@ -1390,15 +1358,15 @@
           "target_hours": 4.0
         },
         {
-          "date": "2025-01-24",
+          "date": "2026-01-26",
           "day_type": "work",
-          "start_hour": 8.06,
-          "end_hour": 12.02,
-          "actual_hours": 3.96,
-          "target_hours": 4.0
+          "start_hour": 7.95,
+          "end_hour": 15.45,
+          "actual_hours": 7.5,
+          "target_hours": 8.0
         },
         {
-          "date": "2025-01-27",
+          "date": "2026-01-27",
           "day_type": "work",
           "start_hour": 7.99,
           "end_hour": 12.0,
@@ -1406,7 +1374,7 @@
           "target_hours": 4.0
         },
         {
-          "date": "2025-01-28",
+          "date": "2026-01-28",
           "day_type": "work",
           "start_hour": 7.92,
           "end_hour": 12.08,
@@ -1414,7 +1382,7 @@
           "target_hours": 4.0
         },
         {
-          "date": "2025-01-29",
+          "date": "2026-01-29",
           "day_type": "work",
           "start_hour": 8.02,
           "end_hour": 12.03,
@@ -1422,7 +1390,7 @@
           "target_hours": 4.0
         },
         {
-          "date": "2025-01-30",
+          "date": "2026-01-30",
           "day_type": "work",
           "start_hour": 8.04,
           "end_hour": 12.14,
@@ -1430,15 +1398,15 @@
           "target_hours": 4.0
         },
         {
-          "date": "2025-01-31",
+          "date": "2026-02-02",
           "day_type": "work",
-          "start_hour": 7.99,
-          "end_hour": 11.92,
-          "actual_hours": 3.93,
-          "target_hours": 4.0
+          "start_hour": 7.85,
+          "end_hour": 15.35,
+          "actual_hours": 7.5,
+          "target_hours": 8.0
         },
         {
-          "date": "2025-02-03",
+          "date": "2026-02-03",
           "day_type": "work",
           "start_hour": 7.93,
           "end_hour": 12.12,
@@ -1446,7 +1414,7 @@
           "target_hours": 4.0
         },
         {
-          "date": "2025-02-04",
+          "date": "2026-02-04",
           "day_type": "work",
           "start_hour": 8.06,
           "end_hour": 12.15,
@@ -1454,7 +1422,7 @@
           "target_hours": 4.0
         },
         {
-          "date": "2025-02-05",
+          "date": "2026-02-05",
           "day_type": "work",
           "start_hour": 8.05,
           "end_hour": 12.15,
@@ -1462,7 +1430,7 @@
           "target_hours": 4.0
         },
         {
-          "date": "2025-02-06",
+          "date": "2026-02-06",
           "day_type": "work",
           "start_hour": 8.1,
           "end_hour": 11.6,
@@ -1470,15 +1438,15 @@
           "target_hours": 4.0
         },
         {
-          "date": "2025-02-07",
+          "date": "2026-02-09",
           "day_type": "work",
-          "start_hour": 7.94,
-          "end_hour": 11.91,
-          "actual_hours": 3.97,
-          "target_hours": 4.0
+          "start_hour": 8.29,
+          "end_hour": 15.79,
+          "actual_hours": 7.5,
+          "target_hours": 8.0
         },
         {
-          "date": "2025-02-10",
+          "date": "2026-02-10",
           "day_type": "work",
           "start_hour": 7.97,
           "end_hour": 12.17,
@@ -1486,7 +1454,7 @@
           "target_hours": 4.0
         },
         {
-          "date": "2025-02-11",
+          "date": "2026-02-11",
           "day_type": "work",
           "start_hour": 8.05,
           "end_hour": 12.24,
@@ -1494,7 +1462,7 @@
           "target_hours": 4.0
         },
         {
-          "date": "2025-02-12",
+          "date": "2026-02-12",
           "day_type": "work",
           "start_hour": 8.06,
           "end_hour": 12.05,
@@ -1502,7 +1470,7 @@
           "target_hours": 4.0
         },
         {
-          "date": "2025-02-13",
+          "date": "2026-02-13",
           "day_type": "work",
           "start_hour": 7.96,
           "end_hour": 11.92,
@@ -1510,15 +1478,15 @@
           "target_hours": 4.0
         },
         {
-          "date": "2025-02-14",
+          "date": "2026-02-16",
           "day_type": "work",
-          "start_hour": 8.04,
-          "end_hour": 12.24,
-          "actual_hours": 4.2,
-          "target_hours": 4.0
+          "start_hour": 7.76,
+          "end_hour": 15.26,
+          "actual_hours": 7.5,
+          "target_hours": 8.0
         },
         {
-          "date": "2025-02-17",
+          "date": "2026-02-17",
           "day_type": "work",
           "start_hour": 7.99,
           "end_hour": 12.11,
@@ -1526,7 +1494,7 @@
           "target_hours": 4.0
         },
         {
-          "date": "2025-02-18",
+          "date": "2026-02-18",
           "day_type": "work",
           "start_hour": 7.94,
           "end_hour": 12.15,
@@ -1534,7 +1502,7 @@
           "target_hours": 4.0
         },
         {
-          "date": "2025-02-19",
+          "date": "2026-02-19",
           "day_type": "work",
           "start_hour": 8.06,
           "end_hour": 12.28,
@@ -1542,7 +1510,7 @@
           "target_hours": 4.0
         },
         {
-          "date": "2025-02-20",
+          "date": "2026-02-20",
           "day_type": "work",
           "start_hour": 8.05,
           "end_hour": 12.24,
@@ -1550,15 +1518,15 @@
           "target_hours": 4.0
         },
         {
-          "date": "2025-02-21",
+          "date": "2026-02-23",
           "day_type": "work",
-          "start_hour": 7.92,
-          "end_hour": 12.07,
-          "actual_hours": 4.15,
-          "target_hours": 4.0
+          "start_hour": 8.32,
+          "end_hour": 15.82,
+          "actual_hours": 7.5,
+          "target_hours": 8.0
         },
         {
-          "date": "2025-02-24",
+          "date": "2026-02-24",
           "day_type": "work",
           "start_hour": 7.97,
           "end_hour": 12.18,
@@ -1566,7 +1534,7 @@
           "target_hours": 4.0
         },
         {
-          "date": "2025-02-25",
+          "date": "2026-02-25",
           "day_type": "work",
           "start_hour": 8.05,
           "end_hour": 12.24,
@@ -1574,7 +1542,7 @@
           "target_hours": 4.0
         },
         {
-          "date": "2025-02-26",
+          "date": "2026-02-26",
           "day_type": "work",
           "start_hour": 8.05,
           "end_hour": 12.06,
@@ -1582,7 +1550,7 @@
           "target_hours": 4.0
         },
         {
-          "date": "2025-02-27",
+          "date": "2026-02-27",
           "day_type": "work",
           "start_hour": 8.05,
           "end_hour": 12.01,
@@ -1590,15 +1558,15 @@
           "target_hours": 4.0
         },
         {
-          "date": "2025-02-28",
+          "date": "2026-03-02",
           "day_type": "work",
-          "start_hour": 8.06,
-          "end_hour": 12.25,
-          "actual_hours": 4.19,
-          "target_hours": 4.0
+          "start_hour": 7.67,
+          "end_hour": 15.17,
+          "actual_hours": 7.5,
+          "target_hours": 8.0
         },
         {
-          "date": "2025-03-03",
+          "date": "2026-03-03",
           "day_type": "vacation",
           "start_hour": null,
           "end_hour": null,
@@ -1606,7 +1574,7 @@
           "target_hours": 4.0
         },
         {
-          "date": "2025-03-04",
+          "date": "2026-03-04",
           "day_type": "vacation",
           "start_hour": null,
           "end_hour": null,
@@ -1614,7 +1582,7 @@
           "target_hours": 4.0
         },
         {
-          "date": "2025-03-05",
+          "date": "2026-03-05",
           "day_type": "work",
           "start_hour": 8.03,
           "end_hour": 13.53,
@@ -1622,7 +1590,7 @@
           "target_hours": 4.0
         },
         {
-          "date": "2025-03-06",
+          "date": "2026-03-06",
           "day_type": "work",
           "start_hour": 7.96,
           "end_hour": 12.13,
@@ -1630,15 +1598,15 @@
           "target_hours": 4.0
         },
         {
-          "date": "2025-03-07",
+          "date": "2026-03-09",
           "day_type": "work",
-          "start_hour": 7.99,
-          "end_hour": 12.01,
-          "actual_hours": 4.02,
-          "target_hours": 4.0
+          "start_hour": 8.11,
+          "end_hour": 15.61,
+          "actual_hours": 7.5,
+          "target_hours": 8.0
         },
         {
-          "date": "2025-03-10",
+          "date": "2026-03-10",
           "day_type": "work",
           "start_hour": 8.05,
           "end_hour": 12.05,
@@ -1646,7 +1614,7 @@
           "target_hours": 4.0
         },
         {
-          "date": "2025-03-11",
+          "date": "2026-03-11",
           "day_type": "work",
           "start_hour": 7.92,
           "end_hour": 11.91,
@@ -1654,7 +1622,7 @@
           "target_hours": 4.0
         },
         {
-          "date": "2025-03-12",
+          "date": "2026-03-12",
           "day_type": "work",
           "start_hour": 7.97,
           "end_hour": 12.16,
@@ -1662,7 +1630,7 @@
           "target_hours": 4.0
         },
         {
-          "date": "2025-03-13",
+          "date": "2026-03-13",
           "day_type": "work",
           "start_hour": 8.07,
           "end_hour": 12.08,
@@ -1670,15 +1638,15 @@
           "target_hours": 4.0
         },
         {
-          "date": "2025-03-14",
+          "date": "2026-03-16",
           "day_type": "work",
-          "start_hour": 8.02,
-          "end_hour": 12.07,
-          "actual_hours": 4.05,
-          "target_hours": 4.0
+          "start_hour": 7.82,
+          "end_hour": 15.32,
+          "actual_hours": 7.5,
+          "target_hours": 8.0
         },
         {
-          "date": "2025-03-17",
+          "date": "2026-03-17",
           "day_type": "work",
           "start_hour": 9.05,
           "end_hour": 13.05,
@@ -1686,7 +1654,7 @@
           "target_hours": 4.0
         },
         {
-          "date": "2025-03-18",
+          "date": "2026-03-18",
           "day_type": "work",
           "start_hour": 8.08,
           "end_hour": 12.17,
@@ -1694,7 +1662,7 @@
           "target_hours": 4.0
         },
         {
-          "date": "2025-03-19",
+          "date": "2026-03-19",
           "day_type": "work",
           "start_hour": 8.07,
           "end_hour": 12.03,
@@ -1702,7 +1670,7 @@
           "target_hours": 4.0
         },
         {
-          "date": "2025-03-20",
+          "date": "2026-03-20",
           "day_type": "work",
           "start_hour": 8.08,
           "end_hour": 12.06,
@@ -1710,15 +1678,15 @@
           "target_hours": 4.0
         },
         {
-          "date": "2025-03-21",
+          "date": "2026-03-23",
           "day_type": "work",
-          "start_hour": 8.07,
-          "end_hour": 12.08,
-          "actual_hours": 4.01,
-          "target_hours": 4.0
+          "start_hour": 8.26,
+          "end_hour": 15.76,
+          "actual_hours": 7.5,
+          "target_hours": 8.0
         },
         {
-          "date": "2025-03-24",
+          "date": "2026-03-24",
           "day_type": "work",
           "start_hour": 7.94,
           "end_hour": 12.0,
@@ -1726,7 +1694,7 @@
           "target_hours": 4.0
         },
         {
-          "date": "2025-03-25",
+          "date": "2026-03-25",
           "day_type": "work",
           "start_hour": 8.04,
           "end_hour": 12.06,
@@ -1734,7 +1702,7 @@
           "target_hours": 4.0
         },
         {
-          "date": "2025-03-26",
+          "date": "2026-03-26",
           "day_type": "work",
           "start_hour": 8.02,
           "end_hour": 12.1,
@@ -1742,7 +1710,7 @@
           "target_hours": 4.0
         },
         {
-          "date": "2025-03-27",
+          "date": "2026-03-27",
           "day_type": "work",
           "start_hour": 7.98,
           "end_hour": 12.08,
@@ -1750,15 +1718,15 @@
           "target_hours": 4.0
         },
         {
-          "date": "2025-03-28",
+          "date": "2026-03-30",
           "day_type": "work",
-          "start_hour": 7.96,
-          "end_hour": 12.1,
-          "actual_hours": 4.14,
-          "target_hours": 4.0
+          "start_hour": 8.09,
+          "end_hour": 15.59,
+          "actual_hours": 7.5,
+          "target_hours": 8.0
         },
         {
-          "date": "2025-03-31",
+          "date": "2026-03-31",
           "day_type": "work",
           "start_hour": 7.92,
           "end_hour": 12.13,
@@ -1766,7 +1734,7 @@
           "target_hours": 4.0
         },
         {
-          "date": "2025-04-01",
+          "date": "2026-04-01",
           "day_type": "work",
           "start_hour": 8.01,
           "end_hour": 12.16,
@@ -1774,7 +1742,7 @@
           "target_hours": 4.0
         },
         {
-          "date": "2025-04-02",
+          "date": "2026-04-02",
           "day_type": "work",
           "start_hour": 8.04,
           "end_hour": 12.17,
@@ -1782,23 +1750,7 @@
           "target_hours": 4.0
         },
         {
-          "date": "2025-04-03",
-          "day_type": "work",
-          "start_hour": 7.98,
-          "end_hour": 11.93,
-          "actual_hours": 3.95,
-          "target_hours": 4.0
-        },
-        {
-          "date": "2025-04-04",
-          "day_type": "work",
-          "start_hour": 8.03,
-          "end_hour": 12.06,
-          "actual_hours": 4.03,
-          "target_hours": 4.0
-        },
-        {
-          "date": "2025-04-07",
+          "date": "2026-04-07",
           "day_type": "work",
           "start_hour": 7.97,
           "end_hour": 12.15,
@@ -1806,7 +1758,7 @@
           "target_hours": 4.0
         },
         {
-          "date": "2025-04-08",
+          "date": "2026-04-08",
           "day_type": "work",
           "start_hour": 8.04,
           "end_hour": 12.06,
@@ -1814,7 +1766,7 @@
           "target_hours": 4.0
         },
         {
-          "date": "2025-04-09",
+          "date": "2026-04-09",
           "day_type": "work",
           "start_hour": 7.97,
           "end_hour": 12.02,
@@ -1822,7 +1774,7 @@
           "target_hours": 4.0
         },
         {
-          "date": "2025-04-10",
+          "date": "2026-04-10",
           "day_type": "work",
           "start_hour": 7.97,
           "end_hour": 11.47,
@@ -1830,15 +1782,15 @@
           "target_hours": 4.0
         },
         {
-          "date": "2025-04-11",
+          "date": "2026-04-13",
           "day_type": "work",
-          "start_hour": 7.98,
-          "end_hour": 12.0,
-          "actual_hours": 4.02,
-          "target_hours": 4.0
+          "start_hour": 8.35,
+          "end_hour": 15.85,
+          "actual_hours": 7.5,
+          "target_hours": 8.0
         },
         {
-          "date": "2025-04-14",
+          "date": "2026-04-14",
           "day_type": "work",
           "start_hour": 7.94,
           "end_hour": 12.0,
@@ -1846,7 +1798,7 @@
           "target_hours": 4.0
         },
         {
-          "date": "2025-04-15",
+          "date": "2026-04-15",
           "day_type": "work",
           "start_hour": 8.07,
           "end_hour": 12.2,
@@ -1854,7 +1806,7 @@
           "target_hours": 4.0
         },
         {
-          "date": "2025-04-16",
+          "date": "2026-04-16",
           "day_type": "work",
           "start_hour": 8.06,
           "end_hour": 12.17,
@@ -1862,7 +1814,7 @@
           "target_hours": 4.0
         },
         {
-          "date": "2025-04-17",
+          "date": "2026-04-17",
           "day_type": "work",
           "start_hour": 7.97,
           "end_hour": 12.06,
@@ -1870,15 +1822,15 @@
           "target_hours": 4.0
         },
         {
-          "date": "2025-04-18",
-          "day_type": "holiday",
-          "start_hour": null,
-          "end_hour": null,
-          "actual_hours": 4.0,
-          "target_hours": 4.0
+          "date": "2026-04-20",
+          "day_type": "work",
+          "start_hour": 7.87,
+          "end_hour": 16.61,
+          "actual_hours": 8.74,
+          "target_hours": 8.0
         },
         {
-          "date": "2025-04-21",
+          "date": "2026-04-21",
           "day_type": "holiday",
           "start_hour": null,
           "end_hour": null,
@@ -1891,7 +1843,7 @@
       "user_id": "U3456789",
       "entries": [
         {
-          "date": "2025-01-02",
+          "date": "2026-01-02",
           "day_type": "work",
           "start_hour": 7.19,
           "end_hour": 15.29,
@@ -1899,15 +1851,15 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-01-03",
+          "date": "2026-01-05",
           "day_type": "work",
-          "start_hour": 7.26,
-          "end_hour": 15.52,
-          "actual_hours": 8.26,
+          "start_hour": 7.48,
+          "end_hour": 15.97,
+          "actual_hours": 8.49,
           "target_hours": 8.0
         },
         {
-          "date": "2025-01-06",
+          "date": "2026-01-06",
           "day_type": "work",
           "start_hour": 7.29,
           "end_hour": 15.49,
@@ -1915,7 +1867,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-01-07",
+          "date": "2026-01-07",
           "day_type": "work",
           "start_hour": 7.3,
           "end_hour": 17.3,
@@ -1923,7 +1875,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-01-08",
+          "date": "2026-01-08",
           "day_type": "work",
           "start_hour": 7.26,
           "end_hour": 15.33,
@@ -1931,7 +1883,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-01-09",
+          "date": "2026-01-09",
           "day_type": "work",
           "start_hour": 7.27,
           "end_hour": 15.71,
@@ -1939,15 +1891,15 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-01-10",
+          "date": "2026-01-12",
           "day_type": "work",
-          "start_hour": 7.32,
-          "end_hour": 15.36,
-          "actual_hours": 8.04,
+          "start_hour": 7.0,
+          "end_hour": 15.86,
+          "actual_hours": 8.86,
           "target_hours": 8.0
         },
         {
-          "date": "2025-01-13",
+          "date": "2026-01-13",
           "day_type": "work",
           "start_hour": 7.2,
           "end_hour": 15.43,
@@ -1955,7 +1907,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-01-14",
+          "date": "2026-01-14",
           "day_type": "work",
           "start_hour": 7.29,
           "end_hour": 15.42,
@@ -1963,7 +1915,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-01-15",
+          "date": "2026-01-15",
           "day_type": "work",
           "start_hour": 9.02,
           "end_hour": 17.18,
@@ -1971,7 +1923,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-01-16",
+          "date": "2026-01-16",
           "day_type": "work",
           "start_hour": 7.32,
           "end_hour": 15.68,
@@ -1979,15 +1931,15 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-01-17",
+          "date": "2026-01-19",
           "day_type": "work",
-          "start_hour": 7.3,
-          "end_hour": 15.37,
-          "actual_hours": 8.07,
+          "start_hour": 7.61,
+          "end_hour": 16.09,
+          "actual_hours": 8.48,
           "target_hours": 8.0
         },
         {
-          "date": "2025-01-20",
+          "date": "2026-01-20",
           "day_type": "vacation",
           "start_hour": null,
           "end_hour": null,
@@ -1995,7 +1947,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-01-21",
+          "date": "2026-01-21",
           "day_type": "vacation",
           "start_hour": null,
           "end_hour": null,
@@ -2003,7 +1955,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-01-22",
+          "date": "2026-01-22",
           "day_type": "vacation",
           "start_hour": null,
           "end_hour": null,
@@ -2011,7 +1963,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-01-23",
+          "date": "2026-01-23",
           "day_type": "vacation",
           "start_hour": null,
           "end_hour": null,
@@ -2019,15 +1971,15 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-01-24",
-          "day_type": "vacation",
-          "start_hour": null,
-          "end_hour": null,
-          "actual_hours": 8.0,
+          "date": "2026-01-26",
+          "day_type": "work",
+          "start_hour": 7.0,
+          "end_hour": 14.9,
+          "actual_hours": 7.9,
           "target_hours": 8.0
         },
         {
-          "date": "2025-01-27",
+          "date": "2026-01-27",
           "day_type": "work",
           "start_hour": 7.22,
           "end_hour": 15.18,
@@ -2035,7 +1987,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-01-28",
+          "date": "2026-01-28",
           "day_type": "work",
           "start_hour": 7.23,
           "end_hour": 15.44,
@@ -2043,7 +1995,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-01-29",
+          "date": "2026-01-29",
           "day_type": "work",
           "start_hour": 7.33,
           "end_hour": 15.32,
@@ -2051,7 +2003,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-01-30",
+          "date": "2026-01-30",
           "day_type": "work",
           "start_hour": 7.26,
           "end_hour": 15.55,
@@ -2059,15 +2011,15 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-01-31",
+          "date": "2026-02-02",
           "day_type": "work",
-          "start_hour": 7.22,
-          "end_hour": 15.55,
-          "actual_hours": 8.33,
+          "start_hour": 7.58,
+          "end_hour": 15.08,
+          "actual_hours": 7.5,
           "target_hours": 8.0
         },
         {
-          "date": "2025-02-03",
+          "date": "2026-02-03",
           "day_type": "work",
           "start_hour": 7.27,
           "end_hour": 15.35,
@@ -2075,7 +2027,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-02-04",
+          "date": "2026-02-04",
           "day_type": "work",
           "start_hour": 7.25,
           "end_hour": 13.75,
@@ -2083,7 +2035,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-02-05",
+          "date": "2026-02-05",
           "day_type": "work",
           "start_hour": 7.29,
           "end_hour": 15.24,
@@ -2091,7 +2043,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-02-06",
+          "date": "2026-02-06",
           "day_type": "work",
           "start_hour": 7.31,
           "end_hour": 15.68,
@@ -2099,15 +2051,15 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-02-07",
+          "date": "2026-02-09",
           "day_type": "work",
-          "start_hour": 7.21,
-          "end_hour": 15.39,
-          "actual_hours": 8.18,
+          "start_hour": 7.28,
+          "end_hour": 16.01,
+          "actual_hours": 8.73,
           "target_hours": 8.0
         },
         {
-          "date": "2025-02-10",
+          "date": "2026-02-10",
           "day_type": "work",
           "start_hour": 7.22,
           "end_hour": 15.69,
@@ -2115,7 +2067,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-02-11",
+          "date": "2026-02-11",
           "day_type": "work",
           "start_hour": 7.27,
           "end_hour": 15.25,
@@ -2123,7 +2075,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-02-12",
+          "date": "2026-02-12",
           "day_type": "work",
           "start_hour": 7.23,
           "end_hour": 15.64,
@@ -2131,7 +2083,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-02-13",
+          "date": "2026-02-13",
           "day_type": "work",
           "start_hour": 7.26,
           "end_hour": 15.64,
@@ -2139,15 +2091,15 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-02-14",
+          "date": "2026-02-16",
           "day_type": "work",
-          "start_hour": 7.3,
-          "end_hour": 15.78,
-          "actual_hours": 8.48,
+          "start_hour": 7.0,
+          "end_hour": 16.03,
+          "actual_hours": 9.03,
           "target_hours": 8.0
         },
         {
-          "date": "2025-02-17",
+          "date": "2026-02-17",
           "day_type": "work",
           "start_hour": 7.29,
           "end_hour": 15.75,
@@ -2155,7 +2107,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-02-18",
+          "date": "2026-02-18",
           "day_type": "work",
           "start_hour": 7.33,
           "end_hour": 15.61,
@@ -2163,7 +2115,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-02-19",
+          "date": "2026-02-19",
           "day_type": "work",
           "start_hour": 7.31,
           "end_hour": 15.53,
@@ -2171,7 +2123,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-02-20",
+          "date": "2026-02-20",
           "day_type": "work",
           "start_hour": 7.32,
           "end_hour": 15.57,
@@ -2179,15 +2131,15 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-02-21",
+          "date": "2026-02-23",
           "day_type": "work",
-          "start_hour": 7.33,
-          "end_hour": 15.68,
-          "actual_hours": 8.35,
+          "start_hour": 7.49,
+          "end_hour": 15.63,
+          "actual_hours": 8.14,
           "target_hours": 8.0
         },
         {
-          "date": "2025-02-24",
+          "date": "2026-02-24",
           "day_type": "work",
           "start_hour": 7.27,
           "end_hour": 15.36,
@@ -2195,7 +2147,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-02-25",
+          "date": "2026-02-25",
           "day_type": "work",
           "start_hour": 7.23,
           "end_hour": 15.52,
@@ -2203,7 +2155,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-02-26",
+          "date": "2026-02-26",
           "day_type": "work",
           "start_hour": 7.31,
           "end_hour": 15.54,
@@ -2211,7 +2163,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-02-27",
+          "date": "2026-02-27",
           "day_type": "work",
           "start_hour": 7.29,
           "end_hour": 15.39,
@@ -2219,15 +2171,15 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-02-28",
+          "date": "2026-03-02",
           "day_type": "work",
-          "start_hour": 7.2,
-          "end_hour": 15.3,
-          "actual_hours": 8.1,
+          "start_hour": 7.43,
+          "end_hour": 15.97,
+          "actual_hours": 8.54,
           "target_hours": 8.0
         },
         {
-          "date": "2025-03-03",
+          "date": "2026-03-03",
           "day_type": "work",
           "start_hour": 7.23,
           "end_hour": 15.35,
@@ -2235,7 +2187,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-03-04",
+          "date": "2026-03-04",
           "day_type": "work",
           "start_hour": 7.28,
           "end_hour": 15.3,
@@ -2243,7 +2195,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-03-05",
+          "date": "2026-03-05",
           "day_type": "work",
           "start_hour": 7.23,
           "end_hour": 15.55,
@@ -2251,7 +2203,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-03-06",
+          "date": "2026-03-06",
           "day_type": "work",
           "start_hour": 7.3,
           "end_hour": 15.28,
@@ -2259,15 +2211,15 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-03-07",
+          "date": "2026-03-09",
           "day_type": "work",
-          "start_hour": 7.26,
-          "end_hour": 15.5,
-          "actual_hours": 8.24,
+          "start_hour": 7.37,
+          "end_hour": 16.16,
+          "actual_hours": 8.79,
           "target_hours": 8.0
         },
         {
-          "date": "2025-03-10",
+          "date": "2026-03-10",
           "day_type": "work",
           "start_hour": 7.26,
           "end_hour": 15.32,
@@ -2275,7 +2227,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-03-11",
+          "date": "2026-03-11",
           "day_type": "work",
           "start_hour": 7.22,
           "end_hour": 17.72,
@@ -2283,7 +2235,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-03-12",
+          "date": "2026-03-12",
           "day_type": "work",
           "start_hour": 7.26,
           "end_hour": 15.7,
@@ -2291,7 +2243,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-03-13",
+          "date": "2026-03-13",
           "day_type": "work",
           "start_hour": 7.28,
           "end_hour": 15.61,
@@ -2299,15 +2251,15 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-03-14",
+          "date": "2026-03-16",
           "day_type": "work",
-          "start_hour": 7.33,
-          "end_hour": 15.69,
-          "actual_hours": 8.36,
+          "start_hour": 7.13,
+          "end_hour": 15.14,
+          "actual_hours": 8.01,
           "target_hours": 8.0
         },
         {
-          "date": "2025-03-17",
+          "date": "2026-03-17",
           "day_type": "work",
           "start_hour": 7.25,
           "end_hour": 15.2,
@@ -2315,7 +2267,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-03-18",
+          "date": "2026-03-18",
           "day_type": "work",
           "start_hour": 7.25,
           "end_hour": 15.61,
@@ -2323,7 +2275,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-03-19",
+          "date": "2026-03-19",
           "day_type": "work",
           "start_hour": 7.33,
           "end_hour": 15.79,
@@ -2331,7 +2283,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-03-20",
+          "date": "2026-03-20",
           "day_type": "work",
           "start_hour": 7.26,
           "end_hour": 15.61,
@@ -2339,15 +2291,15 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-03-21",
+          "date": "2026-03-23",
           "day_type": "work",
-          "start_hour": 7.28,
-          "end_hour": 15.56,
-          "actual_hours": 8.28,
+          "start_hour": 7.64,
+          "end_hour": 15.87,
+          "actual_hours": 8.23,
           "target_hours": 8.0
         },
         {
-          "date": "2025-03-24",
+          "date": "2026-03-24",
           "day_type": "work",
           "start_hour": 7.23,
           "end_hour": 15.3,
@@ -2355,7 +2307,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-03-25",
+          "date": "2026-03-25",
           "day_type": "work",
           "start_hour": 7.26,
           "end_hour": 15.23,
@@ -2363,7 +2315,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-03-26",
+          "date": "2026-03-26",
           "day_type": "work",
           "start_hour": 8.53,
           "end_hour": 16.7,
@@ -2371,7 +2323,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-03-27",
+          "date": "2026-03-27",
           "day_type": "work",
           "start_hour": 7.24,
           "end_hour": 15.56,
@@ -2379,15 +2331,15 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-03-28",
+          "date": "2026-03-30",
           "day_type": "work",
-          "start_hour": 7.25,
-          "end_hour": 15.29,
-          "actual_hours": 8.04,
+          "start_hour": 7.07,
+          "end_hour": 15.76,
+          "actual_hours": 8.69,
           "target_hours": 8.0
         },
         {
-          "date": "2025-03-31",
+          "date": "2026-03-31",
           "day_type": "work",
           "start_hour": 7.26,
           "end_hour": 15.28,
@@ -2395,7 +2347,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-04-01",
+          "date": "2026-04-01",
           "day_type": "work",
           "start_hour": 7.29,
           "end_hour": 15.25,
@@ -2403,7 +2355,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-04-02",
+          "date": "2026-04-02",
           "day_type": "work",
           "start_hour": 7.32,
           "end_hour": 14.32,
@@ -2411,23 +2363,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-04-03",
-          "day_type": "work",
-          "start_hour": 7.25,
-          "end_hour": 15.5,
-          "actual_hours": 8.25,
-          "target_hours": 8.0
-        },
-        {
-          "date": "2025-04-04",
-          "day_type": "work",
-          "start_hour": 7.19,
-          "end_hour": 15.49,
-          "actual_hours": 8.3,
-          "target_hours": 8.0
-        },
-        {
-          "date": "2025-04-07",
+          "date": "2026-04-07",
           "day_type": "work",
           "start_hour": 7.21,
           "end_hour": 15.41,
@@ -2435,7 +2371,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-04-08",
+          "date": "2026-04-08",
           "day_type": "work",
           "start_hour": 7.2,
           "end_hour": 15.35,
@@ -2443,7 +2379,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-04-09",
+          "date": "2026-04-09",
           "day_type": "work",
           "start_hour": 7.22,
           "end_hour": 15.35,
@@ -2451,7 +2387,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-04-10",
+          "date": "2026-04-10",
           "day_type": "work",
           "start_hour": 7.31,
           "end_hour": 15.46,
@@ -2459,15 +2395,15 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-04-11",
+          "date": "2026-04-13",
           "day_type": "work",
-          "start_hour": 7.31,
-          "end_hour": 15.71,
-          "actual_hours": 8.4,
+          "start_hour": 7.77,
+          "end_hour": 15.76,
+          "actual_hours": 7.99,
           "target_hours": 8.0
         },
         {
-          "date": "2025-04-14",
+          "date": "2026-04-14",
           "day_type": "work",
           "start_hour": 7.23,
           "end_hour": 15.22,
@@ -2475,7 +2411,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-04-15",
+          "date": "2026-04-15",
           "day_type": "work",
           "start_hour": 7.19,
           "end_hour": 15.43,
@@ -2483,7 +2419,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-04-16",
+          "date": "2026-04-16",
           "day_type": "work",
           "start_hour": 7.35,
           "end_hour": 15.49,
@@ -2491,7 +2427,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-04-17",
+          "date": "2026-04-17",
           "day_type": "work",
           "start_hour": 7.29,
           "end_hour": 15.66,
@@ -2499,15 +2435,15 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-04-18",
-          "day_type": "holiday",
-          "start_hour": null,
-          "end_hour": null,
-          "actual_hours": 8.0,
+          "date": "2026-04-20",
+          "day_type": "work",
+          "start_hour": 7.92,
+          "end_hour": 16.36,
+          "actual_hours": 8.44,
           "target_hours": 8.0
         },
         {
-          "date": "2025-04-21",
+          "date": "2026-04-21",
           "day_type": "holiday",
           "start_hour": null,
           "end_hour": null,
@@ -2520,7 +2456,7 @@
       "user_id": "U4567890",
       "entries": [
         {
-          "date": "2025-01-02",
+          "date": "2026-01-02",
           "day_type": "work",
           "start_hour": 9.06,
           "end_hour": 16.81,
@@ -2528,15 +2464,15 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-01-03",
+          "date": "2026-01-05",
           "day_type": "work",
-          "start_hour": 9.12,
-          "end_hour": 16.59,
-          "actual_hours": 7.47,
-          "target_hours": 7.5
+          "start_hour": 8.66,
+          "end_hour": 16.31,
+          "actual_hours": 7.65,
+          "target_hours": 8.0
         },
         {
-          "date": "2025-01-06",
+          "date": "2026-01-06",
           "day_type": "work",
           "start_hour": 8.93,
           "end_hour": 16.38,
@@ -2544,7 +2480,7 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-01-07",
+          "date": "2026-01-07",
           "day_type": "work",
           "start_hour": 8.96,
           "end_hour": 16.66,
@@ -2552,7 +2488,7 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-01-08",
+          "date": "2026-01-08",
           "day_type": "work",
           "start_hour": 9.04,
           "end_hour": 16.52,
@@ -2560,7 +2496,7 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-01-09",
+          "date": "2026-01-09",
           "day_type": "work",
           "start_hour": 9.07,
           "end_hour": 16.82,
@@ -2568,15 +2504,15 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-01-10",
+          "date": "2026-01-12",
           "day_type": "work",
-          "start_hour": 9.1,
-          "end_hour": 14.6,
-          "actual_hours": 5.5,
-          "target_hours": 7.5
+          "start_hour": 8.99,
+          "end_hour": 16.54,
+          "actual_hours": 7.55,
+          "target_hours": 8.0
         },
         {
-          "date": "2025-01-13",
+          "date": "2026-01-13",
           "day_type": "work",
           "start_hour": 8.96,
           "end_hour": 16.63,
@@ -2584,7 +2520,7 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-01-14",
+          "date": "2026-01-14",
           "day_type": "work",
           "start_hour": 9.08,
           "end_hour": 16.51,
@@ -2592,7 +2528,7 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-01-15",
+          "date": "2026-01-15",
           "day_type": "work",
           "start_hour": 9.09,
           "end_hour": 16.94,
@@ -2600,7 +2536,7 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-01-16",
+          "date": "2026-01-16",
           "day_type": "work",
           "start_hour": 8.95,
           "end_hour": 16.33,
@@ -2608,15 +2544,15 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-01-17",
+          "date": "2026-01-19",
           "day_type": "work",
-          "start_hour": 8.99,
-          "end_hour": 16.7,
-          "actual_hours": 7.71,
-          "target_hours": 7.5
+          "start_hour": 9.0,
+          "end_hour": 16.5,
+          "actual_hours": 7.5,
+          "target_hours": 8.0
         },
         {
-          "date": "2025-01-20",
+          "date": "2026-01-20",
           "day_type": "work",
           "start_hour": 9.12,
           "end_hour": 16.69,
@@ -2624,7 +2560,7 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-01-21",
+          "date": "2026-01-21",
           "day_type": "work",
           "start_hour": 9.07,
           "end_hour": 16.48,
@@ -2632,7 +2568,7 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-01-22",
+          "date": "2026-01-22",
           "day_type": "work",
           "start_hour": 9.07,
           "end_hour": 16.75,
@@ -2640,7 +2576,7 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-01-23",
+          "date": "2026-01-23",
           "day_type": "work",
           "start_hour": 8.95,
           "end_hour": 16.71,
@@ -2648,15 +2584,15 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-01-24",
+          "date": "2026-01-26",
           "day_type": "work",
-          "start_hour": 9.1,
-          "end_hour": 16.77,
-          "actual_hours": 7.67,
-          "target_hours": 7.5
+          "start_hour": 9.0,
+          "end_hour": 16.5,
+          "actual_hours": 7.5,
+          "target_hours": 8.0
         },
         {
-          "date": "2025-01-27",
+          "date": "2026-01-27",
           "day_type": "work",
           "start_hour": 8.95,
           "end_hour": 16.81,
@@ -2664,7 +2600,7 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-01-28",
+          "date": "2026-01-28",
           "day_type": "work",
           "start_hour": 9.09,
           "end_hour": 16.63,
@@ -2672,7 +2608,7 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-01-29",
+          "date": "2026-01-29",
           "day_type": "work",
           "start_hour": 9.02,
           "end_hour": 16.58,
@@ -2680,7 +2616,7 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-01-30",
+          "date": "2026-01-30",
           "day_type": "work",
           "start_hour": 9.03,
           "end_hour": 16.57,
@@ -2688,15 +2624,15 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-01-31",
+          "date": "2026-02-02",
           "day_type": "work",
-          "start_hour": 9.1,
-          "end_hour": 16.88,
-          "actual_hours": 7.78,
-          "target_hours": 7.5
+          "start_hour": 8.82,
+          "end_hour": 16.94,
+          "actual_hours": 8.12,
+          "target_hours": 8.0
         },
         {
-          "date": "2025-02-03",
+          "date": "2026-02-03",
           "day_type": "work",
           "start_hour": 8.95,
           "end_hour": 16.8,
@@ -2704,7 +2640,7 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-02-04",
+          "date": "2026-02-04",
           "day_type": "work",
           "start_hour": 9.06,
           "end_hour": 16.84,
@@ -2712,7 +2648,7 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-02-05",
+          "date": "2026-02-05",
           "day_type": "work",
           "start_hour": 9.05,
           "end_hour": 20.05,
@@ -2720,7 +2656,7 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-02-06",
+          "date": "2026-02-06",
           "day_type": "work",
           "start_hour": 9.07,
           "end_hour": 16.66,
@@ -2728,15 +2664,15 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-02-07",
+          "date": "2026-02-09",
           "day_type": "work",
-          "start_hour": 9.08,
-          "end_hour": 16.93,
-          "actual_hours": 7.85,
-          "target_hours": 7.5
+          "start_hour": 9.0,
+          "end_hour": 17.25,
+          "actual_hours": 8.25,
+          "target_hours": 8.0
         },
         {
-          "date": "2025-02-10",
+          "date": "2026-02-10",
           "day_type": "work",
           "start_hour": 8.98,
           "end_hour": 16.75,
@@ -2744,7 +2680,7 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-02-11",
+          "date": "2026-02-11",
           "day_type": "work",
           "start_hour": 9.04,
           "end_hour": 16.65,
@@ -2752,7 +2688,7 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-02-12",
+          "date": "2026-02-12",
           "day_type": "work",
           "start_hour": 9.02,
           "end_hour": 16.76,
@@ -2760,7 +2696,7 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-02-13",
+          "date": "2026-02-13",
           "day_type": "work",
           "start_hour": 8.98,
           "end_hour": 16.78,
@@ -2768,15 +2704,15 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-02-14",
+          "date": "2026-02-16",
           "day_type": "work",
-          "start_hour": 9.1,
-          "end_hour": 16.51,
-          "actual_hours": 7.41,
-          "target_hours": 7.5
+          "start_hour": 9.0,
+          "end_hour": 16.82,
+          "actual_hours": 7.82,
+          "target_hours": 8.0
         },
         {
-          "date": "2025-02-17",
+          "date": "2026-02-17",
           "day_type": "work",
           "start_hour": 9.11,
           "end_hour": 16.6,
@@ -2784,7 +2720,7 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-02-18",
+          "date": "2026-02-18",
           "day_type": "work",
           "start_hour": 9.02,
           "end_hour": 16.7,
@@ -2792,7 +2728,7 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-02-19",
+          "date": "2026-02-19",
           "day_type": "work",
           "start_hour": 9.01,
           "end_hour": 16.39,
@@ -2800,7 +2736,7 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-02-20",
+          "date": "2026-02-20",
           "day_type": "work",
           "start_hour": 10.53,
           "end_hour": 18.03,
@@ -2808,15 +2744,15 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-02-21",
+          "date": "2026-02-23",
           "day_type": "work",
-          "start_hour": 9.1,
-          "end_hour": 16.56,
-          "actual_hours": 7.46,
-          "target_hours": 7.5
+          "start_hour": 9.0,
+          "end_hour": 17.08,
+          "actual_hours": 8.08,
+          "target_hours": 8.0
         },
         {
-          "date": "2025-02-24",
+          "date": "2026-02-24",
           "day_type": "work",
           "start_hour": 8.97,
           "end_hour": 16.74,
@@ -2824,7 +2760,7 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-02-25",
+          "date": "2026-02-25",
           "day_type": "work",
           "start_hour": 9.0,
           "end_hour": 16.81,
@@ -2832,7 +2768,7 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-02-26",
+          "date": "2026-02-26",
           "day_type": "work",
           "start_hour": 9.07,
           "end_hour": 16.58,
@@ -2840,7 +2776,7 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-02-27",
+          "date": "2026-02-27",
           "day_type": "work",
           "start_hour": 8.93,
           "end_hour": 16.77,
@@ -2848,15 +2784,15 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-02-28",
+          "date": "2026-03-02",
           "day_type": "work",
-          "start_hour": 8.95,
-          "end_hour": 16.68,
-          "actual_hours": 7.73,
-          "target_hours": 7.5
+          "start_hour": 8.98,
+          "end_hour": 16.88,
+          "actual_hours": 7.9,
+          "target_hours": 8.0
         },
         {
-          "date": "2025-03-03",
+          "date": "2026-03-03",
           "day_type": "work",
           "start_hour": 9.03,
           "end_hour": 16.78,
@@ -2864,7 +2800,7 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-03-04",
+          "date": "2026-03-04",
           "day_type": "work",
           "start_hour": 9.07,
           "end_hour": 16.76,
@@ -2872,7 +2808,7 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-03-05",
+          "date": "2026-03-05",
           "day_type": "work",
           "start_hour": 9.03,
           "end_hour": 16.8,
@@ -2880,7 +2816,7 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-03-06",
+          "date": "2026-03-06",
           "day_type": "work",
           "start_hour": 8.95,
           "end_hour": 16.43,
@@ -2888,15 +2824,15 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-03-07",
+          "date": "2026-03-09",
           "day_type": "work",
-          "start_hour": 9.02,
-          "end_hour": 14.52,
-          "actual_hours": 5.5,
-          "target_hours": 7.5
+          "start_hour": 9.0,
+          "end_hour": 16.73,
+          "actual_hours": 7.73,
+          "target_hours": 8.0
         },
         {
-          "date": "2025-03-10",
+          "date": "2026-03-10",
           "day_type": "vacation",
           "start_hour": null,
           "end_hour": null,
@@ -2904,7 +2840,7 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-03-11",
+          "date": "2026-03-11",
           "day_type": "vacation",
           "start_hour": null,
           "end_hour": null,
@@ -2912,7 +2848,7 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-03-12",
+          "date": "2026-03-12",
           "day_type": "vacation",
           "start_hour": null,
           "end_hour": null,
@@ -2920,7 +2856,7 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-03-13",
+          "date": "2026-03-13",
           "day_type": "vacation",
           "start_hour": null,
           "end_hour": null,
@@ -2928,15 +2864,15 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-03-14",
-          "day_type": "vacation",
-          "start_hour": null,
-          "end_hour": null,
-          "actual_hours": 7.5,
-          "target_hours": 7.5
+          "date": "2026-03-16",
+          "day_type": "work",
+          "start_hour": 9.0,
+          "end_hour": 17.08,
+          "actual_hours": 8.08,
+          "target_hours": 8.0
         },
         {
-          "date": "2025-03-17",
+          "date": "2026-03-17",
           "day_type": "work",
           "start_hour": 9.07,
           "end_hour": 16.59,
@@ -2944,7 +2880,7 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-03-18",
+          "date": "2026-03-18",
           "day_type": "work",
           "start_hour": 9.05,
           "end_hour": 16.66,
@@ -2952,7 +2888,7 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-03-19",
+          "date": "2026-03-19",
           "day_type": "work",
           "start_hour": 9.04,
           "end_hour": 16.62,
@@ -2960,7 +2896,7 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-03-20",
+          "date": "2026-03-20",
           "day_type": "work",
           "start_hour": 9.08,
           "end_hour": 16.62,
@@ -2968,15 +2904,15 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-03-21",
+          "date": "2026-03-23",
           "day_type": "work",
-          "start_hour": 9.07,
-          "end_hour": 16.58,
-          "actual_hours": 7.51,
-          "target_hours": 7.5
+          "start_hour": 9.0,
+          "end_hour": 16.93,
+          "actual_hours": 7.93,
+          "target_hours": 8.0
         },
         {
-          "date": "2025-03-24",
+          "date": "2026-03-24",
           "day_type": "work",
           "start_hour": 8.98,
           "end_hour": 16.41,
@@ -2984,7 +2920,7 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-03-25",
+          "date": "2026-03-25",
           "day_type": "work",
           "start_hour": 8.97,
           "end_hour": 16.4,
@@ -2992,7 +2928,7 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-03-26",
+          "date": "2026-03-26",
           "day_type": "work",
           "start_hour": 9.04,
           "end_hour": 16.79,
@@ -3000,7 +2936,7 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-03-27",
+          "date": "2026-03-27",
           "day_type": "work",
           "start_hour": 8.97,
           "end_hour": 16.45,
@@ -3008,15 +2944,15 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-03-28",
+          "date": "2026-03-30",
           "day_type": "work",
-          "start_hour": 9.03,
-          "end_hour": 16.76,
-          "actual_hours": 7.73,
-          "target_hours": 7.5
+          "start_hour": 8.92,
+          "end_hour": 16.43,
+          "actual_hours": 7.51,
+          "target_hours": 8.0
         },
         {
-          "date": "2025-03-31",
+          "date": "2026-03-31",
           "day_type": "work",
           "start_hour": 9.13,
           "end_hour": 16.76,
@@ -3024,7 +2960,7 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-04-01",
+          "date": "2026-04-01",
           "day_type": "work",
           "start_hour": 8.97,
           "end_hour": 19.47,
@@ -3032,7 +2968,7 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-04-02",
+          "date": "2026-04-02",
           "day_type": "work",
           "start_hour": 8.99,
           "end_hour": 16.41,
@@ -3040,23 +2976,7 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-04-03",
-          "day_type": "work",
-          "start_hour": 8.97,
-          "end_hour": 16.45,
-          "actual_hours": 7.48,
-          "target_hours": 7.5
-        },
-        {
-          "date": "2025-04-04",
-          "day_type": "work",
-          "start_hour": 10.03,
-          "end_hour": 17.53,
-          "actual_hours": 7.5,
-          "target_hours": 7.5
-        },
-        {
-          "date": "2025-04-07",
+          "date": "2026-04-07",
           "day_type": "work",
           "start_hour": 8.97,
           "end_hour": 16.35,
@@ -3064,7 +2984,7 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-04-08",
+          "date": "2026-04-08",
           "day_type": "work",
           "start_hour": 9.04,
           "end_hour": 16.55,
@@ -3072,7 +2992,7 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-04-09",
+          "date": "2026-04-09",
           "day_type": "work",
           "start_hour": 9.12,
           "end_hour": 16.77,
@@ -3080,7 +3000,7 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-04-10",
+          "date": "2026-04-10",
           "day_type": "work",
           "start_hour": 9.07,
           "end_hour": 16.5,
@@ -3088,15 +3008,15 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-04-11",
+          "date": "2026-04-13",
           "day_type": "work",
-          "start_hour": 9.1,
-          "end_hour": 16.72,
-          "actual_hours": 7.62,
-          "target_hours": 7.5
+          "start_hour": 9.0,
+          "end_hour": 17.29,
+          "actual_hours": 8.29,
+          "target_hours": 8.0
         },
         {
-          "date": "2025-04-14",
+          "date": "2026-04-14",
           "day_type": "work",
           "start_hour": 9.1,
           "end_hour": 16.76,
@@ -3104,7 +3024,7 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-04-15",
+          "date": "2026-04-15",
           "day_type": "work",
           "start_hour": 9.02,
           "end_hour": 16.61,
@@ -3112,7 +3032,7 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-04-16",
+          "date": "2026-04-16",
           "day_type": "work",
           "start_hour": 8.97,
           "end_hour": 16.37,
@@ -3120,7 +3040,7 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-04-17",
+          "date": "2026-04-17",
           "day_type": "work",
           "start_hour": 9.12,
           "end_hour": 16.73,
@@ -3128,15 +3048,15 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-04-18",
-          "day_type": "holiday",
-          "start_hour": null,
-          "end_hour": null,
-          "actual_hours": 7.5,
-          "target_hours": 7.5
+          "date": "2026-04-20",
+          "day_type": "work",
+          "start_hour": 7.78,
+          "end_hour": 16.19,
+          "actual_hours": 8.41,
+          "target_hours": 8.0
         },
         {
-          "date": "2025-04-21",
+          "date": "2026-04-21",
           "day_type": "holiday",
           "start_hour": null,
           "end_hour": null,
@@ -3149,7 +3069,7 @@
       "user_id": "U5678901",
       "entries": [
         {
-          "date": "2025-01-02",
+          "date": "2026-01-02",
           "day_type": "work",
           "start_hour": 9.57,
           "end_hour": 15.66,
@@ -3157,15 +3077,15 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-01-03",
+          "date": "2026-01-05",
           "day_type": "work",
-          "start_hour": 9.45,
-          "end_hour": 15.63,
-          "actual_hours": 6.18,
-          "target_hours": 6.0
+          "start_hour": 9.0,
+          "end_hour": 16.5,
+          "actual_hours": 7.5,
+          "target_hours": 8.0
         },
         {
-          "date": "2025-01-06",
+          "date": "2026-01-06",
           "day_type": "work",
           "start_hour": 9.45,
           "end_hour": 15.45,
@@ -3173,7 +3093,7 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-01-07",
+          "date": "2026-01-07",
           "day_type": "work",
           "start_hour": 9.53,
           "end_hour": 15.59,
@@ -3181,7 +3101,7 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-01-08",
+          "date": "2026-01-08",
           "day_type": "work",
           "start_hour": 9.6,
           "end_hour": 15.59,
@@ -3189,7 +3109,7 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-01-09",
+          "date": "2026-01-09",
           "day_type": "work",
           "start_hour": 9.56,
           "end_hour": 15.73,
@@ -3197,15 +3117,15 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-01-10",
+          "date": "2026-01-12",
           "day_type": "work",
-          "start_hour": 9.57,
-          "end_hour": 15.6,
-          "actual_hours": 6.03,
-          "target_hours": 6.0
+          "start_hour": 9.0,
+          "end_hour": 16.5,
+          "actual_hours": 7.5,
+          "target_hours": 8.0
         },
         {
-          "date": "2025-01-13",
+          "date": "2026-01-13",
           "day_type": "work",
           "start_hour": 9.52,
           "end_hour": 15.63,
@@ -3213,7 +3133,7 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-01-14",
+          "date": "2026-01-14",
           "day_type": "work",
           "start_hour": 9.5,
           "end_hour": 16.5,
@@ -3221,7 +3141,7 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-01-15",
+          "date": "2026-01-15",
           "day_type": "work",
           "start_hour": 9.51,
           "end_hour": 15.77,
@@ -3229,7 +3149,7 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-01-16",
+          "date": "2026-01-16",
           "day_type": "work",
           "start_hour": 9.6,
           "end_hour": 15.66,
@@ -3237,15 +3157,15 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-01-17",
+          "date": "2026-01-19",
           "day_type": "work",
-          "start_hour": 9.54,
-          "end_hour": 15.71,
-          "actual_hours": 6.17,
-          "target_hours": 6.0
+          "start_hour": 9.0,
+          "end_hour": 16.5,
+          "actual_hours": 7.5,
+          "target_hours": 8.0
         },
         {
-          "date": "2025-01-20",
+          "date": "2026-01-20",
           "day_type": "work",
           "start_hour": 9.56,
           "end_hour": 15.85,
@@ -3253,7 +3173,7 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-01-21",
+          "date": "2026-01-21",
           "day_type": "work",
           "start_hour": 10.52,
           "end_hour": 16.52,
@@ -3261,7 +3181,7 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-01-22",
+          "date": "2026-01-22",
           "day_type": "work",
           "start_hour": 9.47,
           "end_hour": 15.5,
@@ -3269,7 +3189,7 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-01-23",
+          "date": "2026-01-23",
           "day_type": "work",
           "start_hour": 9.55,
           "end_hour": 15.56,
@@ -3277,15 +3197,15 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-01-24",
+          "date": "2026-01-26",
           "day_type": "work",
-          "start_hour": 9.47,
-          "end_hour": 15.45,
-          "actual_hours": 5.98,
-          "target_hours": 6.0
+          "start_hour": 9.0,
+          "end_hour": 16.5,
+          "actual_hours": 7.5,
+          "target_hours": 8.0
         },
         {
-          "date": "2025-01-27",
+          "date": "2026-01-27",
           "day_type": "work",
           "start_hour": 9.44,
           "end_hour": 15.55,
@@ -3293,7 +3213,7 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-01-28",
+          "date": "2026-01-28",
           "day_type": "work",
           "start_hour": 9.54,
           "end_hour": 15.59,
@@ -3301,7 +3221,7 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-01-29",
+          "date": "2026-01-29",
           "day_type": "work",
           "start_hour": 9.48,
           "end_hour": 15.68,
@@ -3309,7 +3229,7 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-01-30",
+          "date": "2026-01-30",
           "day_type": "work",
           "start_hour": 9.55,
           "end_hour": 15.66,
@@ -3317,15 +3237,15 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-01-31",
+          "date": "2026-02-02",
           "day_type": "work",
-          "start_hour": 9.55,
-          "end_hour": 15.83,
-          "actual_hours": 6.28,
-          "target_hours": 6.0
+          "start_hour": 9.0,
+          "end_hour": 16.5,
+          "actual_hours": 7.5,
+          "target_hours": 8.0
         },
         {
-          "date": "2025-02-03",
+          "date": "2026-02-03",
           "day_type": "work",
           "start_hour": 9.57,
           "end_hour": 15.75,
@@ -3333,7 +3253,7 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-02-04",
+          "date": "2026-02-04",
           "day_type": "work",
           "start_hour": 9.55,
           "end_hour": 15.84,
@@ -3341,7 +3261,7 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-02-05",
+          "date": "2026-02-05",
           "day_type": "work",
           "start_hour": 9.51,
           "end_hour": 15.66,
@@ -3349,7 +3269,7 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-02-06",
+          "date": "2026-02-06",
           "day_type": "work",
           "start_hour": 9.54,
           "end_hour": 15.82,
@@ -3357,15 +3277,15 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-02-07",
+          "date": "2026-02-09",
           "day_type": "work",
-          "start_hour": 9.55,
-          "end_hour": 14.55,
-          "actual_hours": 5.0,
-          "target_hours": 6.0
+          "start_hour": 9.0,
+          "end_hour": 16.5,
+          "actual_hours": 7.5,
+          "target_hours": 8.0
         },
         {
-          "date": "2025-02-10",
+          "date": "2026-02-10",
           "day_type": "work",
           "start_hour": 9.57,
           "end_hour": 15.55,
@@ -3373,7 +3293,7 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-02-11",
+          "date": "2026-02-11",
           "day_type": "work",
           "start_hour": 9.47,
           "end_hour": 15.53,
@@ -3381,7 +3301,7 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-02-12",
+          "date": "2026-02-12",
           "day_type": "work",
           "start_hour": 9.56,
           "end_hour": 15.71,
@@ -3389,7 +3309,7 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-02-13",
+          "date": "2026-02-13",
           "day_type": "work",
           "start_hour": 9.49,
           "end_hour": 15.48,
@@ -3397,15 +3317,15 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-02-14",
+          "date": "2026-02-16",
           "day_type": "work",
-          "start_hour": 9.55,
-          "end_hour": 15.75,
-          "actual_hours": 6.2,
-          "target_hours": 6.0
+          "start_hour": 9.0,
+          "end_hour": 16.5,
+          "actual_hours": 7.5,
+          "target_hours": 8.0
         },
         {
-          "date": "2025-02-17",
+          "date": "2026-02-17",
           "day_type": "work",
           "start_hour": 9.59,
           "end_hour": 15.72,
@@ -3413,7 +3333,7 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-02-18",
+          "date": "2026-02-18",
           "day_type": "work",
           "start_hour": 9.52,
           "end_hour": 15.5,
@@ -3421,7 +3341,7 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-02-19",
+          "date": "2026-02-19",
           "day_type": "work",
           "start_hour": 9.45,
           "end_hour": 15.56,
@@ -3429,7 +3349,7 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-02-20",
+          "date": "2026-02-20",
           "day_type": "work",
           "start_hour": 9.49,
           "end_hour": 15.53,
@@ -3437,15 +3357,15 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-02-21",
+          "date": "2026-02-23",
           "day_type": "work",
-          "start_hour": 9.45,
-          "end_hour": 15.75,
-          "actual_hours": 6.3,
-          "target_hours": 6.0
+          "start_hour": 9.0,
+          "end_hour": 16.5,
+          "actual_hours": 7.5,
+          "target_hours": 8.0
         },
         {
-          "date": "2025-02-24",
+          "date": "2026-02-24",
           "day_type": "vacation",
           "start_hour": null,
           "end_hour": null,
@@ -3453,7 +3373,7 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-02-25",
+          "date": "2026-02-25",
           "day_type": "vacation",
           "start_hour": null,
           "end_hour": null,
@@ -3461,7 +3381,7 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-02-26",
+          "date": "2026-02-26",
           "day_type": "vacation",
           "start_hour": null,
           "end_hour": null,
@@ -3469,7 +3389,7 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-02-27",
+          "date": "2026-02-27",
           "day_type": "vacation",
           "start_hour": null,
           "end_hour": null,
@@ -3477,15 +3397,15 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-02-28",
-          "day_type": "vacation",
-          "start_hour": null,
-          "end_hour": null,
-          "actual_hours": 6.0,
-          "target_hours": 6.0
+          "date": "2026-03-02",
+          "day_type": "work",
+          "start_hour": 9.0,
+          "end_hour": 16.5,
+          "actual_hours": 7.5,
+          "target_hours": 8.0
         },
         {
-          "date": "2025-03-03",
+          "date": "2026-03-03",
           "day_type": "work",
           "start_hour": 9.57,
           "end_hour": 15.73,
@@ -3493,7 +3413,7 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-03-04",
+          "date": "2026-03-04",
           "day_type": "work",
           "start_hour": 9.59,
           "end_hour": 15.9,
@@ -3501,7 +3421,7 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-03-05",
+          "date": "2026-03-05",
           "day_type": "work",
           "start_hour": 9.55,
           "end_hour": 15.6,
@@ -3509,7 +3429,7 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-03-06",
+          "date": "2026-03-06",
           "day_type": "work",
           "start_hour": 9.45,
           "end_hour": 15.67,
@@ -3517,15 +3437,15 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-03-07",
+          "date": "2026-03-09",
           "day_type": "work",
-          "start_hour": 9.52,
-          "end_hour": 15.7,
-          "actual_hours": 6.18,
-          "target_hours": 6.0
+          "start_hour": 8.6,
+          "end_hour": 16.1,
+          "actual_hours": 7.5,
+          "target_hours": 8.0
         },
         {
-          "date": "2025-03-10",
+          "date": "2026-03-10",
           "day_type": "work",
           "start_hour": 9.59,
           "end_hour": 15.61,
@@ -3533,7 +3453,7 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-03-11",
+          "date": "2026-03-11",
           "day_type": "work",
           "start_hour": 9.53,
           "end_hour": 15.71,
@@ -3541,7 +3461,7 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-03-12",
+          "date": "2026-03-12",
           "day_type": "work",
           "start_hour": 9.52,
           "end_hour": 15.5,
@@ -3549,7 +3469,7 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-03-13",
+          "date": "2026-03-13",
           "day_type": "work",
           "start_hour": 9.5,
           "end_hour": 15.57,
@@ -3557,15 +3477,15 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-03-14",
+          "date": "2026-03-16",
           "day_type": "work",
-          "start_hour": 9.55,
-          "end_hour": 15.81,
-          "actual_hours": 6.26,
-          "target_hours": 6.0
+          "start_hour": 9.0,
+          "end_hour": 16.5,
+          "actual_hours": 7.5,
+          "target_hours": 8.0
         },
         {
-          "date": "2025-03-17",
+          "date": "2026-03-17",
           "day_type": "work",
           "start_hour": 9.49,
           "end_hour": 15.69,
@@ -3573,7 +3493,7 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-03-18",
+          "date": "2026-03-18",
           "day_type": "work",
           "start_hour": 9.49,
           "end_hour": 15.78,
@@ -3581,7 +3501,7 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-03-19",
+          "date": "2026-03-19",
           "day_type": "work",
           "start_hour": 9.48,
           "end_hour": 16.48,
@@ -3589,7 +3509,7 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-03-20",
+          "date": "2026-03-20",
           "day_type": "work",
           "start_hour": 9.57,
           "end_hour": 15.72,
@@ -3597,15 +3517,15 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-03-21",
+          "date": "2026-03-23",
           "day_type": "work",
-          "start_hour": 9.51,
-          "end_hour": 15.57,
-          "actual_hours": 6.06,
-          "target_hours": 6.0
+          "start_hour": 9.0,
+          "end_hour": 16.5,
+          "actual_hours": 7.5,
+          "target_hours": 8.0
         },
         {
-          "date": "2025-03-24",
+          "date": "2026-03-24",
           "day_type": "work",
           "start_hour": 9.49,
           "end_hour": 15.79,
@@ -3613,7 +3533,7 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-03-25",
+          "date": "2026-03-25",
           "day_type": "work",
           "start_hour": 11.02,
           "end_hour": 17.02,
@@ -3621,7 +3541,7 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-03-26",
+          "date": "2026-03-26",
           "day_type": "work",
           "start_hour": 9.5,
           "end_hour": 15.64,
@@ -3629,7 +3549,7 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-03-27",
+          "date": "2026-03-27",
           "day_type": "work",
           "start_hour": 9.6,
           "end_hour": 15.79,
@@ -3637,15 +3557,15 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-03-28",
+          "date": "2026-03-30",
           "day_type": "work",
-          "start_hour": 9.53,
-          "end_hour": 15.63,
-          "actual_hours": 6.1,
-          "target_hours": 6.0
+          "start_hour": 9.0,
+          "end_hour": 16.5,
+          "actual_hours": 7.5,
+          "target_hours": 8.0
         },
         {
-          "date": "2025-03-31",
+          "date": "2026-03-31",
           "day_type": "work",
           "start_hour": 9.47,
           "end_hour": 15.55,
@@ -3653,7 +3573,7 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-04-01",
+          "date": "2026-04-01",
           "day_type": "work",
           "start_hour": 9.56,
           "end_hour": 15.74,
@@ -3661,7 +3581,7 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-04-02",
+          "date": "2026-04-02",
           "day_type": "work",
           "start_hour": 9.56,
           "end_hour": 15.58,
@@ -3669,23 +3589,7 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-04-03",
-          "day_type": "work",
-          "start_hour": 9.53,
-          "end_hour": 15.81,
-          "actual_hours": 6.28,
-          "target_hours": 6.0
-        },
-        {
-          "date": "2025-04-04",
-          "day_type": "work",
-          "start_hour": 9.51,
-          "end_hour": 15.71,
-          "actual_hours": 6.2,
-          "target_hours": 6.0
-        },
-        {
-          "date": "2025-04-07",
+          "date": "2026-04-07",
           "day_type": "work",
           "start_hour": 9.46,
           "end_hour": 15.76,
@@ -3693,7 +3597,7 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-04-08",
+          "date": "2026-04-08",
           "day_type": "work",
           "start_hour": 9.54,
           "end_hour": 15.58,
@@ -3701,7 +3605,7 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-04-09",
+          "date": "2026-04-09",
           "day_type": "work",
           "start_hour": 9.47,
           "end_hour": 15.62,
@@ -3709,7 +3613,7 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-04-10",
+          "date": "2026-04-10",
           "day_type": "work",
           "start_hour": 9.53,
           "end_hour": 15.51,
@@ -3717,15 +3621,15 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-04-11",
+          "date": "2026-04-13",
           "day_type": "work",
-          "start_hour": 9.6,
-          "end_hour": 15.88,
-          "actual_hours": 6.28,
-          "target_hours": 6.0
+          "start_hour": 8.96,
+          "end_hour": 16.46,
+          "actual_hours": 7.5,
+          "target_hours": 8.0
         },
         {
-          "date": "2025-04-14",
+          "date": "2026-04-14",
           "day_type": "work",
           "start_hour": 9.51,
           "end_hour": 15.5,
@@ -3733,7 +3637,7 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-04-15",
+          "date": "2026-04-15",
           "day_type": "work",
           "start_hour": 9.6,
           "end_hour": 14.6,
@@ -3741,7 +3645,7 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-04-16",
+          "date": "2026-04-16",
           "day_type": "work",
           "start_hour": 9.57,
           "end_hour": 15.7,
@@ -3749,7 +3653,7 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-04-17",
+          "date": "2026-04-17",
           "day_type": "work",
           "start_hour": 9.55,
           "end_hour": 15.68,
@@ -3757,15 +3661,15 @@
           "target_hours": 6.0
         },
         {
-          "date": "2025-04-18",
-          "day_type": "holiday",
-          "start_hour": null,
-          "end_hour": null,
-          "actual_hours": 6.0,
-          "target_hours": 6.0
+          "date": "2026-04-20",
+          "day_type": "work",
+          "start_hour": 7.72,
+          "end_hour": 16.37,
+          "actual_hours": 8.65,
+          "target_hours": 8.0
         },
         {
-          "date": "2025-04-21",
+          "date": "2026-04-21",
           "day_type": "holiday",
           "start_hour": null,
           "end_hour": null,
@@ -3778,7 +3682,7 @@
       "user_id": "U6789012",
       "entries": [
         {
-          "date": "2025-01-02",
+          "date": "2026-01-02",
           "day_type": "work",
           "start_hour": 7.95,
           "end_hour": 16.23,
@@ -3786,15 +3690,15 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-01-03",
+          "date": "2026-01-05",
           "day_type": "work",
-          "start_hour": 8.02,
-          "end_hour": 16.12,
-          "actual_hours": 8.1,
+          "start_hour": 7.93,
+          "end_hour": 16.36,
+          "actual_hours": 8.43,
           "target_hours": 8.0
         },
         {
-          "date": "2025-01-06",
+          "date": "2026-01-06",
           "day_type": "work",
           "start_hour": 7.98,
           "end_hour": 16.13,
@@ -3802,7 +3706,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-01-07",
+          "date": "2026-01-07",
           "day_type": "work",
           "start_hour": 8.01,
           "end_hour": 16.19,
@@ -3810,7 +3714,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-01-08",
+          "date": "2026-01-08",
           "day_type": "work",
           "start_hour": 8.01,
           "end_hour": 16.3,
@@ -3818,7 +3722,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-01-09",
+          "date": "2026-01-09",
           "day_type": "work",
           "start_hour": 7.95,
           "end_hour": 16.22,
@@ -3826,15 +3730,15 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-01-10",
+          "date": "2026-01-12",
           "day_type": "work",
-          "start_hour": 7.96,
-          "end_hour": 16.27,
-          "actual_hours": 8.31,
+          "start_hour": 8.15,
+          "end_hour": 15.65,
+          "actual_hours": 7.5,
           "target_hours": 8.0
         },
         {
-          "date": "2025-01-13",
+          "date": "2026-01-13",
           "day_type": "work",
           "start_hour": 7.97,
           "end_hour": 16.25,
@@ -3842,7 +3746,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-01-14",
+          "date": "2026-01-14",
           "day_type": "work",
           "start_hour": 7.95,
           "end_hour": 16.07,
@@ -3850,7 +3754,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-01-15",
+          "date": "2026-01-15",
           "day_type": "work",
           "start_hour": 7.98,
           "end_hour": 16.31,
@@ -3858,7 +3762,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-01-16",
+          "date": "2026-01-16",
           "day_type": "work",
           "start_hour": 7.97,
           "end_hour": 16.04,
@@ -3866,15 +3770,15 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-01-17",
+          "date": "2026-01-19",
           "day_type": "work",
-          "start_hour": 7.97,
-          "end_hour": 16.1,
-          "actual_hours": 8.13,
+          "start_hour": 8.15,
+          "end_hour": 15.87,
+          "actual_hours": 7.72,
           "target_hours": 8.0
         },
         {
-          "date": "2025-01-20",
+          "date": "2026-01-20",
           "day_type": "work",
           "start_hour": 7.98,
           "end_hour": 16.17,
@@ -3882,7 +3786,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-01-21",
+          "date": "2026-01-21",
           "day_type": "work",
           "start_hour": 7.97,
           "end_hour": 16.1,
@@ -3890,7 +3794,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-01-22",
+          "date": "2026-01-22",
           "day_type": "work",
           "start_hour": 7.94,
           "end_hour": 16.18,
@@ -3898,7 +3802,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-01-23",
+          "date": "2026-01-23",
           "day_type": "work",
           "start_hour": 7.98,
           "end_hour": 16.08,
@@ -3906,15 +3810,15 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-01-24",
+          "date": "2026-01-26",
           "day_type": "work",
-          "start_hour": 8.0,
-          "end_hour": 16.04,
-          "actual_hours": 8.04,
+          "start_hour": 8.09,
+          "end_hour": 15.79,
+          "actual_hours": 7.7,
           "target_hours": 8.0
         },
         {
-          "date": "2025-01-27",
+          "date": "2026-01-27",
           "day_type": "work",
           "start_hour": 7.99,
           "end_hour": 16.23,
@@ -3922,7 +3826,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-01-28",
+          "date": "2026-01-28",
           "day_type": "work",
           "start_hour": 8.0,
           "end_hour": 16.15,
@@ -3930,7 +3834,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-01-29",
+          "date": "2026-01-29",
           "day_type": "work",
           "start_hour": 7.98,
           "end_hour": 17.98,
@@ -3938,7 +3842,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-01-30",
+          "date": "2026-01-30",
           "day_type": "work",
           "start_hour": 7.99,
           "end_hour": 16.27,
@@ -3946,15 +3850,15 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-01-31",
+          "date": "2026-02-02",
           "day_type": "work",
-          "start_hour": 8.02,
-          "end_hour": 16.2,
-          "actual_hours": 8.18,
+          "start_hour": 8.01,
+          "end_hour": 16.63,
+          "actual_hours": 8.62,
           "target_hours": 8.0
         },
         {
-          "date": "2025-02-03",
+          "date": "2026-02-03",
           "day_type": "work",
           "start_hour": 7.92,
           "end_hour": 16.1,
@@ -3962,7 +3866,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-02-04",
+          "date": "2026-02-04",
           "day_type": "work",
           "start_hour": 7.98,
           "end_hour": 16.27,
@@ -3970,7 +3874,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-02-05",
+          "date": "2026-02-05",
           "day_type": "work",
           "start_hour": 8.01,
           "end_hour": 16.17,
@@ -3978,7 +3882,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-02-06",
+          "date": "2026-02-06",
           "day_type": "work",
           "start_hour": 7.97,
           "end_hour": 16.14,
@@ -3986,15 +3890,15 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-02-07",
+          "date": "2026-02-09",
           "day_type": "work",
-          "start_hour": 7.99,
-          "end_hour": 16.14,
-          "actual_hours": 8.15,
+          "start_hour": 7.96,
+          "end_hour": 16.24,
+          "actual_hours": 8.28,
           "target_hours": 8.0
         },
         {
-          "date": "2025-02-10",
+          "date": "2026-02-10",
           "day_type": "work",
           "start_hour": 7.99,
           "end_hour": 16.07,
@@ -4002,7 +3906,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-02-11",
+          "date": "2026-02-11",
           "day_type": "work",
           "start_hour": 7.97,
           "end_hour": 16.29,
@@ -4010,7 +3914,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-02-12",
+          "date": "2026-02-12",
           "day_type": "work",
           "start_hour": 7.95,
           "end_hour": 16.19,
@@ -4018,7 +3922,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-02-13",
+          "date": "2026-02-13",
           "day_type": "work",
           "start_hour": 7.98,
           "end_hour": 16.27,
@@ -4026,15 +3930,15 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-02-14",
+          "date": "2026-02-16",
           "day_type": "work",
-          "start_hour": 8.0,
-          "end_hour": 13.5,
-          "actual_hours": 5.5,
+          "start_hour": 8.1,
+          "end_hour": 16.36,
+          "actual_hours": 8.26,
           "target_hours": 8.0
         },
         {
-          "date": "2025-02-17",
+          "date": "2026-02-17",
           "day_type": "work",
           "start_hour": 8.01,
           "end_hour": 16.3,
@@ -4042,7 +3946,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-02-18",
+          "date": "2026-02-18",
           "day_type": "work",
           "start_hour": 7.96,
           "end_hour": 16.08,
@@ -4050,7 +3954,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-02-19",
+          "date": "2026-02-19",
           "day_type": "work",
           "start_hour": 7.99,
           "end_hour": 16.25,
@@ -4058,7 +3962,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-02-20",
+          "date": "2026-02-20",
           "day_type": "work",
           "start_hour": 8.01,
           "end_hour": 16.05,
@@ -4066,15 +3970,15 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-02-21",
+          "date": "2026-02-23",
           "day_type": "work",
-          "start_hour": 7.93,
-          "end_hour": 16.15,
-          "actual_hours": 8.22,
+          "start_hour": 7.97,
+          "end_hour": 16.71,
+          "actual_hours": 8.74,
           "target_hours": 8.0
         },
         {
-          "date": "2025-02-24",
+          "date": "2026-02-24",
           "day_type": "work",
           "start_hour": 8.01,
           "end_hour": 16.34,
@@ -4082,7 +3986,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-02-25",
+          "date": "2026-02-25",
           "day_type": "work",
           "start_hour": 7.99,
           "end_hour": 16.15,
@@ -4090,7 +3994,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-02-26",
+          "date": "2026-02-26",
           "day_type": "work",
           "start_hour": 7.93,
           "end_hour": 16.15,
@@ -4098,7 +4002,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-02-27",
+          "date": "2026-02-27",
           "day_type": "work",
           "start_hour": 8.01,
           "end_hour": 16.17,
@@ -4106,15 +4010,15 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-02-28",
+          "date": "2026-03-02",
           "day_type": "work",
-          "start_hour": 7.99,
-          "end_hour": 16.29,
-          "actual_hours": 8.3,
+          "start_hour": 8.14,
+          "end_hour": 16.25,
+          "actual_hours": 8.11,
           "target_hours": 8.0
         },
         {
-          "date": "2025-03-03",
+          "date": "2026-03-03",
           "day_type": "work",
           "start_hour": 7.92,
           "end_hour": 16.19,
@@ -4122,7 +4026,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-03-04",
+          "date": "2026-03-04",
           "day_type": "work",
           "start_hour": 7.95,
           "end_hour": 16.09,
@@ -4130,7 +4034,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-03-05",
+          "date": "2026-03-05",
           "day_type": "work",
           "start_hour": 9.02,
           "end_hour": 17.18,
@@ -4138,7 +4042,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-03-06",
+          "date": "2026-03-06",
           "day_type": "work",
           "start_hour": 7.93,
           "end_hour": 16.12,
@@ -4146,15 +4050,15 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-03-07",
+          "date": "2026-03-09",
           "day_type": "work",
-          "start_hour": 7.98,
-          "end_hour": 16.25,
-          "actual_hours": 8.27,
+          "start_hour": 8.39,
+          "end_hour": 16.21,
+          "actual_hours": 7.82,
           "target_hours": 8.0
         },
         {
-          "date": "2025-03-10",
+          "date": "2026-03-10",
           "day_type": "work",
           "start_hour": 7.94,
           "end_hour": 15.99,
@@ -4162,7 +4066,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-03-11",
+          "date": "2026-03-11",
           "day_type": "work",
           "start_hour": 8.01,
           "end_hour": 16.23,
@@ -4170,7 +4074,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-03-12",
+          "date": "2026-03-12",
           "day_type": "work",
           "start_hour": 7.94,
           "end_hour": 16.24,
@@ -4178,7 +4082,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-03-13",
+          "date": "2026-03-13",
           "day_type": "work",
           "start_hour": 7.93,
           "end_hour": 16.1,
@@ -4186,15 +4090,15 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-03-14",
+          "date": "2026-03-16",
           "day_type": "work",
-          "start_hour": 7.95,
-          "end_hour": 16.06,
-          "actual_hours": 8.11,
+          "start_hour": 8.12,
+          "end_hour": 16.24,
+          "actual_hours": 8.12,
           "target_hours": 8.0
         },
         {
-          "date": "2025-03-17",
+          "date": "2026-03-17",
           "day_type": "work",
           "start_hour": 7.92,
           "end_hour": 16.19,
@@ -4202,7 +4106,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-03-18",
+          "date": "2026-03-18",
           "day_type": "work",
           "start_hour": 8.01,
           "end_hour": 16.24,
@@ -4210,7 +4114,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-03-19",
+          "date": "2026-03-19",
           "day_type": "work",
           "start_hour": 7.94,
           "end_hour": 16.1,
@@ -4218,7 +4122,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-03-20",
+          "date": "2026-03-20",
           "day_type": "work",
           "start_hour": 7.97,
           "end_hour": 14.47,
@@ -4226,15 +4130,15 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-03-21",
+          "date": "2026-03-23",
           "day_type": "work",
-          "start_hour": 7.95,
-          "end_hour": 16.16,
-          "actual_hours": 8.21,
+          "start_hour": 8.0,
+          "end_hour": 16.45,
+          "actual_hours": 8.45,
           "target_hours": 8.0
         },
         {
-          "date": "2025-03-24",
+          "date": "2026-03-24",
           "day_type": "vacation",
           "start_hour": null,
           "end_hour": null,
@@ -4242,7 +4146,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-03-25",
+          "date": "2026-03-25",
           "day_type": "vacation",
           "start_hour": null,
           "end_hour": null,
@@ -4250,7 +4154,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-03-26",
+          "date": "2026-03-26",
           "day_type": "vacation",
           "start_hour": null,
           "end_hour": null,
@@ -4258,7 +4162,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-03-27",
+          "date": "2026-03-27",
           "day_type": "vacation",
           "start_hour": null,
           "end_hour": null,
@@ -4266,15 +4170,15 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-03-28",
-          "day_type": "vacation",
-          "start_hour": null,
-          "end_hour": null,
-          "actual_hours": 8.0,
+          "date": "2026-03-30",
+          "day_type": "work",
+          "start_hour": 8.02,
+          "end_hour": 16.45,
+          "actual_hours": 8.43,
           "target_hours": 8.0
         },
         {
-          "date": "2025-03-31",
+          "date": "2026-03-31",
           "day_type": "work",
           "start_hour": 7.98,
           "end_hour": 16.14,
@@ -4282,7 +4186,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-04-01",
+          "date": "2026-04-01",
           "day_type": "work",
           "start_hour": 7.95,
           "end_hour": 16.23,
@@ -4290,7 +4194,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-04-02",
+          "date": "2026-04-02",
           "day_type": "work",
           "start_hour": 7.94,
           "end_hour": 16.09,
@@ -4298,23 +4202,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-04-03",
-          "day_type": "work",
-          "start_hour": 9.52,
-          "end_hour": 17.68,
-          "actual_hours": 8.16,
-          "target_hours": 8.0
-        },
-        {
-          "date": "2025-04-04",
-          "day_type": "work",
-          "start_hour": 7.97,
-          "end_hour": 16.07,
-          "actual_hours": 8.1,
-          "target_hours": 8.0
-        },
-        {
-          "date": "2025-04-07",
+          "date": "2026-04-07",
           "day_type": "work",
           "start_hour": 7.98,
           "end_hour": 16.18,
@@ -4322,7 +4210,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-04-08",
+          "date": "2026-04-08",
           "day_type": "work",
           "start_hour": 8.02,
           "end_hour": 16.14,
@@ -4330,7 +4218,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-04-09",
+          "date": "2026-04-09",
           "day_type": "work",
           "start_hour": 8.02,
           "end_hour": 16.25,
@@ -4338,7 +4226,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-04-10",
+          "date": "2026-04-10",
           "day_type": "work",
           "start_hour": 7.95,
           "end_hour": 16.15,
@@ -4346,15 +4234,15 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-04-11",
+          "date": "2026-04-13",
           "day_type": "work",
-          "start_hour": 7.95,
-          "end_hour": 17.95,
-          "actual_hours": 10.0,
+          "start_hour": 7.76,
+          "end_hour": 15.46,
+          "actual_hours": 7.7,
           "target_hours": 8.0
         },
         {
-          "date": "2025-04-14",
+          "date": "2026-04-14",
           "day_type": "work",
           "start_hour": 7.99,
           "end_hour": 16.24,
@@ -4362,7 +4250,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-04-15",
+          "date": "2026-04-15",
           "day_type": "work",
           "start_hour": 7.92,
           "end_hour": 16.13,
@@ -4370,7 +4258,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-04-16",
+          "date": "2026-04-16",
           "day_type": "work",
           "start_hour": 7.97,
           "end_hour": 16.27,
@@ -4378,7 +4266,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-04-17",
+          "date": "2026-04-17",
           "day_type": "work",
           "start_hour": 7.95,
           "end_hour": 16.22,
@@ -4386,15 +4274,15 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-04-18",
-          "day_type": "holiday",
-          "start_hour": null,
-          "end_hour": null,
-          "actual_hours": 8.0,
+          "date": "2026-04-20",
+          "day_type": "work",
+          "start_hour": 7.66,
+          "end_hour": 16.16,
+          "actual_hours": 8.5,
           "target_hours": 8.0
         },
         {
-          "date": "2025-04-21",
+          "date": "2026-04-21",
           "day_type": "holiday",
           "start_hour": null,
           "end_hour": null,
@@ -4407,7 +4295,7 @@
       "user_id": "U7890123",
       "entries": [
         {
-          "date": "2025-01-02",
+          "date": "2026-01-02",
           "day_type": "work",
           "start_hour": 9.54,
           "end_hour": 17.09,
@@ -4415,15 +4303,15 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-01-03",
+          "date": "2026-01-05",
           "day_type": "work",
-          "start_hour": 9.55,
-          "end_hour": 17.23,
-          "actual_hours": 7.68,
-          "target_hours": 7.5
+          "start_hour": 9.0,
+          "end_hour": 16.5,
+          "actual_hours": 7.5,
+          "target_hours": 8.0
         },
         {
-          "date": "2025-01-06",
+          "date": "2026-01-06",
           "day_type": "work",
           "start_hour": 9.56,
           "end_hour": 17.29,
@@ -4431,7 +4319,7 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-01-07",
+          "date": "2026-01-07",
           "day_type": "work",
           "start_hour": 9.55,
           "end_hour": 17.34,
@@ -4439,7 +4327,7 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-01-08",
+          "date": "2026-01-08",
           "day_type": "work",
           "start_hour": 9.55,
           "end_hour": 17.37,
@@ -4447,7 +4335,7 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-01-09",
+          "date": "2026-01-09",
           "day_type": "work",
           "start_hour": 9.47,
           "end_hour": 20.47,
@@ -4455,15 +4343,15 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-01-10",
+          "date": "2026-01-12",
           "day_type": "work",
-          "start_hour": 9.55,
-          "end_hour": 17.07,
-          "actual_hours": 7.52,
-          "target_hours": 7.5
+          "start_hour": 9.0,
+          "end_hour": 16.5,
+          "actual_hours": 7.5,
+          "target_hours": 8.0
         },
         {
-          "date": "2025-01-13",
+          "date": "2026-01-13",
           "day_type": "work",
           "start_hour": 9.51,
           "end_hour": 17.17,
@@ -4471,7 +4359,7 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-01-14",
+          "date": "2026-01-14",
           "day_type": "work",
           "start_hour": 9.57,
           "end_hour": 16.99,
@@ -4479,7 +4367,7 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-01-15",
+          "date": "2026-01-15",
           "day_type": "work",
           "start_hour": 9.48,
           "end_hour": 17.22,
@@ -4487,7 +4375,7 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-01-16",
+          "date": "2026-01-16",
           "day_type": "work",
           "start_hour": 10.53,
           "end_hour": 18.03,
@@ -4495,15 +4383,15 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-01-17",
+          "date": "2026-01-19",
           "day_type": "work",
-          "start_hour": 9.46,
-          "end_hour": 16.9,
-          "actual_hours": 7.44,
-          "target_hours": 7.5
+          "start_hour": 9.0,
+          "end_hour": 17.25,
+          "actual_hours": 8.25,
+          "target_hours": 8.0
         },
         {
-          "date": "2025-01-20",
+          "date": "2026-01-20",
           "day_type": "work",
           "start_hour": 9.53,
           "end_hour": 17.39,
@@ -4511,7 +4399,7 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-01-21",
+          "date": "2026-01-21",
           "day_type": "work",
           "start_hour": 9.53,
           "end_hour": 17.36,
@@ -4519,7 +4407,7 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-01-22",
+          "date": "2026-01-22",
           "day_type": "work",
           "start_hour": 9.59,
           "end_hour": 17.09,
@@ -4527,7 +4415,7 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-01-23",
+          "date": "2026-01-23",
           "day_type": "work",
           "start_hour": 9.58,
           "end_hour": 17.19,
@@ -4535,15 +4423,15 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-01-24",
+          "date": "2026-01-26",
           "day_type": "work",
-          "start_hour": 9.58,
-          "end_hour": 17.32,
-          "actual_hours": 7.74,
-          "target_hours": 7.5
+          "start_hour": 9.0,
+          "end_hour": 16.5,
+          "actual_hours": 7.5,
+          "target_hours": 8.0
         },
         {
-          "date": "2025-01-27",
+          "date": "2026-01-27",
           "day_type": "vacation",
           "start_hour": null,
           "end_hour": null,
@@ -4551,7 +4439,7 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-01-28",
+          "date": "2026-01-28",
           "day_type": "vacation",
           "start_hour": null,
           "end_hour": null,
@@ -4559,7 +4447,7 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-01-29",
+          "date": "2026-01-29",
           "day_type": "vacation",
           "start_hour": null,
           "end_hour": null,
@@ -4567,7 +4455,7 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-01-30",
+          "date": "2026-01-30",
           "day_type": "vacation",
           "start_hour": null,
           "end_hour": null,
@@ -4575,15 +4463,15 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-01-31",
-          "day_type": "vacation",
-          "start_hour": null,
-          "end_hour": null,
+          "date": "2026-02-02",
+          "day_type": "work",
+          "start_hour": 9.0,
+          "end_hour": 16.5,
           "actual_hours": 7.5,
-          "target_hours": 7.5
+          "target_hours": 8.0
         },
         {
-          "date": "2025-02-03",
+          "date": "2026-02-03",
           "day_type": "work",
           "start_hour": 9.49,
           "end_hour": 16.92,
@@ -4591,7 +4479,7 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-02-04",
+          "date": "2026-02-04",
           "day_type": "work",
           "start_hour": 9.61,
           "end_hour": 17.05,
@@ -4599,7 +4487,7 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-02-05",
+          "date": "2026-02-05",
           "day_type": "work",
           "start_hour": 9.55,
           "end_hour": 15.55,
@@ -4607,7 +4495,7 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-02-06",
+          "date": "2026-02-06",
           "day_type": "work",
           "start_hour": 9.61,
           "end_hour": 17.41,
@@ -4615,15 +4503,15 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-02-07",
+          "date": "2026-02-09",
           "day_type": "work",
-          "start_hour": 9.56,
-          "end_hour": 17.42,
-          "actual_hours": 7.86,
-          "target_hours": 7.5
+          "start_hour": 9.0,
+          "end_hour": 17.84,
+          "actual_hours": 8.84,
+          "target_hours": 8.0
         },
         {
-          "date": "2025-02-10",
+          "date": "2026-02-10",
           "day_type": "work",
           "start_hour": 9.61,
           "end_hour": 17.38,
@@ -4631,7 +4519,7 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-02-11",
+          "date": "2026-02-11",
           "day_type": "work",
           "start_hour": 9.49,
           "end_hour": 17.26,
@@ -4639,7 +4527,7 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-02-12",
+          "date": "2026-02-12",
           "day_type": "work",
           "start_hour": 9.42,
           "end_hour": 17.06,
@@ -4647,7 +4535,7 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-02-13",
+          "date": "2026-02-13",
           "day_type": "work",
           "start_hour": 9.51,
           "end_hour": 17.22,
@@ -4655,15 +4543,15 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-02-14",
+          "date": "2026-02-16",
           "day_type": "work",
-          "start_hour": 9.55,
-          "end_hour": 17.21,
-          "actual_hours": 7.66,
-          "target_hours": 7.5
+          "start_hour": 9.0,
+          "end_hour": 17.82,
+          "actual_hours": 8.82,
+          "target_hours": 8.0
         },
         {
-          "date": "2025-02-17",
+          "date": "2026-02-17",
           "day_type": "work",
           "start_hour": 9.58,
           "end_hour": 17.42,
@@ -4671,7 +4559,7 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-02-18",
+          "date": "2026-02-18",
           "day_type": "work",
           "start_hour": 9.44,
           "end_hour": 16.93,
@@ -4679,7 +4567,7 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-02-19",
+          "date": "2026-02-19",
           "day_type": "work",
           "start_hour": 9.43,
           "end_hour": 17.24,
@@ -4687,7 +4575,7 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-02-20",
+          "date": "2026-02-20",
           "day_type": "work",
           "start_hour": 9.53,
           "end_hour": 17.36,
@@ -4695,15 +4583,15 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-02-21",
+          "date": "2026-02-23",
           "day_type": "work",
-          "start_hour": 9.46,
-          "end_hour": 16.86,
-          "actual_hours": 7.4,
-          "target_hours": 7.5
+          "start_hour": 9.0,
+          "end_hour": 16.61,
+          "actual_hours": 7.61,
+          "target_hours": 8.0
         },
         {
-          "date": "2025-02-24",
+          "date": "2026-02-24",
           "day_type": "work",
           "start_hour": 9.58,
           "end_hour": 17.4,
@@ -4711,7 +4599,7 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-02-25",
+          "date": "2026-02-25",
           "day_type": "work",
           "start_hour": 9.48,
           "end_hour": 17.05,
@@ -4719,7 +4607,7 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-02-26",
+          "date": "2026-02-26",
           "day_type": "work",
           "start_hour": 9.45,
           "end_hour": 17.29,
@@ -4727,7 +4615,7 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-02-27",
+          "date": "2026-02-27",
           "day_type": "work",
           "start_hour": 9.48,
           "end_hour": 17.1,
@@ -4735,15 +4623,15 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-02-28",
+          "date": "2026-03-02",
           "day_type": "work",
-          "start_hour": 9.44,
-          "end_hour": 17.25,
-          "actual_hours": 7.81,
-          "target_hours": 7.5
+          "start_hour": 8.98,
+          "end_hour": 17.69,
+          "actual_hours": 8.71,
+          "target_hours": 8.0
         },
         {
-          "date": "2025-03-03",
+          "date": "2026-03-03",
           "day_type": "work",
           "start_hour": 9.45,
           "end_hour": 17.05,
@@ -4751,7 +4639,7 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-03-04",
+          "date": "2026-03-04",
           "day_type": "work",
           "start_hour": 9.55,
           "end_hour": 17.29,
@@ -4759,7 +4647,7 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-03-05",
+          "date": "2026-03-05",
           "day_type": "work",
           "start_hour": 9.61,
           "end_hour": 17.19,
@@ -4767,7 +4655,7 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-03-06",
+          "date": "2026-03-06",
           "day_type": "work",
           "start_hour": 9.57,
           "end_hour": 17.02,
@@ -4775,15 +4663,15 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-03-07",
+          "date": "2026-03-09",
           "day_type": "work",
-          "start_hour": 9.5,
-          "end_hour": 16.92,
-          "actual_hours": 7.42,
-          "target_hours": 7.5
+          "start_hour": 9.0,
+          "end_hour": 16.5,
+          "actual_hours": 7.5,
+          "target_hours": 8.0
         },
         {
-          "date": "2025-03-10",
+          "date": "2026-03-10",
           "day_type": "work",
           "start_hour": 9.52,
           "end_hour": 17.09,
@@ -4791,7 +4679,7 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-03-11",
+          "date": "2026-03-11",
           "day_type": "work",
           "start_hour": 9.61,
           "end_hour": 17.0,
@@ -4799,7 +4687,7 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-03-12",
+          "date": "2026-03-12",
           "day_type": "work",
           "start_hour": 9.53,
           "end_hour": 20.53,
@@ -4807,7 +4695,7 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-03-13",
+          "date": "2026-03-13",
           "day_type": "work",
           "start_hour": 9.49,
           "end_hour": 17.08,
@@ -4815,15 +4703,15 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-03-14",
+          "date": "2026-03-16",
           "day_type": "work",
-          "start_hour": 9.61,
-          "end_hour": 17.41,
-          "actual_hours": 7.8,
-          "target_hours": 7.5
+          "start_hour": 9.0,
+          "end_hour": 17.02,
+          "actual_hours": 8.02,
+          "target_hours": 8.0
         },
         {
-          "date": "2025-03-17",
+          "date": "2026-03-17",
           "day_type": "work",
           "start_hour": 9.44,
           "end_hour": 17.15,
@@ -4831,7 +4719,7 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-03-18",
+          "date": "2026-03-18",
           "day_type": "work",
           "start_hour": 9.53,
           "end_hour": 17.39,
@@ -4839,7 +4727,7 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-03-19",
+          "date": "2026-03-19",
           "day_type": "work",
           "start_hour": 9.49,
           "end_hour": 17.06,
@@ -4847,7 +4735,7 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-03-20",
+          "date": "2026-03-20",
           "day_type": "work",
           "start_hour": 9.46,
           "end_hour": 16.89,
@@ -4855,15 +4743,15 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-03-21",
+          "date": "2026-03-23",
           "day_type": "work",
-          "start_hour": 9.59,
-          "end_hour": 17.19,
-          "actual_hours": 7.6,
-          "target_hours": 7.5
+          "start_hour": 9.0,
+          "end_hour": 16.5,
+          "actual_hours": 7.5,
+          "target_hours": 8.0
         },
         {
-          "date": "2025-03-24",
+          "date": "2026-03-24",
           "day_type": "work",
           "start_hour": 9.55,
           "end_hour": 17.24,
@@ -4871,7 +4759,7 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-03-25",
+          "date": "2026-03-25",
           "day_type": "work",
           "start_hour": 9.54,
           "end_hour": 16.92,
@@ -4879,7 +4767,7 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-03-26",
+          "date": "2026-03-26",
           "day_type": "work",
           "start_hour": 9.58,
           "end_hour": 17.07,
@@ -4887,7 +4775,7 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-03-27",
+          "date": "2026-03-27",
           "day_type": "work",
           "start_hour": 9.45,
           "end_hour": 17.1,
@@ -4895,15 +4783,15 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-03-28",
+          "date": "2026-03-30",
           "day_type": "work",
-          "start_hour": 9.48,
-          "end_hour": 15.48,
-          "actual_hours": 6.0,
-          "target_hours": 7.5
+          "start_hour": 9.0,
+          "end_hour": 17.77,
+          "actual_hours": 8.77,
+          "target_hours": 8.0
         },
         {
-          "date": "2025-03-31",
+          "date": "2026-03-31",
           "day_type": "work",
           "start_hour": 9.43,
           "end_hour": 17.18,
@@ -4911,7 +4799,7 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-04-01",
+          "date": "2026-04-01",
           "day_type": "work",
           "start_hour": 9.46,
           "end_hour": 16.94,
@@ -4919,7 +4807,7 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-04-02",
+          "date": "2026-04-02",
           "day_type": "work",
           "start_hour": 9.59,
           "end_hour": 17.12,
@@ -4927,23 +4815,7 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-04-03",
-          "day_type": "work",
-          "start_hour": 9.45,
-          "end_hour": 17.27,
-          "actual_hours": 7.82,
-          "target_hours": 7.5
-        },
-        {
-          "date": "2025-04-04",
-          "day_type": "work",
-          "start_hour": 11.02,
-          "end_hour": 18.52,
-          "actual_hours": 7.5,
-          "target_hours": 7.5
-        },
-        {
-          "date": "2025-04-07",
+          "date": "2026-04-07",
           "day_type": "work",
           "start_hour": 9.42,
           "end_hour": 17.22,
@@ -4951,7 +4823,7 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-04-08",
+          "date": "2026-04-08",
           "day_type": "work",
           "start_hour": 9.45,
           "end_hour": 16.88,
@@ -4959,7 +4831,7 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-04-09",
+          "date": "2026-04-09",
           "day_type": "work",
           "start_hour": 9.47,
           "end_hour": 16.93,
@@ -4967,7 +4839,7 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-04-10",
+          "date": "2026-04-10",
           "day_type": "work",
           "start_hour": 9.55,
           "end_hour": 16.93,
@@ -4975,15 +4847,15 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-04-11",
+          "date": "2026-04-13",
           "day_type": "work",
-          "start_hour": 9.42,
-          "end_hour": 17.18,
-          "actual_hours": 7.76,
-          "target_hours": 7.5
+          "start_hour": 9.0,
+          "end_hour": 16.61,
+          "actual_hours": 7.61,
+          "target_hours": 8.0
         },
         {
-          "date": "2025-04-14",
+          "date": "2026-04-14",
           "day_type": "work",
           "start_hour": 9.47,
           "end_hour": 17.0,
@@ -4991,7 +4863,7 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-04-15",
+          "date": "2026-04-15",
           "day_type": "work",
           "start_hour": 9.45,
           "end_hour": 16.85,
@@ -4999,7 +4871,7 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-04-16",
+          "date": "2026-04-16",
           "day_type": "work",
           "start_hour": 9.57,
           "end_hour": 17.2,
@@ -5007,7 +4879,7 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-04-17",
+          "date": "2026-04-17",
           "day_type": "work",
           "start_hour": 9.57,
           "end_hour": 17.18,
@@ -5015,15 +4887,15 @@
           "target_hours": 7.5
         },
         {
-          "date": "2025-04-18",
-          "day_type": "holiday",
-          "start_hour": null,
-          "end_hour": null,
-          "actual_hours": 7.5,
-          "target_hours": 7.5
+          "date": "2026-04-20",
+          "day_type": "work",
+          "start_hour": 7.84,
+          "end_hour": 16.51,
+          "actual_hours": 8.67,
+          "target_hours": 8.0
         },
         {
-          "date": "2025-04-21",
+          "date": "2026-04-21",
           "day_type": "holiday",
           "start_hour": null,
           "end_hour": null,
@@ -5036,7 +4908,7 @@
       "user_id": "U8901234",
       "entries": [
         {
-          "date": "2025-01-02",
+          "date": "2026-01-02",
           "day_type": "work",
           "start_hour": 7.56,
           "end_hour": 15.72,
@@ -5044,15 +4916,15 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-01-03",
+          "date": "2026-01-05",
           "day_type": "work",
-          "start_hour": 7.46,
-          "end_hour": 15.61,
-          "actual_hours": 8.15,
+          "start_hour": 7.36,
+          "end_hour": 16.13,
+          "actual_hours": 8.77,
           "target_hours": 8.0
         },
         {
-          "date": "2025-01-06",
+          "date": "2026-01-06",
           "day_type": "work",
           "start_hour": 7.59,
           "end_hour": 15.51,
@@ -5060,7 +4932,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-01-07",
+          "date": "2026-01-07",
           "day_type": "work",
           "start_hour": 7.57,
           "end_hour": 15.9,
@@ -5068,7 +4940,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-01-08",
+          "date": "2026-01-08",
           "day_type": "work",
           "start_hour": 7.52,
           "end_hour": 15.65,
@@ -5076,7 +4948,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-01-09",
+          "date": "2026-01-09",
           "day_type": "work",
           "start_hour": 7.59,
           "end_hour": 15.52,
@@ -5084,15 +4956,15 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-01-10",
+          "date": "2026-01-12",
           "day_type": "work",
-          "start_hour": 9.03,
-          "end_hour": 17.28,
-          "actual_hours": 8.25,
+          "start_hour": 7.59,
+          "end_hour": 15.82,
+          "actual_hours": 8.23,
           "target_hours": 8.0
         },
         {
-          "date": "2025-01-13",
+          "date": "2026-01-13",
           "day_type": "work",
           "start_hour": 7.52,
           "end_hour": 15.62,
@@ -5100,7 +4972,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-01-14",
+          "date": "2026-01-14",
           "day_type": "work",
           "start_hour": 7.55,
           "end_hour": 18.55,
@@ -5108,7 +4980,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-01-15",
+          "date": "2026-01-15",
           "day_type": "work",
           "start_hour": 7.55,
           "end_hour": 15.7,
@@ -5116,7 +4988,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-01-16",
+          "date": "2026-01-16",
           "day_type": "work",
           "start_hour": 7.59,
           "end_hour": 15.53,
@@ -5124,15 +4996,15 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-01-17",
+          "date": "2026-01-19",
           "day_type": "work",
-          "start_hour": 7.45,
-          "end_hour": 15.65,
-          "actual_hours": 8.2,
+          "start_hour": 7.95,
+          "end_hour": 15.94,
+          "actual_hours": 7.99,
           "target_hours": 8.0
         },
         {
-          "date": "2025-01-20",
+          "date": "2026-01-20",
           "day_type": "work",
           "start_hour": 7.45,
           "end_hour": 15.49,
@@ -5140,7 +5012,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-01-21",
+          "date": "2026-01-21",
           "day_type": "work",
           "start_hour": 7.54,
           "end_hour": 15.71,
@@ -5148,7 +5020,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-01-22",
+          "date": "2026-01-22",
           "day_type": "work",
           "start_hour": 7.49,
           "end_hour": 15.89,
@@ -5156,7 +5028,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-01-23",
+          "date": "2026-01-23",
           "day_type": "work",
           "start_hour": 7.52,
           "end_hour": 15.65,
@@ -5164,15 +5036,15 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-01-24",
+          "date": "2026-01-26",
           "day_type": "work",
-          "start_hour": 7.54,
-          "end_hour": 15.49,
-          "actual_hours": 7.95,
+          "start_hour": 7.0,
+          "end_hour": 14.92,
+          "actual_hours": 7.92,
           "target_hours": 8.0
         },
         {
-          "date": "2025-01-27",
+          "date": "2026-01-27",
           "day_type": "work",
           "start_hour": 7.55,
           "end_hour": 15.88,
@@ -5180,7 +5052,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-01-28",
+          "date": "2026-01-28",
           "day_type": "work",
           "start_hour": 7.54,
           "end_hour": 15.82,
@@ -5188,7 +5060,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-01-29",
+          "date": "2026-01-29",
           "day_type": "work",
           "start_hour": 7.56,
           "end_hour": 15.57,
@@ -5196,7 +5068,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-01-30",
+          "date": "2026-01-30",
           "day_type": "work",
           "start_hour": 7.51,
           "end_hour": 15.52,
@@ -5204,15 +5076,15 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-01-31",
+          "date": "2026-02-02",
           "day_type": "work",
-          "start_hour": 7.49,
-          "end_hour": 15.62,
-          "actual_hours": 8.13,
+          "start_hour": 7.06,
+          "end_hour": 15.71,
+          "actual_hours": 8.65,
           "target_hours": 8.0
         },
         {
-          "date": "2025-02-03",
+          "date": "2026-02-03",
           "day_type": "work",
           "start_hour": 7.51,
           "end_hour": 15.46,
@@ -5220,7 +5092,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-02-04",
+          "date": "2026-02-04",
           "day_type": "work",
           "start_hour": 7.51,
           "end_hour": 15.74,
@@ -5228,7 +5100,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-02-05",
+          "date": "2026-02-05",
           "day_type": "work",
           "start_hour": 7.5,
           "end_hour": 15.48,
@@ -5236,7 +5108,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-02-06",
+          "date": "2026-02-06",
           "day_type": "work",
           "start_hour": 7.59,
           "end_hour": 15.52,
@@ -5244,15 +5116,15 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-02-07",
+          "date": "2026-02-09",
           "day_type": "work",
-          "start_hour": 7.57,
-          "end_hour": 15.52,
-          "actual_hours": 7.95,
+          "start_hour": 7.65,
+          "end_hour": 15.43,
+          "actual_hours": 7.78,
           "target_hours": 8.0
         },
         {
-          "date": "2025-02-10",
+          "date": "2026-02-10",
           "day_type": "work",
           "start_hour": 7.46,
           "end_hour": 15.73,
@@ -5260,7 +5132,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-02-11",
+          "date": "2026-02-11",
           "day_type": "work",
           "start_hour": 7.57,
           "end_hour": 15.75,
@@ -5268,7 +5140,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-02-12",
+          "date": "2026-02-12",
           "day_type": "work",
           "start_hour": 7.53,
           "end_hour": 15.71,
@@ -5276,7 +5148,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-02-13",
+          "date": "2026-02-13",
           "day_type": "work",
           "start_hour": 7.49,
           "end_hour": 15.45,
@@ -5284,15 +5156,15 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-02-14",
+          "date": "2026-02-16",
           "day_type": "work",
-          "start_hour": 7.5,
-          "end_hour": 15.73,
-          "actual_hours": 8.23,
+          "start_hour": 7.56,
+          "end_hour": 16.22,
+          "actual_hours": 8.66,
           "target_hours": 8.0
         },
         {
-          "date": "2025-02-17",
+          "date": "2026-02-17",
           "day_type": "work",
           "start_hour": 7.56,
           "end_hour": 15.89,
@@ -5300,7 +5172,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-02-18",
+          "date": "2026-02-18",
           "day_type": "work",
           "start_hour": 7.53,
           "end_hour": 14.03,
@@ -5308,7 +5180,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-02-19",
+          "date": "2026-02-19",
           "day_type": "work",
           "start_hour": 7.56,
           "end_hour": 15.94,
@@ -5316,7 +5188,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-02-20",
+          "date": "2026-02-20",
           "day_type": "work",
           "start_hour": 7.54,
           "end_hour": 15.62,
@@ -5324,15 +5196,15 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-02-21",
+          "date": "2026-02-23",
           "day_type": "work",
-          "start_hour": 7.53,
-          "end_hour": 15.54,
-          "actual_hours": 8.01,
+          "start_hour": 7.58,
+          "end_hour": 16.54,
+          "actual_hours": 8.96,
           "target_hours": 8.0
         },
         {
-          "date": "2025-02-24",
+          "date": "2026-02-24",
           "day_type": "work",
           "start_hour": 7.55,
           "end_hour": 15.56,
@@ -5340,7 +5212,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-02-25",
+          "date": "2026-02-25",
           "day_type": "work",
           "start_hour": 7.46,
           "end_hour": 15.78,
@@ -5348,7 +5220,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-02-26",
+          "date": "2026-02-26",
           "day_type": "work",
           "start_hour": 7.5,
           "end_hour": 15.78,
@@ -5356,7 +5228,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-02-27",
+          "date": "2026-02-27",
           "day_type": "work",
           "start_hour": 9.53,
           "end_hour": 17.78,
@@ -5364,15 +5236,15 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-02-28",
+          "date": "2026-03-02",
           "day_type": "work",
-          "start_hour": 7.53,
-          "end_hour": 15.83,
-          "actual_hours": 8.3,
+          "start_hour": 7.55,
+          "end_hour": 16.33,
+          "actual_hours": 8.78,
           "target_hours": 8.0
         },
         {
-          "date": "2025-03-03",
+          "date": "2026-03-03",
           "day_type": "work",
           "start_hour": 7.58,
           "end_hour": 15.97,
@@ -5380,7 +5252,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-03-04",
+          "date": "2026-03-04",
           "day_type": "work",
           "start_hour": 7.48,
           "end_hour": 17.98,
@@ -5388,7 +5260,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-03-05",
+          "date": "2026-03-05",
           "day_type": "work",
           "start_hour": 7.57,
           "end_hour": 15.78,
@@ -5396,7 +5268,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-03-06",
+          "date": "2026-03-06",
           "day_type": "work",
           "start_hour": 7.54,
           "end_hour": 15.45,
@@ -5404,15 +5276,15 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-03-07",
+          "date": "2026-03-09",
           "day_type": "work",
-          "start_hour": 7.59,
-          "end_hour": 15.9,
-          "actual_hours": 8.31,
+          "start_hour": 7.96,
+          "end_hour": 17.09,
+          "actual_hours": 9.13,
           "target_hours": 8.0
         },
         {
-          "date": "2025-03-10",
+          "date": "2026-03-10",
           "day_type": "work",
           "start_hour": 7.48,
           "end_hour": 15.47,
@@ -5420,7 +5292,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-03-11",
+          "date": "2026-03-11",
           "day_type": "work",
           "start_hour": 7.55,
           "end_hour": 15.6,
@@ -5428,7 +5300,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-03-12",
+          "date": "2026-03-12",
           "day_type": "work",
           "start_hour": 7.49,
           "end_hour": 15.39,
@@ -5436,7 +5308,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-03-13",
+          "date": "2026-03-13",
           "day_type": "work",
           "start_hour": 7.47,
           "end_hour": 13.97,
@@ -5444,15 +5316,15 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-03-14",
+          "date": "2026-03-16",
           "day_type": "work",
-          "start_hour": 7.58,
-          "end_hour": 15.76,
-          "actual_hours": 8.18,
+          "start_hour": 7.38,
+          "end_hour": 16.07,
+          "actual_hours": 8.69,
           "target_hours": 8.0
         },
         {
-          "date": "2025-03-17",
+          "date": "2026-03-17",
           "day_type": "work",
           "start_hour": 7.5,
           "end_hour": 15.47,
@@ -5460,7 +5332,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-03-18",
+          "date": "2026-03-18",
           "day_type": "work",
           "start_hour": 7.54,
           "end_hour": 15.46,
@@ -5468,7 +5340,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-03-19",
+          "date": "2026-03-19",
           "day_type": "work",
           "start_hour": 7.56,
           "end_hour": 15.57,
@@ -5476,7 +5348,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-03-20",
+          "date": "2026-03-20",
           "day_type": "work",
           "start_hour": 7.51,
           "end_hour": 15.58,
@@ -5484,15 +5356,15 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-03-21",
+          "date": "2026-03-23",
           "day_type": "work",
-          "start_hour": 7.5,
-          "end_hour": 15.76,
-          "actual_hours": 8.26,
+          "start_hour": 7.06,
+          "end_hour": 14.56,
+          "actual_hours": 7.5,
           "target_hours": 8.0
         },
         {
-          "date": "2025-03-24",
+          "date": "2026-03-24",
           "day_type": "work",
           "start_hour": 7.56,
           "end_hour": 15.74,
@@ -5500,7 +5372,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-03-25",
+          "date": "2026-03-25",
           "day_type": "work",
           "start_hour": 7.45,
           "end_hour": 15.38,
@@ -5508,7 +5380,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-03-26",
+          "date": "2026-03-26",
           "day_type": "work",
           "start_hour": 7.47,
           "end_hour": 15.68,
@@ -5516,7 +5388,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-03-27",
+          "date": "2026-03-27",
           "day_type": "work",
           "start_hour": 7.55,
           "end_hour": 15.59,
@@ -5524,15 +5396,15 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-03-28",
+          "date": "2026-03-30",
           "day_type": "work",
-          "start_hour": 7.55,
-          "end_hour": 15.69,
-          "actual_hours": 8.14,
+          "start_hour": 7.03,
+          "end_hour": 15.83,
+          "actual_hours": 8.8,
           "target_hours": 8.0
         },
         {
-          "date": "2025-03-31",
+          "date": "2026-03-31",
           "day_type": "work",
           "start_hour": 7.51,
           "end_hour": 15.55,
@@ -5540,7 +5412,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-04-01",
+          "date": "2026-04-01",
           "day_type": "work",
           "start_hour": 7.56,
           "end_hour": 15.52,
@@ -5548,7 +5420,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-04-02",
+          "date": "2026-04-02",
           "day_type": "work",
           "start_hour": 7.51,
           "end_hour": 15.55,
@@ -5556,63 +5428,47 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-04-03",
+          "date": "2026-04-07",
+          "day_type": "vacation",
+          "start_hour": null,
+          "end_hour": null,
+          "actual_hours": 8.0,
+          "target_hours": 8.0
+        },
+        {
+          "date": "2026-04-08",
+          "day_type": "vacation",
+          "start_hour": null,
+          "end_hour": null,
+          "actual_hours": 8.0,
+          "target_hours": 8.0
+        },
+        {
+          "date": "2026-04-09",
+          "day_type": "vacation",
+          "start_hour": null,
+          "end_hour": null,
+          "actual_hours": 8.0,
+          "target_hours": 8.0
+        },
+        {
+          "date": "2026-04-10",
+          "day_type": "vacation",
+          "start_hour": null,
+          "end_hour": null,
+          "actual_hours": 8.0,
+          "target_hours": 8.0
+        },
+        {
+          "date": "2026-04-13",
           "day_type": "work",
-          "start_hour": 7.55,
-          "end_hour": 15.69,
+          "start_hour": 7.23,
+          "end_hour": 15.37,
           "actual_hours": 8.14,
           "target_hours": 8.0
         },
         {
-          "date": "2025-04-04",
-          "day_type": "work",
-          "start_hour": 7.55,
-          "end_hour": 15.47,
-          "actual_hours": 7.92,
-          "target_hours": 8.0
-        },
-        {
-          "date": "2025-04-07",
-          "day_type": "vacation",
-          "start_hour": null,
-          "end_hour": null,
-          "actual_hours": 8.0,
-          "target_hours": 8.0
-        },
-        {
-          "date": "2025-04-08",
-          "day_type": "vacation",
-          "start_hour": null,
-          "end_hour": null,
-          "actual_hours": 8.0,
-          "target_hours": 8.0
-        },
-        {
-          "date": "2025-04-09",
-          "day_type": "vacation",
-          "start_hour": null,
-          "end_hour": null,
-          "actual_hours": 8.0,
-          "target_hours": 8.0
-        },
-        {
-          "date": "2025-04-10",
-          "day_type": "vacation",
-          "start_hour": null,
-          "end_hour": null,
-          "actual_hours": 8.0,
-          "target_hours": 8.0
-        },
-        {
-          "date": "2025-04-11",
-          "day_type": "vacation",
-          "start_hour": null,
-          "end_hour": null,
-          "actual_hours": 8.0,
-          "target_hours": 8.0
-        },
-        {
-          "date": "2025-04-14",
+          "date": "2026-04-14",
           "day_type": "work",
           "start_hour": 7.5,
           "end_hour": 15.7,
@@ -5620,7 +5476,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-04-15",
+          "date": "2026-04-15",
           "day_type": "work",
           "start_hour": 7.44,
           "end_hour": 15.49,
@@ -5628,7 +5484,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-04-16",
+          "date": "2026-04-16",
           "day_type": "work",
           "start_hour": 7.47,
           "end_hour": 15.44,
@@ -5636,7 +5492,7 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-04-17",
+          "date": "2026-04-17",
           "day_type": "work",
           "start_hour": 7.48,
           "end_hour": 15.54,
@@ -5644,15 +5500,15 @@
           "target_hours": 8.0
         },
         {
-          "date": "2025-04-18",
-          "day_type": "holiday",
-          "start_hour": null,
-          "end_hour": null,
-          "actual_hours": 8.0,
+          "date": "2026-04-20",
+          "day_type": "work",
+          "start_hour": 7.72,
+          "end_hour": 16.41,
+          "actual_hours": 8.69,
           "target_hours": 8.0
         },
         {
-          "date": "2025-04-21",
+          "date": "2026-04-21",
           "day_type": "holiday",
           "start_hour": null,
           "end_hour": null,
