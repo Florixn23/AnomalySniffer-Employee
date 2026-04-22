@@ -101,8 +101,15 @@ sap.ui.define([
         iCumulative += this._getActualMinutes(oConfig, this._isoDate(oEarlier));
       }
       iCumulative += this._getActualMinutes(oConfig, sIsoDate);
-
       this._sendWebhook(oConfig, sIsoDate, iCumulative);
+
+      // Cascade: send remaining weekdays of the week without checking completeness
+      for (var k = 1; iWeekday + k <= 5; k++) {
+        var oNext    = new Date(oDate.getFullYear(), oDate.getMonth(), oDate.getDate() + k);
+        var sNextIso = this._isoDate(oNext);
+        iCumulative += this._getActualMinutes(oConfig, sNextIso);
+        this._sendWebhook(oConfig, sNextIso, iCumulative);
+      }
     },
 
     _isDayComplete: function (oEntries, sIsoDate) {
@@ -133,6 +140,7 @@ sap.ui.define([
 
     _sendWebhook: function (oConfig, sIsoDate, iCumulativeMinutes) {
       var oEntry   = oConfig.entries[sIsoDate];
+      if (!oEntry) return;
       var iWeekday = this._parseIso(sIsoDate).getDay();
       jQuery.ajax({
         url:         oConfig.webhookUrl,
