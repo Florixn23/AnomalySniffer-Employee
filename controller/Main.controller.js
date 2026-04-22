@@ -268,6 +268,7 @@ sap.ui.define([
           contentType: "application/json",
           data: JSON.stringify({
             user:         that._sUserId || "",
+            date:         sIsoDate,
             weekday:      iWeekday === 0 ? 6 : iWeekday - 1,
             start_hour:   (oEntry.type === "work" && oEntry.start) ? that._timeToDecimal(oEntry.start) : null,
             end_hour:     (oEntry.type === "work" && oEntry.end)   ? that._timeToDecimal(oEntry.end)   : null,
