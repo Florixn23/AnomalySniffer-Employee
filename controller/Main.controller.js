@@ -868,7 +868,8 @@ sap.ui.define([
 
       es.onmessage = function (oEvent) {
         try {
-          var oData = JSON.parse(oEvent.data);
+          var oRaw  = JSON.parse(oEvent.data);
+          var oData = oRaw.data || oRaw;
           that.receiveMonthStatus(oData);
           console.log("[SSE] Received message:", oData);
         } catch (e) {
