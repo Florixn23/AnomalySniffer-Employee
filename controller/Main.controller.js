@@ -859,7 +859,7 @@ sap.ui.define([
     // ── SSE connection ─────────────────────────────────────────────────────
 
     _initSSE: function () {
-      if (!sApiUrl || sApiUrl === "API_URL_PLACEHOLDER") {
+      if (!sApiUrl) {
         console.warn("[SSE] sApiUrl is not set – skipping EventSource connection.");
         return;
       }
