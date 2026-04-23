@@ -64,6 +64,7 @@ sap.ui.define([
 
       this._loadTestData();
       this._initSSE();
+      this._initPredictionSSE();
     },
 
     onAfterRendering: function () {
@@ -882,10 +883,49 @@ sap.ui.define([
       };
     },
 
+    _initPredictionSSE: function () {
+      if (!sApiUrl) {
+        console.warn("[SSE] sApiUrl is not set – skipping prediction EventSource connection.");
+        return;
+      }
+      var that = this;
+      var es   = new EventSource(sApiUrl + "/listen/predictions");
+      this._oPredictionSSE = es;
+
+      es.onmessage = function (oEvent) {
+        try {
+          var oRaw  = JSON.parse(oEvent.data);
+          var oData = oRaw.data || oRaw;
+          if (!oData.date) return;
+
+          var oEntry = { type: oData.day_type || "work" };
+          if (oEntry.type === "work") {
+            oEntry.start    = oData.start_hour   != null ? that._decimalToTime(oData.start_hour)   : "";
+            oEntry.end      = oData.end_hour     != null ? that._decimalToTime(oData.end_hour)     : "";
+            oEntry.duration = oData.actual_hours != null ? that._decimalToTime(oData.actual_hours) : "";
+            oEntry.break    = "";
+          }
+          that._oEntries[oData.date] = oEntry;
+          that._refreshCalendar();
+          console.log("[SSE] Prediction received for:", oData.date);
+        } catch (e) {
+          console.error("[SSE] Prediction parse error:", oEvent.data, e);
+        }
+      };
+
+      es.onerror = function (oEvent) {
+        console.error("[SSE] Prediction stream error:", oEvent);
+      };
+    },
+
     onExit: function () {
       if (this._oSSE) {
         this._oSSE.close();
         this._oSSE = null;
+      }
+      if (this._oPredictionSSE) {
+        this._oPredictionSSE.close();
+        this._oPredictionSSE = null;
       }
     }
   });
