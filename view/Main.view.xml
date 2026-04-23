@@ -129,7 +129,7 @@
               <Title text="{/selectedDayLabel}" level="H4" />
             </HBox>
 
-            <!-- READ-ONLY (vacation / holiday) -->
+            <!-- READ-ONLY (vacation / holiday / locked month) -->
             <VBox class="zeReadOnly" visible="{/selectedReadOnly}">
               <core:Icon src="sap-icon://calendar" class="zeReadOnlyIcon" />
               <Text text="{/selectedDayTypeName}" class="zeReadOnlyTitle" />

@@ -223,6 +223,9 @@ sap.ui.define([
         console.log("[SSE] Re-rendering calendar and status bar.");
         this._buildCalendarGrid();
         this._updateMonthStatusBar();
+        // Re-evaluate the currently selected day so the entry panel locks immediately
+        var sSelectedDay = this.getView().getModel().getProperty("/selectedDay");
+        if (sSelectedDay) { this.onDaySelect(sSelectedDay); }
       } else {
         console.warn("[SSE] Re-render skipped – status stored in _oMonthStatuses['" + sKey + "'] but view mismatch.");
       }
@@ -259,7 +262,13 @@ sap.ui.define([
 
       var oModel     = this.getView().getModel();
       var oEntry     = this._getEntryForDate(sIsoDate);
-      var bReadOnly  = !!oEntry && (oEntry.type === "vacation" || oEntry.type === "holiday");
+
+      // Check if the month has been accepted or declined by the manager
+      var sMonthKey    = this._sUserId + "-" + this._iYear + "-" + String(this._iMonth + 1).padStart(2, "0");
+      var oMonthStatus = this._oMonthStatuses && this._oMonthStatuses[sMonthKey];
+      var bMonthLocked = !!(oMonthStatus);
+
+      var bReadOnly  = bMonthLocked || (!!oEntry && (oEntry.type === "vacation" || oEntry.type === "holiday"));
       var sDuration  = (oEntry && oEntry.type === "work") ? (oEntry.duration || "") : "";
       var sTargetStr = this._formatMinutes(this._getTargetMinutesForDate(sIsoDate)) + " h";
 
@@ -268,11 +277,18 @@ sap.ui.define([
                        String(oDate.getDate()).padStart(2, "0") + ". " +
                        aMonthNames[oDate.getMonth()];
 
+      var sDayTypeName;
+      if (bMonthLocked) {
+        sDayTypeName = oMonthStatus.accepted ? "Monat akzeptiert" : "Monat abgelehnt";
+      } else {
+        sDayTypeName = this._getDayTypeLabel(oEntry);
+      }
+
       oModel.setData(Object.assign(oModel.getData(), {
         selectedDay:           sIsoDate,
         selectedDayLabel:      sDayLabel,
         selectedReadOnly:      bReadOnly,
-        selectedDayTypeName:   this._getDayTypeLabel(oEntry),
+        selectedDayTypeName:   sDayTypeName,
         selectedStart:         oEntry ? (oEntry.start    || "") : "",
         selectedEnd:           oEntry ? (oEntry.end      || "") : "",
         selectedDuration:      sDuration,
