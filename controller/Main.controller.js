@@ -884,31 +884,56 @@ sap.ui.define([
 
     // ── SSE connection ─────────────────────────────────────────────────────
 
+    _connectSSE: function (sEndpoint, fnOnMessage, sPropName) {
+      var that    = this;
+      var iDelay  = 1000; // ms before first reconnect attempt
+      var iMax    = 30000; // cap backoff at 30 s
+
+      function connect() {
+        if (that._bExiting) return;
+
+        var es = new EventSource(sApiUrl + sEndpoint);
+        that[sPropName] = es;
+
+        es.onopen = function () {
+          console.log("[SSE] Connected:", sEndpoint);
+          iDelay = 1000; // reset backoff on successful connection
+        };
+
+        es.onmessage = function (oEvent) {
+          try {
+            var oRaw  = JSON.parse(oEvent.data);
+            var oData = oRaw.data || oRaw;
+            fnOnMessage(oData);
+          } catch (e) {
+            console.error("[SSE] Parse error on " + sEndpoint + ":", oEvent.data, e);
+          }
+        };
+
+        es.onerror = function () {
+          es.close();
+          that[sPropName] = null;
+          console.warn("[SSE] " + sEndpoint + " disconnected – reconnecting in " + iDelay + "ms");
+          setTimeout(function () {
+            iDelay = Math.min(iDelay * 2, iMax);
+            connect();
+          }, iDelay);
+        };
+      }
+
+      connect();
+    },
+
     _initSSE: function () {
       if (!sApiUrl) {
         console.warn("[SSE] sApiUrl is not set – skipping EventSource connection.");
         return;
       }
       var that = this;
-      var es   = new EventSource(sApiUrl + "/listen/manager_answers");
-      this._oSSE = es;
-
-      es.onmessage = function (oEvent) {
-        try {
-          console.log("[SSE] Raw event.data:", oEvent.data);
-          var oRaw  = JSON.parse(oEvent.data);
-          console.log("[SSE] Parsed oRaw:", JSON.stringify(oRaw));
-          var oData = oRaw.data || oRaw;
-          console.log("[SSE] oData passed to receiveMonthStatus:", JSON.stringify(oData));
-          that.receiveMonthStatus(oData);
-        } catch (e) {
-          console.error("[SSE] Failed to parse message:", oEvent.data, e);
-        }
-      };
-
-      es.onerror = function (oEvent) {
-        console.error("[SSE] Connection error:", oEvent);
-      };
+      this._connectSSE("/listen/manager_answers", function (oData) {
+        console.log("[SSE] manager_answers received:", JSON.stringify(oData));
+        that.receiveMonthStatus(oData);
+      }, "_oSSE");
     },
 
     _initPredictionSSE: function () {
@@ -917,44 +942,26 @@ sap.ui.define([
         return;
       }
       var that = this;
-      var es   = new EventSource(sApiUrl + "/listen/predictions");
-      this._oPredictionSSE = es;
+      this._connectSSE("/listen/predictions", function (oData) {
+        if (!oData.date) return;
 
-      es.onmessage = function (oEvent) {
-        try {
-          var oRaw  = JSON.parse(oEvent.data);
-          var oData = oRaw.data || oRaw;
-          if (!oData.date) return;
-
-          var oEntry = { type: oData.day_type || "work" };
-          if (oEntry.type === "work") {
-            oEntry.start    = oData.start_hour   != null ? that._decimalToTime(oData.start_hour)   : "";
-            oEntry.end      = oData.end_hour     != null ? that._decimalToTime(oData.end_hour)     : "";
-            oEntry.duration = oData.actual_hours != null ? that._decimalToTime(oData.actual_hours) : "";
-            oEntry.break    = "";
-          }
-          that._oEntries[oData.date] = oEntry;
-          that._refreshCalendar();
-          console.log("[SSE] Prediction received for:", oData.date);
-        } catch (e) {
-          console.error("[SSE] Prediction parse error:", oEvent.data, e);
+        var oEntry = { type: oData.day_type || "work" };
+        if (oEntry.type === "work") {
+          oEntry.start    = oData.start_hour   != null ? that._decimalToTime(oData.start_hour)   : "";
+          oEntry.end      = oData.end_hour     != null ? that._decimalToTime(oData.end_hour)     : "";
+          oEntry.duration = oData.actual_hours != null ? that._decimalToTime(oData.actual_hours) : "";
+          oEntry.break    = "";
         }
-      };
-
-      es.onerror = function (oEvent) {
-        console.error("[SSE] Prediction stream error:", oEvent);
-      };
+        that._oEntries[oData.date] = oEntry;
+        that._refreshCalendar();
+        console.log("[SSE] Prediction received for:", oData.date);
+      }, "_oPredictionSSE");
     },
 
     onExit: function () {
-      if (this._oSSE) {
-        this._oSSE.close();
-        this._oSSE = null;
-      }
-      if (this._oPredictionSSE) {
-        this._oPredictionSSE.close();
-        this._oPredictionSSE = null;
-      }
+      this._bExiting = true;
+      if (this._oSSE)         { this._oSSE.close();         this._oSSE         = null; }
+      if (this._oPredictionSSE) { this._oPredictionSSE.close(); this._oPredictionSSE = null; }
     }
   });
 });
