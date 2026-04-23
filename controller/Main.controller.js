@@ -35,10 +35,8 @@ sap.ui.define([
   // String: Target URL for outgoing webhooks (replace placeholder before deployment)
   var sWebhookUrl = "WEBHOOK_URL_PLACEHOLDER";
 
-  // String: Base API URL for SSE – derived automatically from sWebhookUrl
-  var sApiUrl = (sWebhookUrl && sWebhookUrl !== "WEBHOOK_URL_PLACEHOLDER")
-    ? new URL(sWebhookUrl).origin
-    : "";
+  // String: Base API URL for SSE (injected at container start via API_URL env var)
+  var sApiUrl = "API_URL_PLACEHOLDER";
 
   // Object: Display labels for special day types
   var oDayTypeLabels = { vacation: "Urlaub", holiday: "Feiertag" };
