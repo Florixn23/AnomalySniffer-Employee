@@ -63,6 +63,15 @@
             <!-- Calendar grid -->
             <core:HTML content="{/calGridHtml}" sanitizeContent="false" />
 
+            <!-- Month acceptance status bar -->
+            <VBox id="zeMonthStatusBar"
+                  visible="{= !!${/monthStatusVisible} }"
+                  class="zeMonthStatusBar">
+              <HBox id="zeMonthStatusRow" alignItems="Center" />
+              <VBox id="zeAnomalyChipRow" class="zeAnomalyChips"
+                    visible="{= ${/monthStatusAccepted} === false }" />
+            </VBox>
+
             <!-- Week stats tiles -->
             <HBox class="zeStatsTiles" justifyContent="SpaceBetween">
               <VBox class="zeStatsTile">

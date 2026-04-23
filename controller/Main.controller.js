@@ -4,8 +4,13 @@ sap.ui.define([
   "sap/m/MessageToast",
   "sap/m/ActionSheet",
   "sap/m/Button",
+  "sap/m/Text",
+  "sap/m/Label",
+  "sap/m/Dialog",
+  "sap/m/VBox",
+  "sap/ui/core/Icon",
   "zeiterfassung/controller/WebhookReplay"
-], function (Controller, JSONModel, MessageToast, ActionSheet, Button, WebhookReplay) {
+], function (Controller, JSONModel, MessageToast, ActionSheet, Button, Text, Label, Dialog, VBox, Icon, WebhookReplay) {
   "use strict";
 
   // Array: German month names (index 0 = January)
@@ -23,9 +28,15 @@ sap.ui.define([
   var sColorVacation = "#9b59b6"; // Purple – vacation day
   var sColorHoliday  = "#aad4f5"; // Light blue – public holiday
   var sColorMissing  = "#e8c84a"; // Yellow – past day without an entry
+  var sColorAccepted = "#27ae60"; // Green  – month accepted work day
+  var sColorRejected = "#e67e22"; // Orange – month rejected work day
+  var sColorAnomaly  = "#e74c3c"; // Red    – anomaly date
 
   // String: Target URL for outgoing webhooks (replace placeholder before deployment)
   var sWebhookUrl = "WEBHOOK_URL_PLACEHOLDER";
+
+  // String: Base API URL for SSE connection (replace placeholder before deployment)
+  var sApiUrl     = "API_URL_PLACEHOLDER";
 
   // Object: Display labels for special day types
   var oDayTypeLabels = { vacation: "Urlaub", holiday: "Feiertag" };
@@ -35,15 +46,22 @@ sap.ui.define([
     // ── Initialization ─────────────────────────────────────────────────────
 
     onInit: function () {
-      this.getView().setModel(new JSONModel({ selectedDay: null }));
+      this.getView().setModel(new JSONModel({
+        selectedDay:          null,
+        monthStatusVisible:   false,
+        monthStatusAccepted:  null,
+        monthStatusMessage:   ""
+      }));
 
       var oToday         = new Date();
       this._iYear        = oToday.getFullYear();  // Integer: currently displayed year
       this._iMonth       = oToday.getMonth();     // Integer: currently displayed month (0–11)
       this._sTodayIso    = this._isoDate(oToday); // String: today's date as ISO string (YYYY-MM-DD)
       this._oEntries     = {};                    // Object: all saved day entries, keyed by ISO date
+      this._oMonthStatuses = {};                  // Object: month acceptance statuses, keyed by "USER-YYYY-MM"
 
       this._loadTestData();
+      this._initSSE();
     },
 
     onAfterRendering: function () {
@@ -67,6 +85,7 @@ sap.ui.define([
         dataType: "json",
         success: function (oResponse) {
           that._aAllUsersData = oResponse.users || [oResponse];
+
           that._loadUser(that._aAllUsersData[0]);
           that._refreshCalendar();
           that.onDaySelect(that._sTodayIso);
@@ -147,6 +166,40 @@ sap.ui.define([
       MessageToast.show("Webhook-Replay gestartet");
     },
 
+    // ── Month acceptance interface ─────────────────────────────────────────
+
+    receiveMonthStatus: function (oData) {
+      if (!oData || !oData.User || !oData.Date || oData.accepted === undefined) return;
+
+      var aParts = oData.Date.split("-");
+      var iYear  = +aParts[0];
+      var iMonth = +aParts[1] - 1;   // 0-indexed
+      var sKey   = oData.User + "-" + aParts[0] + "-" + aParts[1];
+
+      if (oData.accepted === true) {
+        this._oMonthStatuses[sKey] = {
+          user: oData.User, year: iYear, month: iMonth,
+          accepted: true, anomalyDates: [], anomalies: []
+        };
+      } else {
+        var aAnomalyData  = (oData.anomalys || []).map(function (o) { return o.data || o; });
+        var oByDate       = this._resolveAnomalyDates(aAnomalyData);
+        this._oMonthStatuses[sKey] = {
+          user: oData.User, year: iYear, month: iMonth,
+          accepted: false, message: oData.message || "",
+          anomalies:    aAnomalyData,
+          anomalyDates: Object.keys(oByDate),
+          anomalyByDate: oByDate
+        };
+      }
+
+      // Re-render only if currently viewing that month/user
+      if (iYear === this._iYear && iMonth === this._iMonth && oData.User === this._sUserId) {
+        this._buildCalendarGrid();
+        this._updateMonthStatusBar();
+      }
+    },
+
     // ── Month navigation ───────────────────────────────────────────────────
 
     onPrevMonth: function () {
@@ -167,6 +220,14 @@ sap.ui.define([
       var oDate      = this._parseIso(sIsoDate);
       var iWeekday   = oDate.getDay(); // Integer: 0 = Sunday, 6 = Saturday
       if (iWeekday === 0 || iWeekday === 6) return; // skip weekends
+
+      // If the day is an anomaly date, open the anomaly dialog immediately
+      var sStatusKey   = this._sUserId + "-" + this._iYear + "-" + String(this._iMonth + 1).padStart(2, "0");
+      var oMonthStatus = this._oMonthStatuses && this._oMonthStatuses[sStatusKey];
+      if (oMonthStatus && oMonthStatus.anomalyByDate && oMonthStatus.anomalyByDate[sIsoDate]) {
+        this.onAnomalyPress(oMonthStatus.anomalyByDate[sIsoDate]);
+        return;
+      }
 
       var oModel     = this.getView().getModel();
       var oEntry     = this._getEntryForDate(sIsoDate);
@@ -353,6 +414,7 @@ sap.ui.define([
       this._buildCalendarGrid();
       var sSelectedIso = oModel.getProperty("/selectedDay");
       this._refreshWeekSummary(sSelectedIso || this._sTodayIso);
+      this._updateMonthStatusBar();
     },
 
     _buildCalendarGrid: function () {
@@ -364,6 +426,10 @@ sap.ui.define([
       var iDaysInMonth  = new Date(iYear, iMonth + 1, 0).getDate();     // Integer: number of days in month
       var iFirstWeekday = new Date(iYear, iMonth, 1).getDay();          // Integer: weekday of the 1st (0 = Sun)
       var iLeadingCells = iFirstWeekday === 0 ? 6 : iFirstWeekday - 1; // Integer: empty cells before the 1st
+
+      // Look up the month acceptance status for the current user/month
+      var sStatusKey   = this._sUserId + "-" + iYear + "-" + String(iMonth + 1).padStart(2, "0");
+      var oMonthStatus = this._oMonthStatuses ? this._oMonthStatuses[sStatusKey] : null;
 
       var aHtmlParts = ['<div class="zeGrid">'];
 
@@ -412,7 +478,7 @@ sap.ui.define([
           aHtmlParts.push('<div class="zeDayNum">' + iCurrentDay + '</div>');
 
           if (!bIsWeekend) {
-            var sBarColor = this._getDayBarColor(oEntry, bIsFuture);
+            var sBarColor = this._getDayBarColor(oEntry, bIsFuture, sIsoDate, oMonthStatus);
             if (sBarColor) {
               aHtmlParts.push('<div class="zeDayBar" style="background:' + sBarColor + '"></div>');
               aHtmlParts.push('<div class="zeDayVal">' + this._getDayBarValue(oEntry, sIsoDate) + '</div>');
@@ -435,14 +501,106 @@ sap.ui.define([
       oModel.setProperty("/calGridHtml", aHtmlParts.join(""));
     },
 
-    _getDayBarColor: function (oEntry, bIsFuture) {
-      if (!oEntry && bIsFuture)                        return null;
-      if (!oEntry)                                     return sColorMissing;
-      if (oEntry.type === "vacation")                  return sColorVacation;
-      if (oEntry.type === "holiday")                   return sColorHoliday;
-      if (oEntry.type === "work" && oEntry.duration)   return sColorWork;
-      if (oEntry.type === "work" && bIsFuture)         return null;
+    _getDayBarColor: function (oEntry, bIsFuture, sIsoDate, oMonthStatus) {
+      // Vacation/holiday colors never overridden
+      if (oEntry && oEntry.type === "vacation") return sColorVacation;
+      if (oEntry && oEntry.type === "holiday")  return sColorHoliday;
+
+      // Apply month status override for work/missing days (only past days)
+      if (oMonthStatus && sIsoDate && !bIsFuture) {
+        if (oMonthStatus.accepted === false) {
+          if (oMonthStatus.anomalyDates.indexOf(sIsoDate) !== -1) return sColorAnomaly;
+          return sColorRejected;
+        }
+        if (oMonthStatus.accepted === true) {
+          if (oEntry && oEntry.type === "work" && oEntry.duration) return sColorAccepted;
+        }
+      }
+
+      // Original fallback logic
+      if (!oEntry && bIsFuture)                       return null;
+      if (!oEntry)                                    return sColorMissing;
+      if (oEntry.type === "work" && oEntry.duration)  return sColorWork;
+      if (oEntry.type === "work" && bIsFuture)        return null;
       return sColorMissing;
+    },
+
+    _resolveAnomalyDates: function (aAnomalyData) {
+      // Returns a map: { "YYYY-MM-DD": anomalyObject } using entry.date directly
+      var oByDate = {};
+      (aAnomalyData || []).forEach(function (oAnomaly) {
+        var sDate = (oAnomaly.entry || {}).date;
+        if (sDate) oByDate[sDate] = oAnomaly;
+      });
+      return oByDate;
+    },
+
+    _updateMonthStatusBar: function () {
+      var oModel  = this.getView().getModel();
+      var sKey    = this._sUserId + "-" + this._iYear + "-"
+                  + String(this._iMonth + 1).padStart(2, "0");
+      var oStatus = this._oMonthStatuses && this._oMonthStatuses[sKey];
+
+      if (!oStatus) {
+        oModel.setProperty("/monthStatusVisible", false);
+        return;
+      }
+
+      oModel.setProperty("/monthStatusVisible", true);
+      oModel.setProperty("/monthStatusAccepted", oStatus.accepted);
+
+      var oStatusBar = this.byId("zeMonthStatusBar");
+      if (oStatusBar) {
+        oStatusBar.removeStyleClass("zeMonthStatusBarAccepted").removeStyleClass("zeMonthStatusBarRejected");
+        oStatusBar.addStyleClass(oStatus.accepted ? "zeMonthStatusBarAccepted" : "zeMonthStatusBarRejected");
+      }
+
+      // Rebuild status row (icon + text)
+      var oStatusRow = this.byId("zeMonthStatusRow");
+      if (oStatusRow) {
+        oStatusRow.destroyItems();
+        var sIconSrc = oStatus.accepted ? "sap-icon://accept" : "sap-icon://message-warning";
+        var sText    = oStatus.accepted ? "Monat akzeptiert" : "Dieser Monat wurde abgelehnt";
+        oStatusRow.addItem(new Icon({ src: sIconSrc, useIconTooltip: false }).addStyleClass("zeMonthStatusIcon"));
+        oStatusRow.addItem(new Text({ text: sText }).addStyleClass("zeMonthStatusText"));
+      }
+
+      // Rebuild anomaly details (rejected only) — show message only, no anomaly data
+      var oChipRow = this.byId("zeAnomalyChipRow");
+      if (oChipRow) {
+        oChipRow.destroyItems();
+        if (!oStatus.accepted && oStatus.message) {
+          oChipRow.addItem(new Text({
+            text: oStatus.message,
+            wrapping: true
+          }).addStyleClass("zeAnomalyText"));
+        }
+      }
+    },
+
+    onAnomalyPress: function (oAnomaly) {
+      var that = this;
+      if (!this._oAnomalyDialog) {
+        this._oAnomalyDialogContent = new VBox().addStyleClass("sapUiSmallMargin");
+        this._oAnomalyDialog = new Dialog({
+          title:        "Anomalie-Details",
+          contentWidth: "500px",
+          resizable:    true,
+          draggable:    true,
+          content:      [this._oAnomalyDialogContent],
+          endButton:    new Button({ text: "Schließen", press: function () { that._oAnomalyDialog.close(); } })
+        });
+        this.getView().addDependent(this._oAnomalyDialog);
+      }
+
+      this._oAnomalyDialogContent.destroyItems();
+      this._oAnomalyDialogContent.addItem(new Label({ text: "Typ:", design: "Bold" }));
+      this._oAnomalyDialogContent.addItem(new Text({ text: oAnomaly.anomaly_type || "" }).addStyleClass("sapUiSmallMarginBottom"));
+      this._oAnomalyDialogContent.addItem(new Label({ text: "Meldung:", design: "Bold" }));
+      this._oAnomalyDialogContent.addItem(new Text({ text: oAnomaly.text || "", wrapping: true }));
+
+      this._oAnomalyDialog.setTitle(oAnomaly.anomaly_type || "Anomalie-Details");
+      this._oAnomalyDialog.open();
     },
 
     _getDayBarValue: function (oEntry, sIsoDate) {
@@ -694,6 +852,38 @@ sap.ui.define([
       oUtc.setUTCDate(oUtc.getUTCDate() + 4 - iDayOfWk);
       var oYearStart = new Date(Date.UTC(oUtc.getUTCFullYear(), 0, 1));
       return Math.ceil(((oUtc - oYearStart) / 86400000 + 1) / 7);
+    },
+
+    // ── SSE connection ─────────────────────────────────────────────────────
+
+    _initSSE: function () {
+      if (!sApiUrl || sApiUrl === "API_URL_PLACEHOLDER") {
+        console.warn("[SSE] sApiUrl is not set – skipping EventSource connection.");
+        return;
+      }
+      var that = this;
+      var es   = new EventSource(sApiUrl + "/listen/manager_answers");
+      this._oSSE = es;
+
+      es.onmessage = function (oEvent) {
+        try {
+          var oData = JSON.parse(oEvent.data);
+          that.receiveMonthStatus(oData);
+        } catch (e) {
+          console.error("[SSE] Failed to parse message:", oEvent.data, e);
+        }
+      };
+
+      es.onerror = function (oEvent) {
+        console.error("[SSE] Connection error:", oEvent);
+      };
+    },
+
+    onExit: function () {
+      if (this._oSSE) {
+        this._oSSE.close();
+        this._oSSE = null;
+      }
     }
   });
 });

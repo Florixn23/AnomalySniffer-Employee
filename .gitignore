@@ -1,0 +1,2 @@
+# Environment config (must not be committed – copy env.example.js → env.js)
+env.js
