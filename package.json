@@ -2,6 +2,7 @@
   "name": "anomaly-sniffer-employee",
   "version": "1.0.0",
   "scripts": {
-    "start": "npx http-server . -p 8081 -o"
+    "start": "npx http-server . -p 8081 -o",
+    "fix-hours": "node fix-target-hours.js"
   }
 }
