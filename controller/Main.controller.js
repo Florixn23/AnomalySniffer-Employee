@@ -170,23 +170,42 @@ sap.ui.define([
     // ── Month acceptance interface ─────────────────────────────────────────
 
     receiveMonthStatus: function (oData) {
-      if (!oData || !oData.User || !oData.Date || oData.accepted === undefined) return;
+      // Normalize: accept both "User" and "user" from the API
+      var sUser     = oData && (oData.User || oData.user);
+      var sDate     = oData && (oData.Date || oData.date);
+      // Normalize: accept boolean true/false or string "true"/"false"
+      var accepted  = oData && oData.accepted;
+      var bAccepted = accepted === true || accepted === "true";
 
-      var aParts = oData.Date.split("-");
+      console.log("[SSE] receiveMonthStatus raw oData:", JSON.stringify(oData));
+      console.log("[SSE] Normalized → sUser:", sUser, "| sDate:", sDate, "| accepted:", accepted, "(bAccepted:", bAccepted + ")");
+      console.log("[SSE] Current view → this._sUserId:", this._sUserId, "| this._iYear:", this._iYear, "| this._iMonth:", this._iMonth);
+
+      if (!oData || !sUser || !sDate || accepted === undefined || accepted === null) {
+        console.warn("[SSE] receiveMonthStatus: early-exit guard triggered.", {
+          hasData: !!oData, sUser: sUser, sDate: sDate, accepted: accepted
+        });
+        return;
+      }
+
+      var aParts = sDate.split("-");
       var iYear  = +aParts[0];
       var iMonth = +aParts[1] - 1;   // 0-indexed
-      var sKey   = oData.User + "-" + aParts[0] + "-" + aParts[1];
+      var sKey   = sUser + "-" + aParts[0] + "-" + aParts[1];
 
-      if (oData.accepted === true) {
+      console.log("[SSE] Computed → iYear:", iYear, "| iMonth:", iMonth, "| sKey:", sKey);
+      console.log("[SSE] Expected key would be:", this._sUserId + "-" + this._iYear + "-" + String(this._iMonth + 1).padStart(2, "0"));
+
+      if (bAccepted) {
         this._oMonthStatuses[sKey] = {
-          user: oData.User, year: iYear, month: iMonth,
+          user: sUser, year: iYear, month: iMonth,
           accepted: true, anomalyDates: [], anomalies: []
         };
       } else {
         var aAnomalyData  = (oData.anomalys || []).map(function (o) { return o.data || o; });
         var oByDate       = this._resolveAnomalyDates(aAnomalyData);
         this._oMonthStatuses[sKey] = {
-          user: oData.User, year: iYear, month: iMonth,
+          user: sUser, year: iYear, month: iMonth,
           accepted: false, message: oData.message || "",
           anomalies:    aAnomalyData,
           anomalyDates: Object.keys(oByDate),
@@ -195,9 +214,17 @@ sap.ui.define([
       }
 
       // Re-render only if currently viewing that month/user
-      if (iYear === this._iYear && iMonth === this._iMonth && oData.User === this._sUserId) {
+      var bUserMatch  = sUser === this._sUserId;
+      var bYearMatch  = iYear === this._iYear;
+      var bMonthMatch = iMonth === this._iMonth;
+      console.log("[SSE] Re-render check → userMatch:", bUserMatch, "| yearMatch:", bYearMatch, "| monthMatch:", bMonthMatch);
+
+      if (bYearMatch && bMonthMatch && bUserMatch) {
+        console.log("[SSE] Re-rendering calendar and status bar.");
         this._buildCalendarGrid();
         this._updateMonthStatusBar();
+      } else {
+        console.warn("[SSE] Re-render skipped – status stored in _oMonthStatuses['" + sKey + "'] but view mismatch.");
       }
     },
 
@@ -868,10 +895,12 @@ sap.ui.define([
 
       es.onmessage = function (oEvent) {
         try {
+          console.log("[SSE] Raw event.data:", oEvent.data);
           var oRaw  = JSON.parse(oEvent.data);
+          console.log("[SSE] Parsed oRaw:", JSON.stringify(oRaw));
           var oData = oRaw.data || oRaw;
+          console.log("[SSE] oData passed to receiveMonthStatus:", JSON.stringify(oData));
           that.receiveMonthStatus(oData);
-          console.log("[SSE] Received message:", oData);
         } catch (e) {
           console.error("[SSE] Failed to parse message:", oEvent.data, e);
         }
