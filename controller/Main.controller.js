@@ -32,8 +32,13 @@ sap.ui.define([
   var sColorRejected = "#e67e22"; // Orange – month rejected work day
   var sColorAnomaly  = "#e74c3c"; // Red    – anomaly date
 
-  var sWebhookUrl = (window.__env__ && window.__env__.WEBHOOK_URL) || "";
-  var sApiUrl     = (window.__env__ && window.__env__.API_URL)     || "";
+  // String: Target URL for outgoing webhooks (replace placeholder before deployment)
+  var sWebhookUrl = "WEBHOOK_URL_PLACEHOLDER";
+
+  // String: Base API URL for SSE – derived automatically from sWebhookUrl
+  var sApiUrl = (sWebhookUrl && sWebhookUrl !== "WEBHOOK_URL_PLACEHOLDER")
+    ? new URL(sWebhookUrl).origin
+    : "";
 
   // Object: Display labels for special day types
   var oDayTypeLabels = { vacation: "Urlaub", holiday: "Feiertag" };
