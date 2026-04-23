@@ -869,6 +869,7 @@ sap.ui.define([
         try {
           var oData = JSON.parse(oEvent.data);
           that.receiveMonthStatus(oData);
+          console.log("[SSE] Received message:", oData);
         } catch (e) {
           console.error("[SSE] Failed to parse message:", oEvent.data, e);
         }
