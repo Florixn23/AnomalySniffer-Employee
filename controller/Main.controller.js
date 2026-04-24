@@ -610,7 +610,7 @@ sap.ui.define([
         var sIconSrc = oStatus.accepted ? "sap-icon://accept" : "sap-icon://message-warning";
         var sText    = oStatus.accepted
           ? "Dieser Monat wurde akzeptiert"
-          : (oStatus.message ? "Dieser Monat wurde abgelehnt, weil: \"" + oStatus.message + "\"" : "Dieser Monat wurde abgelehnt");
+          : "Dieser Monat wurde abgelehnt:";
         oStatusRow.addItem(new Icon({ src: sIconSrc, useIconTooltip: false }).addStyleClass("zeMonthStatusIcon"));
         oStatusRow.addItem(new Text({ text: sText, wrapping: true }).addStyleClass("zeMonthStatusText"));
       }
