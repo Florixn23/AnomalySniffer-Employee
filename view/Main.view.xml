@@ -135,6 +135,22 @@
               <core:Icon src="sap-icon://calendar" class="zeReadOnlyIcon" />
               <Text text="{/selectedDayTypeName}" class="zeReadOnlyTitle" />
               <Text text="Dieser Tag kann nicht bearbeitet werden." class="zeReadOnlyHint" />
+
+              <!-- Time data for locked work days -->
+              <VBox visible="{/selectedHasWorkData}" class="zeReadOnlyTimeInfo">
+                <HBox class="zeReadOnlyTimeRow">
+                  <Text text="Von" class="zeReadOnlyTimeLabel" />
+                  <Text text="{= ${/selectedStart} ? ${/selectedStart} : '–' }" class="zeReadOnlyTimeValue" />
+                </HBox>
+                <HBox class="zeReadOnlyTimeRow">
+                  <Text text="Bis" class="zeReadOnlyTimeLabel" />
+                  <Text text="{= ${/selectedEnd} ? ${/selectedEnd} : '–' }" class="zeReadOnlyTimeValue" />
+                </HBox>
+                <HBox class="zeReadOnlyTimeRow">
+                  <Text text="Dauer" class="zeReadOnlyTimeLabel" />
+                  <Text text="{= ${/selectedDuration} ? ${/selectedDuration} : '–' }" class="zeReadOnlyTimeValue" />
+                </HBox>
+              </VBox>
             </VBox>
 
             <!-- EDITABLE (work day) -->

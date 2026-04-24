@@ -184,6 +184,20 @@
       line-height: 1;
     }
 
+    /* Anomaly type label inside red calendar cells */
+    .zeAnomalyLabel {
+      font-size: 0.55rem;
+      font-weight: 700;
+      color: #e74c3c;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      line-height: 1.2;
+      margin-top: 0.1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+    }
+
     /* ── Month status bar ────────────────────────────────────── */
     .zeMonthStatusBar {
       margin: 0.4rem 0 0.3rem;
@@ -293,6 +307,26 @@
     .zeReadOnlyIcon .sapUiIcon { font-size: 2.5rem !important; color: var(--sapNeutralColor, #b0b0b0); }
     .zeReadOnlyTitle { font-size: 1.05rem; font-weight: 600; color: var(--sapTextColor, #444); margin-top: 0.25rem; }
     .zeReadOnlyHint  { font-size: 0.8rem; color: var(--sapContent_LabelColor, #aaa); text-align: center; }
+
+    /* Time data rows inside the read-only block */
+    .zeReadOnlyTimeInfo {
+      width: 100%;
+      margin-top: 0.75rem;
+      padding-top: 0.75rem;
+      border-top: 1px solid var(--sapGroup_TitleBorderColor, #e8e8e8);
+      gap: 0.5rem;
+    }
+    .zeReadOnlyTimeRow { align-items: center; gap: 0.5rem; }
+    .zeReadOnlyTimeLabel.sapMText {
+      font-size: 0.8rem !important;
+      color: var(--sapContent_LabelColor, #6a6d70);
+      min-width: 3.25rem;
+    }
+    .zeReadOnlyTimeValue.sapMText {
+      font-size: 0.95rem !important;
+      font-weight: 700;
+      color: var(--sapTextColor, #32363a);
+    }
 
     /* Form sections */
     .zePanelSection { margin-bottom: 0.85rem; }

@@ -51,7 +51,8 @@ sap.ui.define([
         monthStatusVisible:   false,
         monthStatusAccepted:  null,
         monthStatusMessage:   "",
-        nextMonthEnabled:     false
+        nextMonthEnabled:     false,
+        selectedHasWorkData:  false
       }));
 
       var oToday         = new Date();
@@ -253,20 +254,12 @@ sap.ui.define([
       var iWeekday   = oDate.getDay(); // Integer: 0 = Sunday, 6 = Saturday
       if (iWeekday === 0 || iWeekday === 6) return; // skip weekends
 
-      // If the day is an anomaly date, open the anomaly dialog immediately
       var sStatusKey   = this._sUserId + "-" + this._iYear + "-" + String(this._iMonth + 1).padStart(2, "0");
       var oMonthStatus = this._oMonthStatuses && this._oMonthStatuses[sStatusKey];
-      if (oMonthStatus && oMonthStatus.anomalyByDate && oMonthStatus.anomalyByDate[sIsoDate]) {
-        this.onAnomalyPress(oMonthStatus.anomalyByDate[sIsoDate]);
-        return;
-      }
+      var bIsAnomaly   = !!(oMonthStatus && oMonthStatus.anomalyByDate && oMonthStatus.anomalyByDate[sIsoDate]);
 
       var oModel     = this.getView().getModel();
       var oEntry     = this._getEntryForDate(sIsoDate);
-
-      // Check if the month has been accepted or declined by the manager
-      var sMonthKey    = this._sUserId + "-" + this._iYear + "-" + String(this._iMonth + 1).padStart(2, "0");
-      var oMonthStatus = this._oMonthStatuses && this._oMonthStatuses[sMonthKey];
       var bMonthLocked = !!(oMonthStatus);
 
       var bReadOnly  = bMonthLocked || (!!oEntry && (oEntry.type === "vacation" || oEntry.type === "holiday"));
@@ -279,7 +272,9 @@ sap.ui.define([
                        aMonthNames[oDate.getMonth()];
 
       var sDayTypeName;
-      if (bMonthLocked) {
+      if (bIsAnomaly) {
+        sDayTypeName = oMonthStatus.anomalyByDate[sIsoDate].anomaly_type || "Anomalie";
+      } else if (bMonthLocked) {
         sDayTypeName = oMonthStatus.accepted ? "Monat akzeptiert" : "Monat abgelehnt";
       } else {
         sDayTypeName = this._getDayTypeLabel(oEntry);
@@ -290,6 +285,7 @@ sap.ui.define([
         selectedDayLabel:      sDayLabel,
         selectedReadOnly:      bReadOnly,
         selectedDayTypeName:   sDayTypeName,
+        selectedHasWorkData:   !!(oEntry && oEntry.type === "work"),
         selectedStart:         oEntry ? (oEntry.start    || "") : "",
         selectedEnd:           oEntry ? (oEntry.end      || "") : "",
         selectedDuration:      sDuration,
@@ -300,6 +296,11 @@ sap.ui.define([
 
       this._refreshWeekSummary(sIsoDate);
       this._buildCalendarGrid();
+
+      // For anomaly days: open the detail dialog in addition to showing the panel
+      if (bIsAnomaly) {
+        this.onAnomalyPress(oMonthStatus.anomalyByDate[sIsoDate]);
+      }
     },
 
     onClosePanel: function () {
@@ -517,14 +518,11 @@ sap.ui.define([
           var oEntry         = this._getEntryForDate(sIsoDate);
           var bIsFuture      = sIsoDate > this._sTodayIso;
 
-          var bIsEditable = !bIsWeekend && !oMonthStatus
-            && !(oEntry && (oEntry.type === "vacation" || oEntry.type === "holiday"));
-
           var sCssClasses = "zeGridCell zeDay"
-            + (bIsWeekend   ? " zeWe"        : "")
-            + (bIsEditable  ? " zeClickable" : "")
-            + (bIsToday     ? " zeToday"     : "")
-            + (bIsSelected  ? " zeSel"       : "");
+            + (bIsWeekend  ? " zeWe"        : "")
+            + (!bIsWeekend ? " zeClickable" : "")
+            + (bIsToday    ? " zeToday"     : "")
+            + (bIsSelected ? " zeSel"       : "");
 
           var sDataAttr = bIsWeekend ? "" : ' data-iso="' + sIsoDate + '"';
           aHtmlParts.push('<div class="' + sCssClasses + '"' + sDataAttr + '>');
@@ -535,6 +533,12 @@ sap.ui.define([
             if (sBarColor) {
               aHtmlParts.push('<div class="zeDayBar" style="background:' + sBarColor + '"></div>');
               aHtmlParts.push('<div class="zeDayVal">' + this._getDayBarValue(oEntry, sIsoDate) + '</div>');
+            }
+            if (oMonthStatus && oMonthStatus.anomalyByDate && oMonthStatus.anomalyByDate[sIsoDate]) {
+              var sAnomalyType = oMonthStatus.anomalyByDate[sIsoDate].anomaly_type || "";
+              if (sAnomalyType) {
+                aHtmlParts.push('<div class="zeAnomalyLabel">' + this._escapeHtml(sAnomalyType) + '</div>');
+              }
             }
           }
           aHtmlParts.push('</div>');
@@ -827,6 +831,15 @@ sap.ui.define([
     // Returns the German display label for a day entry's type
     _getDayTypeLabel: function (oEntry) {
       return oEntry ? (oDayTypeLabels[oEntry.type] || "") : "";
+    },
+
+    // Escapes HTML special characters to prevent XSS in generated HTML strings
+    _escapeHtml: function (s) {
+      return String(s)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;");
     },
 
     // Formats "HH:mm" to a decimal hours string, e.g. "7:30" → "7.5"
