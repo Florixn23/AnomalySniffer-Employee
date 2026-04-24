@@ -136,6 +136,11 @@
               <Text text="{/selectedDayTypeName}" class="zeReadOnlyTitle" />
               <Text text="Dieser Tag kann nicht bearbeitet werden." class="zeReadOnlyHint" />
 
+              <!-- Anomaly message -->
+              <VBox visible="{/selectedIsAnomaly}" class="zeAnomalyInfo">
+                <Text text="{/selectedAnomalyText}" wrapping="true" class="zeAnomalyInfoText" />
+              </VBox>
+
               <!-- Time data for locked work days -->
               <VBox visible="{/selectedHasWorkData}" class="zeReadOnlyTimeInfo">
                 <HBox class="zeReadOnlyTimeRow">

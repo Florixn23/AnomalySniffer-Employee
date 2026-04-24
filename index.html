@@ -188,7 +188,7 @@
     .zeAnomalyLabel {
       font-size: 0.55rem;
       font-weight: 700;
-      color: #e74c3c;
+      color: #c0392b;
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
@@ -206,7 +206,7 @@
       border: 1px solid transparent;
     }
     .zeMonthStatusBarAccepted { background: #eaf5ee; border: 3px solid #27ae60; }
-    .zeMonthStatusBarRejected  { background: #fff4e0; border: 3px solid #e74c3c; }
+    .zeMonthStatusBarRejected  { background: #fff4e0; border: 3px solid #f39c12; }
 
     .zeMonthStatusIcon { font-size: 1rem !important; }
     .zeMonthStatusText { font-size: 0.875rem; font-weight: 600; margin-left: 0.4rem; }
@@ -326,6 +326,21 @@
       font-size: 0.95rem !important;
       font-weight: 700;
       color: var(--sapTextColor, #32363a);
+    }
+
+    /* Anomaly detail block inside the read-only panel */
+    .zeAnomalyInfo {
+      width: 100%;
+      margin-top: 0.75rem;
+      padding: 0.65rem 0.75rem;
+      background: #fff4f4;
+      border-left: 3px solid #c0392b;
+      border-radius: 0 0.4rem 0.4rem 0;
+    }
+    .zeAnomalyInfoText.sapMText {
+      font-size: 0.82rem !important;
+      color: var(--sapTextColor, #32363a);
+      white-space: pre-line;
     }
 
     /* Form sections */

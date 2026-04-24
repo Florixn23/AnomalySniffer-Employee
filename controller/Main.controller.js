@@ -29,8 +29,8 @@ sap.ui.define([
   var sColorHoliday  = "#aad4f5"; // Light blue – public holiday
   var sColorMissing  = "#e8c84a"; // Yellow – past day without an entry
   var sColorAccepted = "#27ae60"; // Green  – month accepted work day
-  var sColorRejected = "#e67e22"; // Orange – month rejected work day
-  var sColorAnomaly  = "#e74c3c"; // Red    – anomaly date
+  var sColorRejected = "#f39c12"; // Amber/Orange – month rejected work day
+  var sColorAnomaly  = "#c0392b"; // Deep red    – anomaly date
 
   // String: Target URL for outgoing webhooks (replace placeholder before deployment)
   var sWebhookUrl = "WEBHOOK_URL_PLACEHOLDER";
@@ -52,7 +52,9 @@ sap.ui.define([
         monthStatusAccepted:  null,
         monthStatusMessage:   "",
         nextMonthEnabled:     false,
-        selectedHasWorkData:  false
+        selectedHasWorkData:  false,
+        selectedIsAnomaly:    false,
+        selectedAnomalyText:  ""
       }));
 
       var oToday         = new Date();
@@ -286,6 +288,8 @@ sap.ui.define([
         selectedReadOnly:      bReadOnly,
         selectedDayTypeName:   sDayTypeName,
         selectedHasWorkData:   !!(oEntry && oEntry.type === "work"),
+        selectedIsAnomaly:     bIsAnomaly,
+        selectedAnomalyText:   bIsAnomaly ? (oMonthStatus.anomalyByDate[sIsoDate].text || "") : "",
         selectedStart:         oEntry ? (oEntry.start    || "") : "",
         selectedEnd:           oEntry ? (oEntry.end      || "") : "",
         selectedDuration:      sDuration,
@@ -296,11 +300,6 @@ sap.ui.define([
 
       this._refreshWeekSummary(sIsoDate);
       this._buildCalendarGrid();
-
-      // For anomaly days: open the detail dialog in addition to showing the panel
-      if (bIsAnomaly) {
-        this.onAnomalyPress(oMonthStatus.anomalyByDate[sIsoDate]);
-      }
     },
 
     onClosePanel: function () {
