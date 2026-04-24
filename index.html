@@ -117,9 +117,14 @@
       box-sizing: border-box;
       position: relative;
     }
-    .zeDay.zeClickable { cursor: pointer; }
+    .zeDay.zeClickable {
+      cursor: pointer;
+      transition: transform 0.14s ease, box-shadow 0.14s ease, background 0.14s ease;
+    }
     .zeDay.zeClickable:hover {
       background: var(--sapList_Hover_Background, #edf3ff);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.10);
     }
 
     .zeWe {
@@ -185,8 +190,8 @@
       border-radius: 6px;
       border: 1px solid transparent;
     }
-    .zeMonthStatusBarAccepted { background: #eaf5ee; border-color: #a8d5b5; }
-    .zeMonthStatusBarRejected  { background: #fff4e0; border-color: #f0c070; }
+    .zeMonthStatusBarAccepted { background: #eaf5ee; border: 3px solid #27ae60; }
+    .zeMonthStatusBarRejected  { background: #fff4e0; border: 3px solid #e74c3c; }
 
     .zeMonthStatusIcon { font-size: 1rem !important; }
     .zeMonthStatusText { font-size: 0.875rem; font-weight: 600; margin-left: 0.4rem; }

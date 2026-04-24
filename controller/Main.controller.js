@@ -512,10 +512,14 @@ sap.ui.define([
           var oEntry         = this._getEntryForDate(sIsoDate);
           var bIsFuture      = sIsoDate > this._sTodayIso;
 
+          var bIsEditable = !bIsWeekend && !oMonthStatus
+            && !(oEntry && (oEntry.type === "vacation" || oEntry.type === "holiday"));
+
           var sCssClasses = "zeGridCell zeDay"
-            + (bIsWeekend  ? " zeWe"    : "")
-            + (bIsToday    ? " zeToday" : "")
-            + (bIsSelected ? " zeSel"   : "");
+            + (bIsWeekend   ? " zeWe"        : "")
+            + (bIsEditable  ? " zeClickable" : "")
+            + (bIsToday     ? " zeToday"     : "")
+            + (bIsSelected  ? " zeSel"       : "");
 
           var sDataAttr = bIsWeekend ? "" : ' data-iso="' + sIsoDate + '"';
           aHtmlParts.push('<div class="' + sCssClasses + '"' + sDataAttr + '>');
@@ -604,9 +608,11 @@ sap.ui.define([
       if (oStatusRow) {
         oStatusRow.destroyItems();
         var sIconSrc = oStatus.accepted ? "sap-icon://accept" : "sap-icon://message-warning";
-        var sText    = oStatus.accepted ? "Monat akzeptiert" : "Dieser Monat wurde abgelehnt";
+        var sText    = oStatus.accepted
+          ? "Dieser Monat wurde akzeptiert"
+          : (oStatus.message ? "Dieser Monat wurde abgelehnt, weil: \"" + oStatus.message + "\"" : "Dieser Monat wurde abgelehnt");
         oStatusRow.addItem(new Icon({ src: sIconSrc, useIconTooltip: false }).addStyleClass("zeMonthStatusIcon"));
-        oStatusRow.addItem(new Text({ text: sText }).addStyleClass("zeMonthStatusText"));
+        oStatusRow.addItem(new Text({ text: sText, wrapping: true }).addStyleClass("zeMonthStatusText"));
       }
 
       // Rebuild anomaly details (rejected only) — show message only, no anomaly data
