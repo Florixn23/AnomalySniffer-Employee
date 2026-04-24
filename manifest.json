@@ -3,8 +3,8 @@
   "sap.app": {
     "id": "zeiterfassung",
     "type": "application",
-    "title": "Arbeitszeiterfassung",
-    "description": "Zeiterfassung für Mitarbeiter",
+    "title": "Working Hours Tracking",
+    "description": "Time tracking for employees",
     "applicationVersion": { "version": "1.0.0" }
   },
   "sap.ui": {

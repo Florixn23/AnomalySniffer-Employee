@@ -14,14 +14,14 @@ sap.ui.define([
   "use strict";
 
   // Array: German month names (index 0 = January)
-  var aMonthNames = ["Januar","Februar","März","April","Mai","Juni",
-                     "Juli","August","September","Oktober","November","Dezember"];
+  var aMonthNames = ["January","February","March","April","May","June",
+                     "July","August","September","October","November","December"];
 
   // Array: Weekday header labels for the calendar grid (Monday-first)
   var aWeekdayHeaders = ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"];
 
   // Array: Short German weekday labels (Sunday = index 0, matching JS Date.getDay())
-  var aWeekdayShort = ["So","Mo","Di","Mi","Do","Fr","Sa"];
+  var aWeekdayShort = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
 
   // String: Color hex values for the day bar indicators
   var sColorWork     = "#4a90d9"; // Blue  – recorded work day
@@ -39,7 +39,7 @@ sap.ui.define([
   var sApiUrl = "API_URL_PLACEHOLDER";
 
   // Object: Display labels for special day types
-  var oDayTypeLabels = { vacation: "Urlaub", holiday: "Feiertag" };
+  var oDayTypeLabels = { vacation: "Vacation", holiday: "Holiday" };
 
   return Controller.extend("zeiterfassung.controller.Main", {
 
@@ -168,7 +168,7 @@ sap.ui.define([
 
     onReplayWebhooks: function () {
       WebhookReplay.replayAllUsers({ webhookUrl: sWebhookUrl, usersData: this._aAllUsersData });
-      MessageToast.show("Webhook-Replay gestartet");
+      MessageToast.show("Webhook replay started");
     },
 
     // ── Month acceptance interface ─────────────────────────────────────────
@@ -275,9 +275,9 @@ sap.ui.define([
 
       var sDayTypeName;
       if (bIsAnomaly) {
-        sDayTypeName = oMonthStatus.anomalyByDate[sIsoDate].anomaly_type || "Anomalie";
+        sDayTypeName = oMonthStatus.anomalyByDate[sIsoDate].anomaly_type || "Anomaly";
       } else if (bMonthLocked) {
-        sDayTypeName = oMonthStatus.accepted ? "Monat akzeptiert" : "Monat abgelehnt";
+        sDayTypeName = oMonthStatus.accepted ? "Month accepted" : "Month rejected";
       } else {
         sDayTypeName = this._getDayTypeLabel(oEntry);
       }
@@ -333,7 +333,7 @@ sap.ui.define([
       oModel.setProperty("/selectedDayUnrecorded", sDuration ? "0 h" : sTargetStr);
       this._refreshWeekSummary(sIsoDate);
       this._buildCalendarGrid();
-      MessageToast.show("Gespeichert");
+      MessageToast.show("Saved");
 
       this._sendPendingWebhooks(sIsoDate);
     },
@@ -388,7 +388,7 @@ sap.ui.define([
             target_hours: getTargetMinutes(sIsoDate) / 60,
             weekly_hours: Math.round(iCumulativeMinutes / 60 * 100) / 100
           }),
-          error: function () { MessageToast.show("Webhook-Fehler für " + sIsoDate); }
+          error: function () { MessageToast.show("Webhook error for " + sIsoDate); }
         });
       };
 
@@ -617,8 +617,8 @@ sap.ui.define([
         oStatusRow.destroyItems();
         var sIconSrc = oStatus.accepted ? "sap-icon://accept" : "sap-icon://message-warning";
         var sText    = oStatus.accepted
-          ? "Dieser Monat wurde akzeptiert"
-          : "Dieser Monat wurde abgelehnt:";
+          ? "This month has been accepted"
+          : "This month has been rejected:";
         oStatusRow.addItem(new Icon({ src: sIconSrc, useIconTooltip: false }).addStyleClass("zeMonthStatusIcon"));
         oStatusRow.addItem(new Text({ text: sText, wrapping: true }).addStyleClass("zeMonthStatusText"));
       }
@@ -641,23 +641,23 @@ sap.ui.define([
       if (!this._oAnomalyDialog) {
         this._oAnomalyDialogContent = new VBox().addStyleClass("sapUiSmallMargin");
         this._oAnomalyDialog = new Dialog({
-          title:        "Anomalie-Details",
+          title:        "Anomaly Details",
           contentWidth: "500px",
           resizable:    true,
           draggable:    true,
           content:      [this._oAnomalyDialogContent],
-          endButton:    new Button({ text: "Schließen", press: function () { that._oAnomalyDialog.close(); } })
+          endButton:    new Button({ text: "Close", press: function () { that._oAnomalyDialog.close(); } })
         });
         this.getView().addDependent(this._oAnomalyDialog);
       }
 
       this._oAnomalyDialogContent.destroyItems();
-      this._oAnomalyDialogContent.addItem(new Label({ text: "Typ:", design: "Bold" }));
+      this._oAnomalyDialogContent.addItem(new Label({ text: "Type:", design: "Bold" }));
       this._oAnomalyDialogContent.addItem(new Text({ text: oAnomaly.anomaly_type || "" }).addStyleClass("sapUiSmallMarginBottom"));
-      this._oAnomalyDialogContent.addItem(new Label({ text: "Meldung:", design: "Bold" }));
+      this._oAnomalyDialogContent.addItem(new Label({ text: "Message:", design: "Bold" }));
       this._oAnomalyDialogContent.addItem(new Text({ text: oAnomaly.text || "", wrapping: true }));
 
-      this._oAnomalyDialog.setTitle(oAnomaly.anomaly_type || "Anomalie-Details");
+      this._oAnomalyDialog.setTitle(oAnomaly.anomaly_type || "Anomaly Details");
       this._oAnomalyDialog.open();
     },
 
@@ -806,13 +806,13 @@ sap.ui.define([
     onThemePress: function (oEvent) {
       if (!this._oThemeSheet) {
         var aThemeOptions = [
-          { text: "Morning Horizon (Hell)",   theme: "sap_horizon"      },
-          { text: "Evening Horizon (Dunkel)", theme: "sap_horizon_dark" },
-          { text: "High Contrast Schwarz",    theme: "sap_horizon_hcb"  },
-          { text: "High Contrast Weiß",       theme: "sap_horizon_hcw"  }
+          { text: "Morning Horizon (Light)",        theme: "sap_horizon"      },
+          { text: "Evening Horizon (Dark)",          theme: "sap_horizon_dark" },
+          { text: "High Contrast Black",             theme: "sap_horizon_hcb"  },
+          { text: "High Contrast White",             theme: "sap_horizon_hcw"  }
         ];
         this._oThemeSheet = new ActionSheet({
-          title: "Design wählen",
+          title: "Choose Theme",
           buttons: aThemeOptions.map(function (oOption) {
             return new Button({
               text:  oOption.text,

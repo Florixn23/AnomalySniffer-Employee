@@ -161,7 +161,7 @@ sap.ui.define([
             target_hours: that._getTargetMinutes(oConfig, sIsoDate) / 60,
             weekly_hours: Math.round(iCumulativeMinutes / 60 * 100) / 100
           }),
-          error: function () { MessageToast.show("Webhook-Fehler für " + sIsoDate); }
+          error: function () { MessageToast.show("Webhook error for " + sIsoDate); }
         });
       }, iDelay);
     },

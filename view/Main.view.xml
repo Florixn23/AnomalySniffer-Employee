@@ -32,11 +32,11 @@
             <Title text="Anomaly Sniffer" level="H5" class="zeCalPanelTitle" />
             <ToolbarSpacer />
             <Button id="userBtn" type="Ghost" press=".onUserPress" />
-            <Button icon="sap-icon://calendar"          type="Transparent" tooltip="Kalenderansicht" />
-            <Button icon="sap-icon://text-align-center" type="Transparent" tooltip="Wochenansicht" />
-            <Button icon="sap-icon://synchronize"       type="Transparent" tooltip="Webhooks wiedergeben" press=".onReplayWebhooks" />
-            <Button icon="sap-icon://palette"           type="Transparent" tooltip="Design" press=".onThemePress" />
-            <Button icon="sap-icon://hint"              type="Transparent" tooltip="Hilfe" />
+            <Button icon="sap-icon://calendar"          type="Transparent" tooltip="Calendar View" />
+            <Button icon="sap-icon://text-align-center" type="Transparent" tooltip="Week View" />
+            <Button icon="sap-icon://synchronize"       type="Transparent" tooltip="Replay Webhooks" press=".onReplayWebhooks" />
+            <Button icon="sap-icon://palette"           type="Transparent" tooltip="Theme" press=".onThemePress" />
+            <Button icon="sap-icon://hint"              type="Transparent" tooltip="Help" />
           </OverflowToolbar>
         </headerToolbar>
 
@@ -76,24 +76,24 @@
             <!-- Week stats tiles -->
             <HBox class="zeStatsTiles" justifyContent="SpaceBetween">
               <VBox class="zeStatsTile">
-                <Text text="KALENDERWOCHE" class="zeStatsTileLabel" />
+                <Text text="CALENDAR WEEK" class="zeStatsTileLabel" />
                 <Text text="{/currentWeek}" class="zeStatsTileValueBlue" />
-                <Text text="Aktuelle Woche" class="zeStatsTileSub" />
+                <Text text="Current Week" class="zeStatsTileSub" />
               </VBox>
               <VBox class="zeStatsTile">
-                <Text text="IST-STUNDEN / WOCHE" class="zeStatsTileLabel" />
+                <Text text="ACTUAL HOURS / WEEK" class="zeStatsTileLabel" />
                 <Text text="{/weekActual}" class="{/weekActualClass}" />
-                <Text text="{= 'Ziel: ' + ${/weekTarget} }" class="zeStatsTileSub" />
+                <Text text="{= 'Target: ' + ${/weekTarget} }" class="zeStatsTileSub" />
               </VBox>
               <VBox class="zeStatsTile">
-                <Text text="SOLL-STUNDEN / WOCHE" class="zeStatsTileLabel" />
+                <Text text="TARGET HOURS / WEEK" class="zeStatsTileLabel" />
                 <Text text="{/weekTarget}" class="zeStatsTileValueNeutral" />
-                <Text text="5 Arbeitstage" class="zeStatsTileSub" />
+                <Text text="5 Working Days" class="zeStatsTileSub" />
               </VBox>
               <VBox class="zeStatsTile">
-                <Text text="OFFEN / ÜBERSTUNDEN" class="zeStatsTileLabel" />
+                <Text text="OPEN / OVERTIME" class="zeStatsTileLabel" />
                 <Text text="{/weekUnrecorded}" class="{= parseFloat(${/weekUnrecordedNum}) >= 0 ? 'zeStatsTileValueRed' : 'zeStatsTileValueGreen'}" />
-                <Text text="{= parseFloat(${/weekUnrecordedNum}) >= 0 ? 'Noch nicht erfasst' : 'Über Ziel' }" class="zeStatsTileSub" />
+                <Text text="{= parseFloat(${/weekUnrecordedNum}) >= 0 ? 'Not yet recorded' : 'Above target' }" class="zeStatsTileSub" />
               </VBox>
             </HBox>
 
@@ -134,7 +134,7 @@
             <VBox class="zeReadOnly" visible="{/selectedReadOnly}">
               <core:Icon src="sap-icon://calendar" class="zeReadOnlyIcon" />
               <Text text="{/selectedDayTypeName}" class="zeReadOnlyTitle" />
-              <Text text="Dieser Tag kann nicht bearbeitet werden." class="zeReadOnlyHint" />
+              <Text text="This day cannot be edited." class="zeReadOnlyHint" />
 
               <!-- Anomaly message -->
               <VBox visible="{/selectedIsAnomaly}" class="zeAnomalyInfo">
@@ -144,15 +144,15 @@
               <!-- Time data for locked work days -->
               <VBox visible="{/selectedHasWorkData}" class="zeReadOnlyTimeInfo">
                 <HBox class="zeReadOnlyTimeRow">
-                  <Text text="Von" class="zeReadOnlyTimeLabel" />
+                  <Text text="From" class="zeReadOnlyTimeLabel" />
                   <Text text="{= ${/selectedStart} ? ${/selectedStart} : '–' }" class="zeReadOnlyTimeValue" />
                 </HBox>
                 <HBox class="zeReadOnlyTimeRow">
-                  <Text text="Bis" class="zeReadOnlyTimeLabel" />
+                  <Text text="Until" class="zeReadOnlyTimeLabel" />
                   <Text text="{= ${/selectedEnd} ? ${/selectedEnd} : '–' }" class="zeReadOnlyTimeValue" />
                 </HBox>
                 <HBox class="zeReadOnlyTimeRow">
-                  <Text text="Dauer" class="zeReadOnlyTimeLabel" />
+                  <Text text="Duration" class="zeReadOnlyTimeLabel" />
                   <Text text="{= ${/selectedDuration} ? ${/selectedDuration} : '–' }" class="zeReadOnlyTimeValue" />
                 </HBox>
               </VBox>
@@ -162,28 +162,28 @@
             <VBox visible="{= !${/selectedReadOnly} }">
 
               <VBox class="zePanelSection">
-                <Label text="Beginn" design="Bold" class="zePanelLabel" />
+                <Label text="Start" design="Bold" class="zePanelLabel" />
                 <TimePicker value="{/selectedStart}"
                             valueFormat="HH:mm" displayFormat="HH:mm"
                             placeholder="hh:mm" change=".onPanelStartChange" width="100%" />
               </VBox>
 
               <VBox class="zePanelSection">
-                <Label text="Ende" design="Bold" class="zePanelLabel" />
+                <Label text="End" design="Bold" class="zePanelLabel" />
                 <TimePicker value="{/selectedEnd}"
                             valueFormat="HH:mm" displayFormat="HH:mm"
                             placeholder="hh:mm" change=".onPanelEndChange" width="100%" />
               </VBox>
 
               <VBox class="zePanelSection">
-                <Label text="Dauer" design="Bold" class="zePanelLabel" />
+                <Label text="Duration" design="Bold" class="zePanelLabel" />
                 <Input value="{/selectedDuration}" placeholder="hh:mm"
                        change=".onPanelDurationChange" width="100%" />
               </VBox>
 
               <HBox justifyContent="End" class="zePanelActions">
-                <Button text="Löschen"   type="Transparent" press=".onClearDay" />
-                <Button text="Speichern" type="Emphasized"  press=".onSaveDay"
+                <Button text="Clear"   type="Transparent" press=".onClearDay" />
+                <Button text="Save" type="Emphasized"  press=".onSaveDay"
                         class="sapUiTinyMarginBegin" />
               </HBox>
 
