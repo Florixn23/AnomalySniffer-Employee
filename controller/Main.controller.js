@@ -30,7 +30,7 @@ sap.ui.define([
   var sColorMissing  = "#e8c84a"; // Yellow – past day without an entry
   var sColorAccepted = "#27ae60"; // Green  – month accepted work day
   var sColorRejected = "#f39c12"; // Amber/Orange – month rejected work day
-  var sColorAnomaly  = "#c0392b"; // Deep red    – anomaly date
+  var sColorAnomaly  = "#e74c3c"; // Bright red  – anomaly date
 
   // String: Target URL for outgoing webhooks (replace placeholder before deployment)
   var sWebhookUrl = "WEBHOOK_URL_PLACEHOLDER";
