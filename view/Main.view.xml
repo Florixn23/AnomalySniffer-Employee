@@ -57,7 +57,8 @@
                 <Title text="{/yearTitle}"  level="H2" class="zeYearTitle" />
               </HBox>
               <Button icon="sap-icon://navigation-right-arrow"
-                      press=".onNextMonth" type="Transparent" />
+                      press=".onNextMonth" type="Transparent"
+                      enabled="{/nextMonthEnabled}" />
             </HBox>
 
             <!-- Calendar grid -->

@@ -50,7 +50,8 @@ sap.ui.define([
         selectedDay:          null,
         monthStatusVisible:   false,
         monthStatusAccepted:  null,
-        monthStatusMessage:   ""
+        monthStatusMessage:   "",
+        nextMonthEnabled:     false
       }));
 
       var oToday         = new Date();
@@ -453,8 +454,12 @@ sap.ui.define([
 
     _refreshCalendar: function () {
       var oModel = this.getView().getModel();
+      var oNow   = new Date();
       oModel.setProperty("/monthTitle", aMonthNames[this._iMonth]);
       oModel.setProperty("/yearTitle",  String(this._iYear));
+      oModel.setProperty("/nextMonthEnabled",
+        this._iYear < oNow.getFullYear() ||
+        (this._iYear === oNow.getFullYear() && this._iMonth < oNow.getMonth()));
       this._buildCalendarGrid();
       var sSelectedIso = oModel.getProperty("/selectedDay");
       this._refreshWeekSummary(sSelectedIso || this._sTodayIso);
